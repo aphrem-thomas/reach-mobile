@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     },
     eachline:{
        flexDirection:'row',
-       fontSize:30
     },
     redTextStyle:{
         color:'red',
