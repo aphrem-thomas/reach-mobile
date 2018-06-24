@@ -6,10 +6,8 @@ import FrontPage from './FrontPage.js'
 class Button extends React.Component{
     render(){
         return(
-            <TouchableOpacity>
-            <View style={styles.buttonstyle}>
+            <TouchableOpacity onPress={this.props.onPress} style={styles.buttonstyle}>
                 <Text style={styles.textStyle}>{this.props.title}</Text>
-            </View>
             </TouchableOpacity>
         );
     
@@ -18,13 +16,15 @@ class Button extends React.Component{
 const styles = StyleSheet.create({
     buttonstyle:{
         height:60,
-        width:300,
-        backgroundColor:'orange',
+        alignSelf:'stretch',
+        backgroundColor:'#f8a557',
         alignItems:'center',
         justifyContent:'center',
         borderRadius:30,
         marginTop:10,
         marginBottom:10,
+        marginLeft:10,
+        marginRight:10
     },
     textStyle:{
         color:'black',

@@ -2,8 +2,11 @@ import React from 'react';
 import RectNative from 'react-native';
 import {Text,View,StyleSheet} from 'react-native';
 import Button from './Button.js';
-
+import {Actions} from 'react-native-router-flux';
 class FrontPage extends React.Component{
+    clickHandle1(){
+        Actions.refugeesecondpage();
+    }
     render(){
         return(
             <View style={styles.viewStyle}>
@@ -24,7 +27,7 @@ class FrontPage extends React.Component{
                     <Text style={styles.whiteTextStyle}>ospitals</Text>
                 </View>
                 <View style={{marginTop:60}}>
-                    <Button title='Refugee management' color='orange'/>
+                    <Button title='Refugee management' color='orange' onPress={()=>Actions.refugeesecondpage()}/>
                     <Button title='Supply Chain' color='orange'/>
                 </View>
             </View>

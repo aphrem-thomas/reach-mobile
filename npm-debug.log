@@ -1,0 +1,3153 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'react-native-router-flux',
+1 verbose cli   '--save' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 verbose config Skipping project config: C:\Users\Aphrem Thomas/.npmrc. (matches userconfig)
+5 silly loadCurrentTree Starting
+6 silly install loadCurrentTree
+7 silly install readLocalPackageData
+8 silly fetchPackageMetaData react-native-router-flux
+9 silly fetchNamedPackageData react-native-router-flux
+10 silly mapToRegistry name react-native-router-flux
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'react-native-router-flux',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'react-native-router-flux',
+13 silly mapToRegistry   name: 'react-native-router-flux',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/react-native-router-flux
+15 verbose request uri https://registry.npmjs.org/react-native-router-flux
+16 verbose request no auth needed
+17 info attempt registry request try #1 at 8:14:43 PM
+18 verbose request id 43ec6ec6cfa19e9c
+19 verbose etag W/"dce0a8127bb216cf96e2ec5203ec7544"
+20 verbose lastModified Thu, 07 Jun 2018 13:14:46 GMT
+21 http request GET https://registry.npmjs.org/react-native-router-flux
+22 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+23 info attempt registry request try #2 at 8:15:04 PM
+24 verbose etag W/"dce0a8127bb216cf96e2ec5203ec7544"
+25 verbose lastModified Thu, 07 Jun 2018 13:14:46 GMT
+26 http request GET https://registry.npmjs.org/react-native-router-flux
+27 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+28 info attempt registry request try #3 at 8:16:04 PM
+29 verbose etag W/"dce0a8127bb216cf96e2ec5203ec7544"
+30 verbose lastModified Thu, 07 Jun 2018 13:14:46 GMT
+31 http request GET https://registry.npmjs.org/react-native-router-flux
+32 silly get cb [ 304, undefined ]
+33 verbose etag https://registry.npmjs.org/react-native-router-flux from cache
+34 verbose get saving react-native-router-flux to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-router-flux\.cache.json
+35 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+36 silly install normalizeTree
+37 silly loadCurrentTree Finishing
+38 silly loadIdealTree Starting
+39 silly install loadIdealTree
+40 silly cloneCurrentTree Starting
+41 silly install cloneCurrentTreeToIdealTree
+42 silly cloneCurrentTree Finishing
+43 silly loadShrinkwrap Starting
+44 silly install loadShrinkwrap
+45 silly loadShrinkwrap Finishing
+46 silly loadAllDepsIntoIdealTree Starting
+47 silly install loadAllDepsIntoIdealTree
+48 silly resolveWithNewModule react-native-router-flux@4.0.0-beta.31 checking installable status
+49 silly cache add args [ 'react-native-router-flux', null ]
+50 verbose cache add spec react-native-router-flux
+51 silly cache add parsed spec Result {
+51 silly cache add   raw: 'react-native-router-flux',
+51 silly cache add   scope: null,
+51 silly cache add   escapedName: 'react-native-router-flux',
+51 silly cache add   name: 'react-native-router-flux',
+51 silly cache add   rawSpec: '',
+51 silly cache add   spec: 'latest',
+51 silly cache add   type: 'tag' }
+52 silly addNamed react-native-router-flux@latest
+53 verbose addNamed "latest" is being treated as a dist-tag for react-native-router-flux
+54 info addNameTag [ 'react-native-router-flux', 'latest' ]
+55 silly mapToRegistry name react-native-router-flux
+56 silly mapToRegistry using default registry
+57 silly mapToRegistry registry https://registry.npmjs.org/
+58 silly mapToRegistry data Result {
+58 silly mapToRegistry   raw: 'react-native-router-flux',
+58 silly mapToRegistry   scope: null,
+58 silly mapToRegistry   escapedName: 'react-native-router-flux',
+58 silly mapToRegistry   name: 'react-native-router-flux',
+58 silly mapToRegistry   rawSpec: '',
+58 silly mapToRegistry   spec: 'latest',
+58 silly mapToRegistry   type: 'tag' }
+59 silly mapToRegistry uri https://registry.npmjs.org/react-native-router-flux
+60 verbose addNameTag registry:https://registry.npmjs.org/react-native-router-flux not in flight; fetching
+61 verbose get https://registry.npmjs.org/react-native-router-flux not expired, no request
+62 silly addNameTag next cb for react-native-router-flux with tag latest
+63 silly addNamed react-native-router-flux@4.0.0-beta.31
+64 verbose addNamed "4.0.0-beta.31" is a plain semver version for react-native-router-flux
+65 silly cache afterAdd react-native-router-flux@4.0.0-beta.31
+66 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-native-router-flux\4.0.0-beta.31\package\package.json not in flight; writing
+67 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+68 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-native-router-flux\4.0.0-beta.31\package\package.json written
+69 silly fetchNamedPackageData lodash.isequal
+70 silly mapToRegistry name lodash.isequal
+71 silly mapToRegistry using default registry
+72 silly mapToRegistry registry https://registry.npmjs.org/
+73 silly mapToRegistry data Result {
+73 silly mapToRegistry   raw: 'lodash.isequal',
+73 silly mapToRegistry   scope: null,
+73 silly mapToRegistry   escapedName: 'lodash.isequal',
+73 silly mapToRegistry   name: 'lodash.isequal',
+73 silly mapToRegistry   rawSpec: '',
+73 silly mapToRegistry   spec: 'latest',
+73 silly mapToRegistry   type: 'tag' }
+74 silly mapToRegistry uri https://registry.npmjs.org/lodash.isequal
+75 silly fetchNamedPackageData mobx
+76 silly mapToRegistry name mobx
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://registry.npmjs.org/
+79 silly mapToRegistry data Result {
+79 silly mapToRegistry   raw: 'mobx',
+79 silly mapToRegistry   scope: null,
+79 silly mapToRegistry   escapedName: 'mobx',
+79 silly mapToRegistry   name: 'mobx',
+79 silly mapToRegistry   rawSpec: '',
+79 silly mapToRegistry   spec: 'latest',
+79 silly mapToRegistry   type: 'tag' }
+80 silly mapToRegistry uri https://registry.npmjs.org/mobx
+81 silly fetchNamedPackageData mobx-react
+82 silly mapToRegistry name mobx-react
+83 silly mapToRegistry using default registry
+84 silly mapToRegistry registry https://registry.npmjs.org/
+85 silly mapToRegistry data Result {
+85 silly mapToRegistry   raw: 'mobx-react',
+85 silly mapToRegistry   scope: null,
+85 silly mapToRegistry   escapedName: 'mobx-react',
+85 silly mapToRegistry   name: 'mobx-react',
+85 silly mapToRegistry   rawSpec: '',
+85 silly mapToRegistry   spec: 'latest',
+85 silly mapToRegistry   type: 'tag' }
+86 silly mapToRegistry uri https://registry.npmjs.org/mobx-react
+87 silly fetchNamedPackageData opencollective
+88 silly mapToRegistry name opencollective
+89 silly mapToRegistry using default registry
+90 silly mapToRegistry registry https://registry.npmjs.org/
+91 silly mapToRegistry data Result {
+91 silly mapToRegistry   raw: 'opencollective',
+91 silly mapToRegistry   scope: null,
+91 silly mapToRegistry   escapedName: 'opencollective',
+91 silly mapToRegistry   name: 'opencollective',
+91 silly mapToRegistry   rawSpec: '',
+91 silly mapToRegistry   spec: 'latest',
+91 silly mapToRegistry   type: 'tag' }
+92 silly mapToRegistry uri https://registry.npmjs.org/opencollective
+93 silly fetchNamedPackageData path-to-regexp
+94 silly mapToRegistry name path-to-regexp
+95 silly mapToRegistry using default registry
+96 silly mapToRegistry registry https://registry.npmjs.org/
+97 silly mapToRegistry data Result {
+97 silly mapToRegistry   raw: 'path-to-regexp',
+97 silly mapToRegistry   scope: null,
+97 silly mapToRegistry   escapedName: 'path-to-regexp',
+97 silly mapToRegistry   name: 'path-to-regexp',
+97 silly mapToRegistry   rawSpec: '',
+97 silly mapToRegistry   spec: 'latest',
+97 silly mapToRegistry   type: 'tag' }
+98 silly mapToRegistry uri https://registry.npmjs.org/path-to-regexp
+99 silly fetchNamedPackageData react-navigation
+100 silly mapToRegistry name react-navigation
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry data Result {
+103 silly mapToRegistry   raw: 'react-navigation',
+103 silly mapToRegistry   scope: null,
+103 silly mapToRegistry   escapedName: 'react-navigation',
+103 silly mapToRegistry   name: 'react-navigation',
+103 silly mapToRegistry   rawSpec: '',
+103 silly mapToRegistry   spec: 'latest',
+103 silly mapToRegistry   type: 'tag' }
+104 silly mapToRegistry uri https://registry.npmjs.org/react-navigation
+105 verbose request uri https://registry.npmjs.org/lodash.isequal
+106 verbose request no auth needed
+107 info attempt registry request try #1 at 8:16:08 PM
+108 verbose etag W/"a7a2689de69ea69094bf3204c851812b"
+109 verbose lastModified Sun, 27 May 2018 06:58:37 GMT
+110 http request GET https://registry.npmjs.org/lodash.isequal
+111 verbose request uri https://registry.npmjs.org/mobx-react
+112 verbose request no auth needed
+113 info attempt registry request try #1 at 8:16:08 PM
+114 verbose etag W/"d5bb2c46d34bd409451b6ae73f97b486"
+115 verbose lastModified Mon, 11 Jun 2018 07:29:44 GMT
+116 http request GET https://registry.npmjs.org/mobx-react
+117 verbose request uri https://registry.npmjs.org/path-to-regexp
+118 verbose request no auth needed
+119 info attempt registry request try #1 at 8:16:08 PM
+120 verbose etag W/"1ac8a9a32f349a225e39a7e2b5d872fd"
+121 verbose lastModified Sun, 27 May 2018 11:56:55 GMT
+122 http request GET https://registry.npmjs.org/path-to-regexp
+123 verbose request uri https://registry.npmjs.org/react-navigation
+124 verbose request no auth needed
+125 info attempt registry request try #1 at 8:16:08 PM
+126 verbose etag W/"ab158f7fa21b79ce86418693bb9858ef"
+127 verbose lastModified Fri, 22 Jun 2018 20:21:47 GMT
+128 http request GET https://registry.npmjs.org/react-navigation
+129 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+130 verbose request uri https://registry.npmjs.org/mobx
+131 verbose request no auth needed
+132 info attempt registry request try #1 at 8:16:08 PM
+133 verbose etag W/"81905af09be119800edbc0a94a4eedb9"
+134 verbose lastModified Mon, 18 Jun 2018 10:05:19 GMT
+135 http request GET https://registry.npmjs.org/mobx
+136 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+137 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+138 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+139 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+140 verbose request uri https://registry.npmjs.org/opencollective
+141 verbose request no auth needed
+142 info attempt registry request try #1 at 8:16:08 PM
+143 verbose etag W/"93b356f3c7a5c07796023ccde36b2b74"
+144 verbose lastModified Sun, 27 May 2018 11:16:05 GMT
+145 http request GET https://registry.npmjs.org/opencollective
+146 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+147 info attempt registry request try #2 at 8:16:18 PM
+148 verbose etag W/"a7a2689de69ea69094bf3204c851812b"
+149 verbose lastModified Sun, 27 May 2018 06:58:37 GMT
+150 http request GET https://registry.npmjs.org/lodash.isequal
+151 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+152 info attempt registry request try #2 at 8:16:18 PM
+153 verbose etag W/"d5bb2c46d34bd409451b6ae73f97b486"
+154 verbose lastModified Mon, 11 Jun 2018 07:29:44 GMT
+155 http request GET https://registry.npmjs.org/mobx-react
+156 info attempt registry request try #2 at 8:16:18 PM
+157 verbose etag W/"1ac8a9a32f349a225e39a7e2b5d872fd"
+158 verbose lastModified Sun, 27 May 2018 11:56:55 GMT
+159 http request GET https://registry.npmjs.org/path-to-regexp
+160 info attempt registry request try #2 at 8:16:18 PM
+161 verbose etag W/"ab158f7fa21b79ce86418693bb9858ef"
+162 verbose lastModified Fri, 22 Jun 2018 20:21:47 GMT
+163 http request GET https://registry.npmjs.org/react-navigation
+164 info attempt registry request try #2 at 8:16:18 PM
+165 verbose etag W/"81905af09be119800edbc0a94a4eedb9"
+166 verbose lastModified Mon, 18 Jun 2018 10:05:19 GMT
+167 http request GET https://registry.npmjs.org/mobx
+168 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+169 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+170 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+171 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+172 info attempt registry request try #2 at 8:16:18 PM
+173 verbose etag W/"93b356f3c7a5c07796023ccde36b2b74"
+174 verbose lastModified Sun, 27 May 2018 11:16:05 GMT
+175 http request GET https://registry.npmjs.org/opencollective
+176 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+177 info attempt registry request try #3 at 8:17:18 PM
+178 verbose etag W/"a7a2689de69ea69094bf3204c851812b"
+179 verbose lastModified Sun, 27 May 2018 06:58:37 GMT
+180 http request GET https://registry.npmjs.org/lodash.isequal
+181 silly get cb [ 304, undefined ]
+182 verbose etag https://registry.npmjs.org/lodash.isequal from cache
+183 verbose get saving lodash.isequal to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\lodash.isequal\.cache.json
+184 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+185 silly resolveWithNewModule lodash.isequal@4.5.0 checking installable status
+186 silly cache add args [ 'lodash.isequal@^4.5.0', null ]
+187 verbose cache add spec lodash.isequal@^4.5.0
+188 silly cache add parsed spec Result {
+188 silly cache add   raw: 'lodash.isequal@^4.5.0',
+188 silly cache add   scope: null,
+188 silly cache add   escapedName: 'lodash.isequal',
+188 silly cache add   name: 'lodash.isequal',
+188 silly cache add   rawSpec: '^4.5.0',
+188 silly cache add   spec: '>=4.5.0 <5.0.0',
+188 silly cache add   type: 'range' }
+189 silly addNamed lodash.isequal@>=4.5.0 <5.0.0
+190 verbose addNamed ">=4.5.0 <5.0.0" is a valid semver range for lodash.isequal
+191 silly addNameRange { name: 'lodash.isequal',
+191 silly addNameRange   range: '>=4.5.0 <5.0.0',
+191 silly addNameRange   hasData: false }
+192 silly mapToRegistry name lodash.isequal
+193 silly mapToRegistry using default registry
+194 silly mapToRegistry registry https://registry.npmjs.org/
+195 silly mapToRegistry data Result {
+195 silly mapToRegistry   raw: 'lodash.isequal',
+195 silly mapToRegistry   scope: null,
+195 silly mapToRegistry   escapedName: 'lodash.isequal',
+195 silly mapToRegistry   name: 'lodash.isequal',
+195 silly mapToRegistry   rawSpec: '',
+195 silly mapToRegistry   spec: 'latest',
+195 silly mapToRegistry   type: 'tag' }
+196 silly mapToRegistry uri https://registry.npmjs.org/lodash.isequal
+197 verbose addNameRange registry:https://registry.npmjs.org/lodash.isequal not in flight; fetching
+198 verbose get https://registry.npmjs.org/lodash.isequal not expired, no request
+199 silly addNameRange number 2 { name: 'lodash.isequal',
+199 silly addNameRange   range: '>=4.5.0 <5.0.0',
+199 silly addNameRange   hasData: true }
+200 silly addNameRange versions [ 'lodash.isequal',
+200 silly addNameRange   [ '2.0.0',
+200 silly addNameRange     '2.1.0',
+200 silly addNameRange     '2.2.0',
+200 silly addNameRange     '2.2.1',
+200 silly addNameRange     '2.3.0',
+200 silly addNameRange     '2.4.0',
+200 silly addNameRange     '2.4.1',
+200 silly addNameRange     '3.0.0',
+200 silly addNameRange     '3.0.1',
+200 silly addNameRange     '3.0.2',
+200 silly addNameRange     '3.0.3',
+200 silly addNameRange     '3.0.4',
+200 silly addNameRange     '4.0.0',
+200 silly addNameRange     '4.1.0',
+200 silly addNameRange     '4.1.1',
+200 silly addNameRange     '4.1.2',
+200 silly addNameRange     '4.1.3',
+200 silly addNameRange     '4.1.4',
+200 silly addNameRange     '4.2.0',
+200 silly addNameRange     '4.3.0',
+200 silly addNameRange     '4.3.1',
+200 silly addNameRange     '4.4.0',
+200 silly addNameRange     '4.5.0' ] ]
+201 silly addNamed lodash.isequal@4.5.0
+202 verbose addNamed "4.5.0" is a plain semver version for lodash.isequal
+203 silly cache afterAdd lodash.isequal@4.5.0
+204 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\lodash.isequal\4.5.0\package\package.json not in flight; writing
+205 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+206 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\lodash.isequal\4.5.0\package\package.json written
+207 info attempt registry request try #3 at 8:17:18 PM
+208 verbose etag W/"d5bb2c46d34bd409451b6ae73f97b486"
+209 verbose lastModified Mon, 11 Jun 2018 07:29:44 GMT
+210 http request GET https://registry.npmjs.org/mobx-react
+211 info attempt registry request try #3 at 8:17:18 PM
+212 verbose etag W/"1ac8a9a32f349a225e39a7e2b5d872fd"
+213 verbose lastModified Sun, 27 May 2018 11:56:55 GMT
+214 http request GET https://registry.npmjs.org/path-to-regexp
+215 info attempt registry request try #3 at 8:17:18 PM
+216 verbose etag W/"ab158f7fa21b79ce86418693bb9858ef"
+217 verbose lastModified Fri, 22 Jun 2018 20:21:47 GMT
+218 http request GET https://registry.npmjs.org/react-navigation
+219 info attempt registry request try #3 at 8:17:18 PM
+220 verbose etag W/"81905af09be119800edbc0a94a4eedb9"
+221 verbose lastModified Mon, 18 Jun 2018 10:05:19 GMT
+222 http request GET https://registry.npmjs.org/mobx
+223 silly get cb [ 304, undefined ]
+224 verbose etag https://registry.npmjs.org/mobx-react from cache
+225 verbose get saving mobx-react to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\mobx-react\.cache.json
+226 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+227 silly get cb [ 304, undefined ]
+228 verbose etag https://registry.npmjs.org/path-to-regexp from cache
+229 verbose get saving path-to-regexp to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\path-to-regexp\.cache.json
+230 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+231 silly get cb [ 304, undefined ]
+232 verbose etag https://registry.npmjs.org/react-navigation from cache
+233 verbose get saving react-navigation to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\react-navigation\.cache.json
+234 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+235 silly get cb [ 304, undefined ]
+236 verbose etag https://registry.npmjs.org/mobx from cache
+237 verbose get saving mobx to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\mobx\.cache.json
+238 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+239 info attempt registry request try #3 at 8:17:18 PM
+240 verbose etag W/"93b356f3c7a5c07796023ccde36b2b74"
+241 verbose lastModified Sun, 27 May 2018 11:16:05 GMT
+242 http request GET https://registry.npmjs.org/opencollective
+243 silly get cb [ 304, undefined ]
+244 verbose etag https://registry.npmjs.org/opencollective from cache
+245 verbose get saving opencollective to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\opencollective\.cache.json
+246 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+247 silly resolveWithNewModule mobx-react@4.4.3 checking installable status
+248 silly cache add args [ 'mobx-react@^4.3.4', null ]
+249 verbose cache add spec mobx-react@^4.3.4
+250 silly cache add parsed spec Result {
+250 silly cache add   raw: 'mobx-react@^4.3.4',
+250 silly cache add   scope: null,
+250 silly cache add   escapedName: 'mobx-react',
+250 silly cache add   name: 'mobx-react',
+250 silly cache add   rawSpec: '^4.3.4',
+250 silly cache add   spec: '>=4.3.4 <5.0.0',
+250 silly cache add   type: 'range' }
+251 silly addNamed mobx-react@>=4.3.4 <5.0.0
+252 verbose addNamed ">=4.3.4 <5.0.0" is a valid semver range for mobx-react
+253 silly addNameRange { name: 'mobx-react', range: '>=4.3.4 <5.0.0', hasData: false }
+254 silly mapToRegistry name mobx-react
+255 silly mapToRegistry using default registry
+256 silly mapToRegistry registry https://registry.npmjs.org/
+257 silly mapToRegistry data Result {
+257 silly mapToRegistry   raw: 'mobx-react',
+257 silly mapToRegistry   scope: null,
+257 silly mapToRegistry   escapedName: 'mobx-react',
+257 silly mapToRegistry   name: 'mobx-react',
+257 silly mapToRegistry   rawSpec: '',
+257 silly mapToRegistry   spec: 'latest',
+257 silly mapToRegistry   type: 'tag' }
+258 silly mapToRegistry uri https://registry.npmjs.org/mobx-react
+259 verbose addNameRange registry:https://registry.npmjs.org/mobx-react not in flight; fetching
+260 silly resolveWithNewModule path-to-regexp@2.2.1 checking installable status
+261 silly cache add args [ 'path-to-regexp@^2.1.0', null ]
+262 verbose cache add spec path-to-regexp@^2.1.0
+263 silly cache add parsed spec Result {
+263 silly cache add   raw: 'path-to-regexp@^2.1.0',
+263 silly cache add   scope: null,
+263 silly cache add   escapedName: 'path-to-regexp',
+263 silly cache add   name: 'path-to-regexp',
+263 silly cache add   rawSpec: '^2.1.0',
+263 silly cache add   spec: '>=2.1.0 <3.0.0',
+263 silly cache add   type: 'range' }
+264 silly addNamed path-to-regexp@>=2.1.0 <3.0.0
+265 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for path-to-regexp
+266 silly addNameRange { name: 'path-to-regexp',
+266 silly addNameRange   range: '>=2.1.0 <3.0.0',
+266 silly addNameRange   hasData: false }
+267 silly mapToRegistry name path-to-regexp
+268 silly mapToRegistry using default registry
+269 silly mapToRegistry registry https://registry.npmjs.org/
+270 silly mapToRegistry data Result {
+270 silly mapToRegistry   raw: 'path-to-regexp',
+270 silly mapToRegistry   scope: null,
+270 silly mapToRegistry   escapedName: 'path-to-regexp',
+270 silly mapToRegistry   name: 'path-to-regexp',
+270 silly mapToRegistry   rawSpec: '',
+270 silly mapToRegistry   spec: 'latest',
+270 silly mapToRegistry   type: 'tag' }
+271 silly mapToRegistry uri https://registry.npmjs.org/path-to-regexp
+272 verbose addNameRange registry:https://registry.npmjs.org/path-to-regexp not in flight; fetching
+273 verbose get https://registry.npmjs.org/mobx-react not expired, no request
+274 silly addNameRange number 2 { name: 'mobx-react', range: '>=4.3.4 <5.0.0', hasData: true }
+275 silly addNameRange versions [ 'mobx-react',
+275 silly addNameRange   [ '3.0.0',
+275 silly addNameRange     '3.0.1',
+275 silly addNameRange     '3.0.2',
+275 silly addNameRange     '3.0.3',
+275 silly addNameRange     '3.0.4',
+275 silly addNameRange     '3.0.5',
+275 silly addNameRange     '3.1.0',
+275 silly addNameRange     '3.2.0',
+275 silly addNameRange     '3.3.0',
+275 silly addNameRange     '3.3.1',
+275 silly addNameRange     '3.4.0-beta.1',
+275 silly addNameRange     '3.4.0',
+275 silly addNameRange     '3.5.0',
+275 silly addNameRange     '3.5.0-fix85',
+275 silly addNameRange     '3.5.0-fix85-2',
+275 silly addNameRange     '3.5.1',
+275 silly addNameRange     '3.5.2-alpha.1',
+275 silly addNameRange     '3.5.2',
+275 silly addNameRange     '3.5.3',
+275 silly addNameRange     '3.5.4',
+275 silly addNameRange     '3.5.4-fix101',
+275 silly addNameRange     '3.5.5',
+275 silly addNameRange     '3.5.6',
+275 silly addNameRange     '3.5.7',
+275 silly addNameRange     '3.5.8',
+275 silly addNameRange     '3.5.8-observableprops',
+275 silly addNameRange     '3.5.8-fix134',
+275 silly addNameRange     '3.5.8-observableprops.1',
+275 silly addNameRange     '3.5.9',
+275 silly addNameRange     '4.0.0-beta.1',
+275 silly addNameRange     '4.0.0-beta.2',
+275 silly addNameRange     '4.0.0-rc.1',
+275 silly addNameRange     '4.0.0-rc.2',
+275 silly addNameRange     '4.0.0-rc.3',
+275 silly addNameRange     '4.0.0-rc.4',
+275 silly addNameRange     '4.0.0',
+275 silly addNameRange     '4.0.1',
+275 silly addNameRange     '4.0.2-rc',
+275 silly addNameRange     '4.0.2',
+275 silly addNameRange     '4.0.3-rc',
+275 silly addNameRange     '4.0.3',
+275 silly addNameRange     '4.0.4',
+275 silly addNameRange     '4.1.0',
+275 silly addNameRange     '4.1.1',
+275 silly addNameRange     '4.1.2',
+275 silly addNameRange     '4.1.3',
+275 silly addNameRange     '4.1.4',
+275 silly addNameRange     '4.1.5',
+275 silly addNameRange     '4.1.6',
+275 silly addNameRange     '4.1.7',
+275 silly addNameRange     '4.1.8',
+275 silly addNameRange     '4.2.1',
+275 silly addNameRange     '4.2.2',
+275 silly addNameRange     '4.3.0-rc.1',
+275 silly addNameRange     '4.3.1',
+275 silly addNameRange     '4.3.2-rc.1',
+275 silly addNameRange     '4.3.2',
+275 silly addNameRange     '4.3.3',
+275 silly addNameRange     '4.3.4',
+275 silly addNameRange     '4.3.5',
+275 silly addNameRange     '4.4.0',
+275 silly addNameRange     '4.4.1',
+275 silly addNameRange     '4.4.2',
+275 silly addNameRange     '5.0.0-rc.1',
+275 silly addNameRange     '5.0.0-beta.1',
+275 silly addNameRange     '4.4.2-fix-428',
+275 silly addNameRange     '5.0.0-beta.2',
+275 silly addNameRange     '4.4.3',
+275 silly addNameRange     '5.0.0',
+275 silly addNameRange     '5.1.0-rc.1',
+275 silly addNameRange     '5.1.0-rc.2',
+275 silly addNameRange     '5.1.0-rc.3',
+275 silly addNameRange     '5.1.0',
+275 silly addNameRange     '5.1.1',
+275 silly addNameRange     '5.1.2',
+275 silly addNameRange     '5.2.0',
+275 silly addNameRange     '5.2.1',
+275 silly addNameRange     '5.2.2',
+275 silly addNameRange     '5.2.3' ] ]
+276 silly addNamed mobx-react@4.4.3
+277 verbose addNamed "4.4.3" is a plain semver version for mobx-react
+278 verbose get https://registry.npmjs.org/path-to-regexp not expired, no request
+279 silly addNameRange number 2 { name: 'path-to-regexp',
+279 silly addNameRange   range: '>=2.1.0 <3.0.0',
+279 silly addNameRange   hasData: true }
+280 silly addNameRange versions [ 'path-to-regexp',
+280 silly addNameRange   [ '0.0.1',
+280 silly addNameRange     '0.0.2',
+280 silly addNameRange     '0.1.0',
+280 silly addNameRange     '0.1.1',
+280 silly addNameRange     '0.1.2',
+280 silly addNameRange     '0.2.0',
+280 silly addNameRange     '0.2.1',
+280 silly addNameRange     '0.1.3',
+280 silly addNameRange     '0.2.2',
+280 silly addNameRange     '0.2.3',
+280 silly addNameRange     '0.2.4',
+280 silly addNameRange     '0.2.5',
+280 silly addNameRange     '1.0.0',
+280 silly addNameRange     '1.0.1',
+280 silly addNameRange     '1.0.2',
+280 silly addNameRange     '1.0.3',
+280 silly addNameRange     '0.1.4',
+280 silly addNameRange     '0.1.5',
+280 silly addNameRange     '1.1.0',
+280 silly addNameRange     '1.1.1',
+280 silly addNameRange     '1.2.0',
+280 silly addNameRange     '0.1.6',
+280 silly addNameRange     '0.1.7',
+280 silly addNameRange     '1.2.1',
+280 silly addNameRange     '1.3.0',
+280 silly addNameRange     '1.4.0',
+280 silly addNameRange     '1.5.0',
+280 silly addNameRange     '1.5.1',
+280 silly addNameRange     '1.5.2',
+280 silly addNameRange     '1.5.3',
+280 silly addNameRange     '1.6.0',
+280 silly addNameRange     '1.7.0',
+280 silly addNameRange     '2.0.0',
+280 silly addNameRange     '2.1.0',
+280 silly addNameRange     '2.2.0',
+280 silly addNameRange     '2.2.1' ] ]
+281 silly addNamed path-to-regexp@2.2.1
+282 verbose addNamed "2.2.1" is a plain semver version for path-to-regexp
+283 silly resolveWithNewModule opencollective@1.0.3 checking installable status
+284 silly cache add args [ 'opencollective@^1.0.3', null ]
+285 verbose cache add spec opencollective@^1.0.3
+286 silly cache add parsed spec Result {
+286 silly cache add   raw: 'opencollective@^1.0.3',
+286 silly cache add   scope: null,
+286 silly cache add   escapedName: 'opencollective',
+286 silly cache add   name: 'opencollective',
+286 silly cache add   rawSpec: '^1.0.3',
+286 silly cache add   spec: '>=1.0.3 <2.0.0',
+286 silly cache add   type: 'range' }
+287 silly addNamed opencollective@>=1.0.3 <2.0.0
+288 verbose addNamed ">=1.0.3 <2.0.0" is a valid semver range for opencollective
+289 silly addNameRange { name: 'opencollective',
+289 silly addNameRange   range: '>=1.0.3 <2.0.0',
+289 silly addNameRange   hasData: false }
+290 silly mapToRegistry name opencollective
+291 silly mapToRegistry using default registry
+292 silly mapToRegistry registry https://registry.npmjs.org/
+293 silly mapToRegistry data Result {
+293 silly mapToRegistry   raw: 'opencollective',
+293 silly mapToRegistry   scope: null,
+293 silly mapToRegistry   escapedName: 'opencollective',
+293 silly mapToRegistry   name: 'opencollective',
+293 silly mapToRegistry   rawSpec: '',
+293 silly mapToRegistry   spec: 'latest',
+293 silly mapToRegistry   type: 'tag' }
+294 silly mapToRegistry uri https://registry.npmjs.org/opencollective
+295 verbose addNameRange registry:https://registry.npmjs.org/opencollective not in flight; fetching
+296 silly resolveWithNewModule react-navigation@1.5.8 checking installable status
+297 silly cache add args [ 'react-navigation@1.5.8', null ]
+298 verbose cache add spec react-navigation@1.5.8
+299 silly cache add parsed spec Result {
+299 silly cache add   raw: 'react-navigation@1.5.8',
+299 silly cache add   scope: null,
+299 silly cache add   escapedName: 'react-navigation',
+299 silly cache add   name: 'react-navigation',
+299 silly cache add   rawSpec: '1.5.8',
+299 silly cache add   spec: '1.5.8',
+299 silly cache add   type: 'version' }
+300 silly addNamed react-navigation@1.5.8
+301 verbose addNamed "1.5.8" is a plain semver version for react-navigation
+302 silly mapToRegistry name react-navigation
+303 silly mapToRegistry using default registry
+304 silly mapToRegistry registry https://registry.npmjs.org/
+305 silly mapToRegistry data Result {
+305 silly mapToRegistry   raw: 'react-navigation',
+305 silly mapToRegistry   scope: null,
+305 silly mapToRegistry   escapedName: 'react-navigation',
+305 silly mapToRegistry   name: 'react-navigation',
+305 silly mapToRegistry   rawSpec: '',
+305 silly mapToRegistry   spec: 'latest',
+305 silly mapToRegistry   type: 'tag' }
+306 silly mapToRegistry uri https://registry.npmjs.org/react-navigation
+307 verbose addNameVersion registry:https://registry.npmjs.org/react-navigation not in flight; fetching
+308 silly resolveWithNewModule mobx@3.6.2 checking installable status
+309 silly cache add args [ 'mobx@^3.3.1', null ]
+310 verbose cache add spec mobx@^3.3.1
+311 silly cache add parsed spec Result {
+311 silly cache add   raw: 'mobx@^3.3.1',
+311 silly cache add   scope: null,
+311 silly cache add   escapedName: 'mobx',
+311 silly cache add   name: 'mobx',
+311 silly cache add   rawSpec: '^3.3.1',
+311 silly cache add   spec: '>=3.3.1 <4.0.0',
+311 silly cache add   type: 'range' }
+312 silly addNamed mobx@>=3.3.1 <4.0.0
+313 verbose addNamed ">=3.3.1 <4.0.0" is a valid semver range for mobx
+314 silly addNameRange { name: 'mobx', range: '>=3.3.1 <4.0.0', hasData: false }
+315 silly mapToRegistry name mobx
+316 silly mapToRegistry using default registry
+317 silly mapToRegistry registry https://registry.npmjs.org/
+318 silly mapToRegistry data Result {
+318 silly mapToRegistry   raw: 'mobx',
+318 silly mapToRegistry   scope: null,
+318 silly mapToRegistry   escapedName: 'mobx',
+318 silly mapToRegistry   name: 'mobx',
+318 silly mapToRegistry   rawSpec: '',
+318 silly mapToRegistry   spec: 'latest',
+318 silly mapToRegistry   type: 'tag' }
+319 silly mapToRegistry uri https://registry.npmjs.org/mobx
+320 verbose addNameRange registry:https://registry.npmjs.org/mobx not in flight; fetching
+321 silly cache afterAdd mobx-react@4.4.3
+322 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mobx-react\4.4.3\package\package.json not in flight; writing
+323 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+324 verbose get https://registry.npmjs.org/opencollective not expired, no request
+325 silly addNameRange number 2 { name: 'opencollective',
+325 silly addNameRange   range: '>=1.0.3 <2.0.0',
+325 silly addNameRange   hasData: true }
+326 silly addNameRange versions [ 'opencollective', [ '1.0.0', '1.0.1', '1.0.2', '1.0.3' ] ]
+327 silly addNamed opencollective@1.0.3
+328 verbose addNamed "1.0.3" is a plain semver version for opencollective
+329 verbose get https://registry.npmjs.org/react-navigation not expired, no request
+330 verbose get https://registry.npmjs.org/mobx not expired, no request
+331 silly addNameRange number 2 { name: 'mobx', range: '>=3.3.1 <4.0.0', hasData: true }
+332 silly addNameRange versions [ 'mobx',
+332 silly addNameRange   [ '0.0.0',
+332 silly addNameRange     '2.0.0',
+332 silly addNameRange     '2.0.1',
+332 silly addNameRange     '2.0.2',
+332 silly addNameRange     '2.0.3',
+332 silly addNameRange     '2.0.4',
+332 silly addNameRange     '2.0.5',
+332 silly addNameRange     '2.0.6',
+332 silly addNameRange     '2.1.0',
+332 silly addNameRange     '2.1.1',
+332 silly addNameRange     '2.1.2',
+332 silly addNameRange     '2.1.3',
+332 silly addNameRange     '2.1.4',
+332 silly addNameRange     '2.1.5',
+332 silly addNameRange     '2.1.6',
+332 silly addNameRange     '2.1.7',
+332 silly addNameRange     '2.2.0-beta.1',
+332 silly addNameRange     '2.2.0',
+332 silly addNameRange     '2.2.1',
+332 silly addNameRange     '2.2.2',
+332 silly addNameRange     '2.3.0',
+332 silly addNameRange     '2.3.1',
+332 silly addNameRange     '2.3.2',
+332 silly addNameRange     '2.3.3',
+332 silly addNameRange     '2.3.4',
+332 silly addNameRange     '2.3.4-iosfix',
+332 silly addNameRange     '2.3.4-iosfix2',
+332 silly addNameRange     '2.3.5',
+332 silly addNameRange     '2.3.4-iosfix3',
+332 silly addNameRange     '2.3.6',
+332 silly addNameRange     '2.3.6-albert',
+332 silly addNameRange     '2.3.7',
+332 silly addNameRange     '2.4.0-alpha1',
+332 silly addNameRange     '2.4.0-beta1',
+332 silly addNameRange     '2.4.0',
+332 silly addNameRange     '2.4.0-fix427',
+332 silly addNameRange     '2.4.0-fix441',
+332 silly addNameRange     '2.4.1',
+332 silly addNameRange     '2.4.2',
+332 silly addNameRange     '2.4.3',
+332 silly addNameRange     '2.5.0-alpha1',
+332 silly addNameRange     '2.4.3-fix505',
+332 silly addNameRange     '2.4.4',
+332 silly addNameRange     '2.5.0-rc1',
+332 silly addNameRange     '2.5.0',
+332 silly addNameRange     '2.5.1',
+332 silly addNameRange     '2.5.2',
+332 silly addNameRange     '2.6.0',
+332 silly addNameRange     '2.6.0-fix621',
+332 silly addNameRange     '2.6.1',
+332 silly addNameRange     '2.7.0-beta',
+332 silly addNameRange     '2.6.2',
+332 silly addNameRange     '2.6.3',
+332 silly addNameRange     '2.6.4',
+332 silly addNameRange     '2.6.5',
+332 silly addNameRange     '2.7.0',
+332 silly addNameRange     '3.0.0-rc.1',
+332 silly addNameRange     '3.0.0-rc.2',
+332 silly addNameRange     '3.0.0',
+332 silly addNameRange     '3.0.0-fix-751',
+332 silly addNameRange     '3.0.1',
+332 silly addNameRange     '3.0.1-fix734',
+332 silly addNameRange     '3.0.2',
+332 silly addNameRange     '3.0.1-fix734-2',
+332 silly addNameRange     '3.0.2-fix798',
+332 silly addNameRange     '3.0.2-fix798-2',
+332 silly addNameRange     '3.1.0',
+332 silly addNameRange     '3.1.2',
+332 silly addNameRange     '3.1.3',
+332 silly addNameRange     '3.1.4',
+332 silly addNameRange     '3.1.5',
+332 silly addNameRange     '3.1.6-fix887',
+332 silly addNameRange     '3.1.7',
+332 silly addNameRange     '3.1.8',
+332 silly addNameRange     '3.1.8-fix874',
+332 silly addNameRange     '3.1.9',
+332 silly addNameRange     '3.1.10',
+332 silly addNameRange     '3.1.11-rollup',
+332 silly addNameRange     '3.1.11',
+332 silly addNameRange     '3.1.13-fixcra',
+332 silly addNameRange     '3.1.14',
+332 silly addNameRange     '3.1.15',
+332 silly addNameRange     '3.1.16',
+332 silly addNameRange     '3.1.17',
+332 silly addNameRange     '3.2.0',
+332 silly addNameRange     '3.2.1',
+332 silly addNameRange     '3.2.2',
+332 silly addNameRange     '3.3.0',
+332 silly addNameRange     '3.3.1',
+332 silly addNameRange     '3.3.2',
+332 silly addNameRange     '3.3.3',
+332 silly addNameRange     '3.4.0',
+332 silly addNameRange     '3.4.1',
+332 silly addNameRange     '3.5.1',
+332 silly addNameRange     '3.6.0',
+332 silly addNameRange     '4.0.0-alpha.1',
+332 silly addNameRange     '3.6.1',
+332 silly addNameRange     '4.0.0-alpha.2',
+332 silly addNameRange     '4.0.0-beta.1',
+332 silly addNameRange     '4.0.0-beta.2',
+332 silly addNameRange     ... 23 more items ] ]
+333 silly addNamed mobx@3.6.2
+334 verbose addNamed "3.6.2" is a plain semver version for mobx
+335 silly cache afterAdd path-to-regexp@2.2.1
+336 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\path-to-regexp\2.2.1\package\package.json not in flight; writing
+337 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+338 silly cache afterAdd react-navigation@1.5.8
+339 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-navigation\1.5.8\package\package.json not in flight; writing
+340 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+341 silly cache afterAdd mobx@3.6.2
+342 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mobx\3.6.2\package\package.json not in flight; writing
+343 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+344 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mobx-react\4.4.3\package\package.json written
+345 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\path-to-regexp\2.2.1\package\package.json written
+346 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-navigation\1.5.8\package\package.json written
+347 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mobx\3.6.2\package\package.json written
+348 silly cache afterAdd opencollective@1.0.3
+349 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\opencollective\1.0.3\package\package.json not in flight; writing
+350 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+351 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\opencollective\1.0.3\package\package.json written
+352 silly fetchNamedPackageData inquirer
+353 silly mapToRegistry name inquirer
+354 silly mapToRegistry using default registry
+355 silly mapToRegistry registry https://registry.npmjs.org/
+356 silly mapToRegistry data Result {
+356 silly mapToRegistry   raw: 'inquirer',
+356 silly mapToRegistry   scope: null,
+356 silly mapToRegistry   escapedName: 'inquirer',
+356 silly mapToRegistry   name: 'inquirer',
+356 silly mapToRegistry   rawSpec: '',
+356 silly mapToRegistry   spec: 'latest',
+356 silly mapToRegistry   type: 'tag' }
+357 silly mapToRegistry uri https://registry.npmjs.org/inquirer
+358 silly fetchNamedPackageData minimist
+359 silly mapToRegistry name minimist
+360 silly mapToRegistry using default registry
+361 silly mapToRegistry registry https://registry.npmjs.org/
+362 silly mapToRegistry data Result {
+362 silly mapToRegistry   raw: 'minimist',
+362 silly mapToRegistry   scope: null,
+362 silly mapToRegistry   escapedName: 'minimist',
+362 silly mapToRegistry   name: 'minimist',
+362 silly mapToRegistry   rawSpec: '',
+362 silly mapToRegistry   spec: 'latest',
+362 silly mapToRegistry   type: 'tag' }
+363 silly mapToRegistry uri https://registry.npmjs.org/minimist
+364 silly fetchNamedPackageData node-fetch
+365 silly mapToRegistry name node-fetch
+366 silly mapToRegistry using default registry
+367 silly mapToRegistry registry https://registry.npmjs.org/
+368 silly mapToRegistry data Result {
+368 silly mapToRegistry   raw: 'node-fetch',
+368 silly mapToRegistry   scope: null,
+368 silly mapToRegistry   escapedName: 'node-fetch',
+368 silly mapToRegistry   name: 'node-fetch',
+368 silly mapToRegistry   rawSpec: '',
+368 silly mapToRegistry   spec: 'latest',
+368 silly mapToRegistry   type: 'tag' }
+369 silly mapToRegistry uri https://registry.npmjs.org/node-fetch
+370 silly fetchNamedPackageData babel-polyfill
+371 silly mapToRegistry name babel-polyfill
+372 silly mapToRegistry using default registry
+373 silly mapToRegistry registry https://registry.npmjs.org/
+374 silly mapToRegistry data Result {
+374 silly mapToRegistry   raw: 'babel-polyfill',
+374 silly mapToRegistry   scope: null,
+374 silly mapToRegistry   escapedName: 'babel-polyfill',
+374 silly mapToRegistry   name: 'babel-polyfill',
+374 silly mapToRegistry   rawSpec: '',
+374 silly mapToRegistry   spec: 'latest',
+374 silly mapToRegistry   type: 'tag' }
+375 silly mapToRegistry uri https://registry.npmjs.org/babel-polyfill
+376 verbose request uri https://registry.npmjs.org/babel-polyfill
+377 verbose request no auth needed
+378 info attempt registry request try #1 at 8:17:20 PM
+379 verbose etag W/"1a84471148a29ee354750c3fc7596ed9"
+380 verbose lastModified Sat, 26 May 2018 01:39:18 GMT
+381 http request GET https://registry.npmjs.org/babel-polyfill
+382 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+383 verbose request uri https://registry.npmjs.org/inquirer
+384 verbose request no auth needed
+385 info attempt registry request try #1 at 8:17:20 PM
+386 verbose etag W/"85de5bbfe59ce07cc193fddadf9f8664"
+387 verbose lastModified Sat, 02 Jun 2018 09:30:29 GMT
+388 http request GET https://registry.npmjs.org/inquirer
+389 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+390 verbose request uri https://registry.npmjs.org/node-fetch
+391 verbose request no auth needed
+392 info attempt registry request try #1 at 8:17:20 PM
+393 verbose etag W/"6543f2b39bd8058e39a181a194e87035"
+394 verbose lastModified Sun, 27 May 2018 09:59:35 GMT
+395 http request GET https://registry.npmjs.org/node-fetch
+396 verbose request uri https://registry.npmjs.org/minimist
+397 verbose request no auth needed
+398 info attempt registry request try #1 at 8:17:20 PM
+399 verbose etag W/"a0b426a2c90a93be26bd6141b77d1f18"
+400 verbose lastModified Sun, 27 May 2018 08:07:34 GMT
+401 http request GET https://registry.npmjs.org/minimist
+402 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+403 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+404 info attempt registry request try #2 at 8:17:30 PM
+405 verbose etag W/"1a84471148a29ee354750c3fc7596ed9"
+406 verbose lastModified Sat, 26 May 2018 01:39:18 GMT
+407 http request GET https://registry.npmjs.org/babel-polyfill
+408 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+409 info attempt registry request try #2 at 8:17:30 PM
+410 verbose etag W/"85de5bbfe59ce07cc193fddadf9f8664"
+411 verbose lastModified Sat, 02 Jun 2018 09:30:29 GMT
+412 http request GET https://registry.npmjs.org/inquirer
+413 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+414 info attempt registry request try #2 at 8:17:30 PM
+415 verbose etag W/"6543f2b39bd8058e39a181a194e87035"
+416 verbose lastModified Sun, 27 May 2018 09:59:35 GMT
+417 http request GET https://registry.npmjs.org/node-fetch
+418 info attempt registry request try #2 at 8:17:30 PM
+419 verbose etag W/"a0b426a2c90a93be26bd6141b77d1f18"
+420 verbose lastModified Sun, 27 May 2018 08:07:34 GMT
+421 http request GET https://registry.npmjs.org/minimist
+422 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+423 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+424 info attempt registry request try #3 at 8:18:30 PM
+425 verbose etag W/"1a84471148a29ee354750c3fc7596ed9"
+426 verbose lastModified Sat, 26 May 2018 01:39:18 GMT
+427 http request GET https://registry.npmjs.org/babel-polyfill
+428 silly get cb [ 304, undefined ]
+429 verbose etag https://registry.npmjs.org/babel-polyfill from cache
+430 verbose get saving babel-polyfill to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\babel-polyfill\.cache.json
+431 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+432 info attempt registry request try #3 at 8:18:30 PM
+433 verbose etag W/"85de5bbfe59ce07cc193fddadf9f8664"
+434 verbose lastModified Sat, 02 Jun 2018 09:30:29 GMT
+435 http request GET https://registry.npmjs.org/inquirer
+436 silly get cb [ 304, undefined ]
+437 verbose etag https://registry.npmjs.org/inquirer from cache
+438 verbose get saving inquirer to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\inquirer\.cache.json
+439 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+440 info attempt registry request try #3 at 8:18:30 PM
+441 verbose etag W/"6543f2b39bd8058e39a181a194e87035"
+442 verbose lastModified Sun, 27 May 2018 09:59:35 GMT
+443 http request GET https://registry.npmjs.org/node-fetch
+444 info attempt registry request try #3 at 8:18:30 PM
+445 verbose etag W/"a0b426a2c90a93be26bd6141b77d1f18"
+446 verbose lastModified Sun, 27 May 2018 08:07:34 GMT
+447 http request GET https://registry.npmjs.org/minimist
+448 silly get cb [ 304, undefined ]
+449 verbose etag https://registry.npmjs.org/node-fetch from cache
+450 verbose get saving node-fetch to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\node-fetch\.cache.json
+451 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+452 silly get cb [ 304, undefined ]
+453 verbose etag https://registry.npmjs.org/minimist from cache
+454 verbose get saving minimist to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\minimist\.cache.json
+455 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+456 silly resolveWithNewModule babel-polyfill@6.23.0 checking installable status
+457 silly cache add args [ 'babel-polyfill@6.23.0', null ]
+458 verbose cache add spec babel-polyfill@6.23.0
+459 silly cache add parsed spec Result {
+459 silly cache add   raw: 'babel-polyfill@6.23.0',
+459 silly cache add   scope: null,
+459 silly cache add   escapedName: 'babel-polyfill',
+459 silly cache add   name: 'babel-polyfill',
+459 silly cache add   rawSpec: '6.23.0',
+459 silly cache add   spec: '6.23.0',
+459 silly cache add   type: 'version' }
+460 silly addNamed babel-polyfill@6.23.0
+461 verbose addNamed "6.23.0" is a plain semver version for babel-polyfill
+462 silly mapToRegistry name babel-polyfill
+463 silly mapToRegistry using default registry
+464 silly mapToRegistry registry https://registry.npmjs.org/
+465 silly mapToRegistry data Result {
+465 silly mapToRegistry   raw: 'babel-polyfill',
+465 silly mapToRegistry   scope: null,
+465 silly mapToRegistry   escapedName: 'babel-polyfill',
+465 silly mapToRegistry   name: 'babel-polyfill',
+465 silly mapToRegistry   rawSpec: '',
+465 silly mapToRegistry   spec: 'latest',
+465 silly mapToRegistry   type: 'tag' }
+466 silly mapToRegistry uri https://registry.npmjs.org/babel-polyfill
+467 verbose addNameVersion registry:https://registry.npmjs.org/babel-polyfill not in flight; fetching
+468 silly resolveWithNewModule inquirer@3.0.6 checking installable status
+469 silly cache add args [ 'inquirer@3.0.6', null ]
+470 verbose cache add spec inquirer@3.0.6
+471 silly cache add parsed spec Result {
+471 silly cache add   raw: 'inquirer@3.0.6',
+471 silly cache add   scope: null,
+471 silly cache add   escapedName: 'inquirer',
+471 silly cache add   name: 'inquirer',
+471 silly cache add   rawSpec: '3.0.6',
+471 silly cache add   spec: '3.0.6',
+471 silly cache add   type: 'version' }
+472 silly addNamed inquirer@3.0.6
+473 verbose addNamed "3.0.6" is a plain semver version for inquirer
+474 silly mapToRegistry name inquirer
+475 silly mapToRegistry using default registry
+476 silly mapToRegistry registry https://registry.npmjs.org/
+477 silly mapToRegistry data Result {
+477 silly mapToRegistry   raw: 'inquirer',
+477 silly mapToRegistry   scope: null,
+477 silly mapToRegistry   escapedName: 'inquirer',
+477 silly mapToRegistry   name: 'inquirer',
+477 silly mapToRegistry   rawSpec: '',
+477 silly mapToRegistry   spec: 'latest',
+477 silly mapToRegistry   type: 'tag' }
+478 silly mapToRegistry uri https://registry.npmjs.org/inquirer
+479 verbose addNameVersion registry:https://registry.npmjs.org/inquirer not in flight; fetching
+480 verbose get https://registry.npmjs.org/babel-polyfill not expired, no request
+481 silly resolveWithNewModule minimist@1.2.0 checking installable status
+482 silly cache add args [ 'minimist@1.2.0', null ]
+483 verbose cache add spec minimist@1.2.0
+484 silly cache add parsed spec Result {
+484 silly cache add   raw: 'minimist@1.2.0',
+484 silly cache add   scope: null,
+484 silly cache add   escapedName: 'minimist',
+484 silly cache add   name: 'minimist',
+484 silly cache add   rawSpec: '1.2.0',
+484 silly cache add   spec: '1.2.0',
+484 silly cache add   type: 'version' }
+485 silly addNamed minimist@1.2.0
+486 verbose addNamed "1.2.0" is a plain semver version for minimist
+487 silly mapToRegistry name minimist
+488 silly mapToRegistry using default registry
+489 silly mapToRegistry registry https://registry.npmjs.org/
+490 silly mapToRegistry data Result {
+490 silly mapToRegistry   raw: 'minimist',
+490 silly mapToRegistry   scope: null,
+490 silly mapToRegistry   escapedName: 'minimist',
+490 silly mapToRegistry   name: 'minimist',
+490 silly mapToRegistry   rawSpec: '',
+490 silly mapToRegistry   spec: 'latest',
+490 silly mapToRegistry   type: 'tag' }
+491 silly mapToRegistry uri https://registry.npmjs.org/minimist
+492 verbose addNameVersion registry:https://registry.npmjs.org/minimist not in flight; fetching
+493 silly resolveWithNewModule node-fetch@1.6.3 checking installable status
+494 silly cache add args [ 'node-fetch@1.6.3', null ]
+495 verbose cache add spec node-fetch@1.6.3
+496 silly cache add parsed spec Result {
+496 silly cache add   raw: 'node-fetch@1.6.3',
+496 silly cache add   scope: null,
+496 silly cache add   escapedName: 'node-fetch',
+496 silly cache add   name: 'node-fetch',
+496 silly cache add   rawSpec: '1.6.3',
+496 silly cache add   spec: '1.6.3',
+496 silly cache add   type: 'version' }
+497 silly addNamed node-fetch@1.6.3
+498 verbose addNamed "1.6.3" is a plain semver version for node-fetch
+499 silly mapToRegistry name node-fetch
+500 silly mapToRegistry using default registry
+501 silly mapToRegistry registry https://registry.npmjs.org/
+502 silly mapToRegistry data Result {
+502 silly mapToRegistry   raw: 'node-fetch',
+502 silly mapToRegistry   scope: null,
+502 silly mapToRegistry   escapedName: 'node-fetch',
+502 silly mapToRegistry   name: 'node-fetch',
+502 silly mapToRegistry   rawSpec: '',
+502 silly mapToRegistry   spec: 'latest',
+502 silly mapToRegistry   type: 'tag' }
+503 silly mapToRegistry uri https://registry.npmjs.org/node-fetch
+504 verbose addNameVersion registry:https://registry.npmjs.org/node-fetch not in flight; fetching
+505 verbose get https://registry.npmjs.org/inquirer not expired, no request
+506 verbose get https://registry.npmjs.org/minimist not expired, no request
+507 verbose get https://registry.npmjs.org/node-fetch not expired, no request
+508 silly cache afterAdd inquirer@3.0.6
+509 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\inquirer\3.0.6\package\package.json not in flight; writing
+510 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+511 silly cache afterAdd babel-polyfill@6.23.0
+512 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\babel-polyfill\6.23.0\package\package.json not in flight; writing
+513 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+514 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\inquirer\3.0.6\package\package.json written
+515 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\babel-polyfill\6.23.0\package\package.json written
+516 silly cache afterAdd minimist@1.2.0
+517 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\minimist\1.2.0\package\package.json not in flight; writing
+518 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+519 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\minimist\1.2.0\package\package.json written
+520 silly cache afterAdd node-fetch@1.6.3
+521 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\node-fetch\1.6.3\package\package.json not in flight; writing
+522 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+523 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\node-fetch\1.6.3\package\package.json written
+524 silly fetchNamedPackageData ansi-escapes
+525 silly mapToRegistry name ansi-escapes
+526 silly mapToRegistry using default registry
+527 silly mapToRegistry registry https://registry.npmjs.org/
+528 silly mapToRegistry data Result {
+528 silly mapToRegistry   raw: 'ansi-escapes',
+528 silly mapToRegistry   scope: null,
+528 silly mapToRegistry   escapedName: 'ansi-escapes',
+528 silly mapToRegistry   name: 'ansi-escapes',
+528 silly mapToRegistry   rawSpec: '',
+528 silly mapToRegistry   spec: 'latest',
+528 silly mapToRegistry   type: 'tag' }
+529 silly mapToRegistry uri https://registry.npmjs.org/ansi-escapes
+530 silly fetchNamedPackageData cli-cursor
+531 silly mapToRegistry name cli-cursor
+532 silly mapToRegistry using default registry
+533 silly mapToRegistry registry https://registry.npmjs.org/
+534 silly mapToRegistry data Result {
+534 silly mapToRegistry   raw: 'cli-cursor',
+534 silly mapToRegistry   scope: null,
+534 silly mapToRegistry   escapedName: 'cli-cursor',
+534 silly mapToRegistry   name: 'cli-cursor',
+534 silly mapToRegistry   rawSpec: '',
+534 silly mapToRegistry   spec: 'latest',
+534 silly mapToRegistry   type: 'tag' }
+535 silly mapToRegistry uri https://registry.npmjs.org/cli-cursor
+536 silly fetchNamedPackageData cli-width
+537 silly mapToRegistry name cli-width
+538 silly mapToRegistry using default registry
+539 silly mapToRegistry registry https://registry.npmjs.org/
+540 silly mapToRegistry data Result {
+540 silly mapToRegistry   raw: 'cli-width',
+540 silly mapToRegistry   scope: null,
+540 silly mapToRegistry   escapedName: 'cli-width',
+540 silly mapToRegistry   name: 'cli-width',
+540 silly mapToRegistry   rawSpec: '',
+540 silly mapToRegistry   spec: 'latest',
+540 silly mapToRegistry   type: 'tag' }
+541 silly mapToRegistry uri https://registry.npmjs.org/cli-width
+542 silly fetchNamedPackageData external-editor
+543 silly mapToRegistry name external-editor
+544 silly mapToRegistry using default registry
+545 silly mapToRegistry registry https://registry.npmjs.org/
+546 silly mapToRegistry data Result {
+546 silly mapToRegistry   raw: 'external-editor',
+546 silly mapToRegistry   scope: null,
+546 silly mapToRegistry   escapedName: 'external-editor',
+546 silly mapToRegistry   name: 'external-editor',
+546 silly mapToRegistry   rawSpec: '',
+546 silly mapToRegistry   spec: 'latest',
+546 silly mapToRegistry   type: 'tag' }
+547 silly mapToRegistry uri https://registry.npmjs.org/external-editor
+548 silly fetchNamedPackageData figures
+549 silly mapToRegistry name figures
+550 silly mapToRegistry using default registry
+551 silly mapToRegistry registry https://registry.npmjs.org/
+552 silly mapToRegistry data Result {
+552 silly mapToRegistry   raw: 'figures',
+552 silly mapToRegistry   scope: null,
+552 silly mapToRegistry   escapedName: 'figures',
+552 silly mapToRegistry   name: 'figures',
+552 silly mapToRegistry   rawSpec: '',
+552 silly mapToRegistry   spec: 'latest',
+552 silly mapToRegistry   type: 'tag' }
+553 silly mapToRegistry uri https://registry.npmjs.org/figures
+554 silly fetchNamedPackageData mute-stream
+555 silly mapToRegistry name mute-stream
+556 silly mapToRegistry using default registry
+557 silly mapToRegistry registry https://registry.npmjs.org/
+558 silly mapToRegistry data Result {
+558 silly mapToRegistry   raw: 'mute-stream',
+558 silly mapToRegistry   scope: null,
+558 silly mapToRegistry   escapedName: 'mute-stream',
+558 silly mapToRegistry   name: 'mute-stream',
+558 silly mapToRegistry   rawSpec: '',
+558 silly mapToRegistry   spec: 'latest',
+558 silly mapToRegistry   type: 'tag' }
+559 silly mapToRegistry uri https://registry.npmjs.org/mute-stream
+560 silly fetchNamedPackageData run-async
+561 silly mapToRegistry name run-async
+562 silly mapToRegistry using default registry
+563 silly mapToRegistry registry https://registry.npmjs.org/
+564 silly mapToRegistry data Result {
+564 silly mapToRegistry   raw: 'run-async',
+564 silly mapToRegistry   scope: null,
+564 silly mapToRegistry   escapedName: 'run-async',
+564 silly mapToRegistry   name: 'run-async',
+564 silly mapToRegistry   rawSpec: '',
+564 silly mapToRegistry   spec: 'latest',
+564 silly mapToRegistry   type: 'tag' }
+565 silly mapToRegistry uri https://registry.npmjs.org/run-async
+566 silly fetchNamedPackageData rx
+567 silly mapToRegistry name rx
+568 silly mapToRegistry using default registry
+569 silly mapToRegistry registry https://registry.npmjs.org/
+570 silly mapToRegistry data Result {
+570 silly mapToRegistry   raw: 'rx',
+570 silly mapToRegistry   scope: null,
+570 silly mapToRegistry   escapedName: 'rx',
+570 silly mapToRegistry   name: 'rx',
+570 silly mapToRegistry   rawSpec: '',
+570 silly mapToRegistry   spec: 'latest',
+570 silly mapToRegistry   type: 'tag' }
+571 silly mapToRegistry uri https://registry.npmjs.org/rx
+572 silly fetchNamedPackageData string-width
+573 silly mapToRegistry name string-width
+574 silly mapToRegistry using default registry
+575 silly mapToRegistry registry https://registry.npmjs.org/
+576 silly mapToRegistry data Result {
+576 silly mapToRegistry   raw: 'string-width',
+576 silly mapToRegistry   scope: null,
+576 silly mapToRegistry   escapedName: 'string-width',
+576 silly mapToRegistry   name: 'string-width',
+576 silly mapToRegistry   rawSpec: '',
+576 silly mapToRegistry   spec: 'latest',
+576 silly mapToRegistry   type: 'tag' }
+577 silly mapToRegistry uri https://registry.npmjs.org/string-width
+578 silly fetchNamedPackageData through
+579 silly mapToRegistry name through
+580 silly mapToRegistry using default registry
+581 silly mapToRegistry registry https://registry.npmjs.org/
+582 silly mapToRegistry data Result {
+582 silly mapToRegistry   raw: 'through',
+582 silly mapToRegistry   scope: null,
+582 silly mapToRegistry   escapedName: 'through',
+582 silly mapToRegistry   name: 'through',
+582 silly mapToRegistry   rawSpec: '',
+582 silly mapToRegistry   spec: 'latest',
+582 silly mapToRegistry   type: 'tag' }
+583 silly mapToRegistry uri https://registry.npmjs.org/through
+584 verbose request uri https://registry.npmjs.org/ansi-escapes
+585 verbose request no auth needed
+586 info attempt registry request try #1 at 8:18:31 PM
+587 verbose etag W/"1a25381097975666573f47890b4aad35"
+588 verbose lastModified Sat, 26 May 2018 00:28:32 GMT
+589 http request GET https://registry.npmjs.org/ansi-escapes
+590 verbose request uri https://registry.npmjs.org/cli-cursor
+591 verbose request no auth needed
+592 info attempt registry request try #1 at 8:18:31 PM
+593 verbose etag W/"a26f18db6a3f96066d0b621734ad9110"
+594 verbose lastModified Sat, 26 May 2018 19:58:46 GMT
+595 http request GET https://registry.npmjs.org/cli-cursor
+596 verbose request uri https://registry.npmjs.org/external-editor
+597 verbose request no auth needed
+598 info attempt registry request try #1 at 8:18:31 PM
+599 verbose etag W/"2ae715c152eeda7530eab8a56e72fab2"
+600 verbose lastModified Sat, 26 May 2018 08:06:25 GMT
+601 http request GET https://registry.npmjs.org/external-editor
+602 verbose request uri https://registry.npmjs.org/run-async
+603 verbose request no auth needed
+604 info attempt registry request try #1 at 8:18:31 PM
+605 verbose etag W/"8f2f96b3e86ee71f88afa7ad2bcd1096"
+606 verbose lastModified Sun, 27 May 2018 16:22:41 GMT
+607 http request GET https://registry.npmjs.org/run-async
+608 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+609 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+610 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+611 verbose request uri https://registry.npmjs.org/cli-width
+612 verbose request no auth needed
+613 info attempt registry request try #1 at 8:18:31 PM
+614 verbose etag W/"39b1293edc0c47608e5cd4606e97ceba"
+615 verbose lastModified Sat, 26 May 2018 03:44:49 GMT
+616 http request GET https://registry.npmjs.org/cli-width
+617 verbose request uri https://registry.npmjs.org/rx
+618 verbose request no auth needed
+619 info attempt registry request try #1 at 8:18:31 PM
+620 verbose etag W/"bddc8aa08e00051c808ce9ff92cd71bc"
+621 verbose lastModified Sun, 27 May 2018 16:25:38 GMT
+622 http request GET https://registry.npmjs.org/rx
+623 verbose request uri https://registry.npmjs.org/figures
+624 verbose request no auth needed
+625 info attempt registry request try #1 at 8:18:31 PM
+626 verbose etag W/"a6ca457b2d3c926dc46b1d0e680722bd"
+627 verbose lastModified Sun, 27 May 2018 00:38:15 GMT
+628 http request GET https://registry.npmjs.org/figures
+629 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+630 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+631 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+632 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+633 verbose request uri https://registry.npmjs.org/mute-stream
+634 verbose request no auth needed
+635 info attempt registry request try #1 at 8:18:31 PM
+636 verbose etag W/"972970f5ddd69a1c8300e6b07d8de44d"
+637 verbose lastModified Sun, 27 May 2018 08:49:45 GMT
+638 http request GET https://registry.npmjs.org/mute-stream
+639 verbose request uri https://registry.npmjs.org/through
+640 verbose request no auth needed
+641 info attempt registry request try #1 at 8:18:31 PM
+642 verbose etag W/"849e43642f2cb70c9f4d0c15948b761d"
+643 verbose lastModified Sun, 27 May 2018 19:27:53 GMT
+644 http request GET https://registry.npmjs.org/through
+645 verbose request uri https://registry.npmjs.org/string-width
+646 verbose request no auth needed
+647 info attempt registry request try #1 at 8:18:31 PM
+648 verbose etag W/"00444a8ead7b13ffbeebdc9d53e03b78"
+649 verbose lastModified Sun, 27 May 2018 18:25:32 GMT
+650 http request GET https://registry.npmjs.org/string-width
+651 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+652 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+653 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+654 info attempt registry request try #2 at 8:18:41 PM
+655 verbose etag W/"1a25381097975666573f47890b4aad35"
+656 verbose lastModified Sat, 26 May 2018 00:28:32 GMT
+657 http request GET https://registry.npmjs.org/ansi-escapes
+658 info attempt registry request try #2 at 8:18:41 PM
+659 verbose etag W/"a26f18db6a3f96066d0b621734ad9110"
+660 verbose lastModified Sat, 26 May 2018 19:58:46 GMT
+661 http request GET https://registry.npmjs.org/cli-cursor
+662 info attempt registry request try #2 at 8:18:41 PM
+663 verbose etag W/"2ae715c152eeda7530eab8a56e72fab2"
+664 verbose lastModified Sat, 26 May 2018 08:06:25 GMT
+665 http request GET https://registry.npmjs.org/external-editor
+666 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+667 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+668 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+669 info attempt registry request try #2 at 8:18:41 PM
+670 verbose etag W/"8f2f96b3e86ee71f88afa7ad2bcd1096"
+671 verbose lastModified Sun, 27 May 2018 16:22:41 GMT
+672 http request GET https://registry.npmjs.org/run-async
+673 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+674 info attempt registry request try #2 at 8:18:41 PM
+675 verbose etag W/"39b1293edc0c47608e5cd4606e97ceba"
+676 verbose lastModified Sat, 26 May 2018 03:44:49 GMT
+677 http request GET https://registry.npmjs.org/cli-width
+678 info attempt registry request try #2 at 8:18:41 PM
+679 verbose etag W/"bddc8aa08e00051c808ce9ff92cd71bc"
+680 verbose lastModified Sun, 27 May 2018 16:25:38 GMT
+681 http request GET https://registry.npmjs.org/rx
+682 info attempt registry request try #2 at 8:18:41 PM
+683 verbose etag W/"a6ca457b2d3c926dc46b1d0e680722bd"
+684 verbose lastModified Sun, 27 May 2018 00:38:15 GMT
+685 http request GET https://registry.npmjs.org/figures
+686 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+687 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+688 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+689 info attempt registry request try #2 at 8:18:41 PM
+690 verbose etag W/"972970f5ddd69a1c8300e6b07d8de44d"
+691 verbose lastModified Sun, 27 May 2018 08:49:45 GMT
+692 http request GET https://registry.npmjs.org/mute-stream
+693 info attempt registry request try #2 at 8:18:41 PM
+694 verbose etag W/"849e43642f2cb70c9f4d0c15948b761d"
+695 verbose lastModified Sun, 27 May 2018 19:27:53 GMT
+696 http request GET https://registry.npmjs.org/through
+697 info attempt registry request try #2 at 8:18:41 PM
+698 verbose etag W/"00444a8ead7b13ffbeebdc9d53e03b78"
+699 verbose lastModified Sun, 27 May 2018 18:25:32 GMT
+700 http request GET https://registry.npmjs.org/string-width
+701 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+702 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+703 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+704 info attempt registry request try #3 at 8:19:41 PM
+705 verbose etag W/"1a25381097975666573f47890b4aad35"
+706 verbose lastModified Sat, 26 May 2018 00:28:32 GMT
+707 http request GET https://registry.npmjs.org/ansi-escapes
+708 info attempt registry request try #3 at 8:19:41 PM
+709 verbose etag W/"a26f18db6a3f96066d0b621734ad9110"
+710 verbose lastModified Sat, 26 May 2018 19:58:46 GMT
+711 http request GET https://registry.npmjs.org/cli-cursor
+712 info attempt registry request try #3 at 8:19:41 PM
+713 verbose etag W/"2ae715c152eeda7530eab8a56e72fab2"
+714 verbose lastModified Sat, 26 May 2018 08:06:25 GMT
+715 http request GET https://registry.npmjs.org/external-editor
+716 info attempt registry request try #3 at 8:19:41 PM
+717 verbose etag W/"8f2f96b3e86ee71f88afa7ad2bcd1096"
+718 verbose lastModified Sun, 27 May 2018 16:22:41 GMT
+719 http request GET https://registry.npmjs.org/run-async
+720 info attempt registry request try #3 at 8:19:41 PM
+721 verbose etag W/"39b1293edc0c47608e5cd4606e97ceba"
+722 verbose lastModified Sat, 26 May 2018 03:44:49 GMT
+723 http request GET https://registry.npmjs.org/cli-width
+724 info attempt registry request try #3 at 8:19:41 PM
+725 verbose etag W/"bddc8aa08e00051c808ce9ff92cd71bc"
+726 verbose lastModified Sun, 27 May 2018 16:25:38 GMT
+727 http request GET https://registry.npmjs.org/rx
+728 info attempt registry request try #3 at 8:19:41 PM
+729 verbose etag W/"a6ca457b2d3c926dc46b1d0e680722bd"
+730 verbose lastModified Sun, 27 May 2018 00:38:15 GMT
+731 http request GET https://registry.npmjs.org/figures
+732 silly get cb [ 304, undefined ]
+733 verbose etag https://registry.npmjs.org/ansi-escapes from cache
+734 verbose get saving ansi-escapes to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\ansi-escapes\.cache.json
+735 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+736 silly get cb [ 304, undefined ]
+737 verbose etag https://registry.npmjs.org/cli-cursor from cache
+738 verbose get saving cli-cursor to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\cli-cursor\.cache.json
+739 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+740 silly get cb [ 304, undefined ]
+741 verbose etag https://registry.npmjs.org/external-editor from cache
+742 verbose get saving external-editor to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\external-editor\.cache.json
+743 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+744 silly get cb [ 304, undefined ]
+745 verbose etag https://registry.npmjs.org/run-async from cache
+746 verbose get saving run-async to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\run-async\.cache.json
+747 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+748 silly get cb [ 304, undefined ]
+749 verbose etag https://registry.npmjs.org/cli-width from cache
+750 verbose get saving cli-width to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\cli-width\.cache.json
+751 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+752 silly get cb [ 304, undefined ]
+753 verbose etag https://registry.npmjs.org/rx from cache
+754 verbose get saving rx to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\rx\.cache.json
+755 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+756 silly get cb [ 304, undefined ]
+757 verbose etag https://registry.npmjs.org/figures from cache
+758 verbose get saving figures to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\figures\.cache.json
+759 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+760 info attempt registry request try #3 at 8:19:41 PM
+761 verbose etag W/"972970f5ddd69a1c8300e6b07d8de44d"
+762 verbose lastModified Sun, 27 May 2018 08:49:45 GMT
+763 http request GET https://registry.npmjs.org/mute-stream
+764 info attempt registry request try #3 at 8:19:41 PM
+765 verbose etag W/"849e43642f2cb70c9f4d0c15948b761d"
+766 verbose lastModified Sun, 27 May 2018 19:27:53 GMT
+767 http request GET https://registry.npmjs.org/through
+768 info attempt registry request try #3 at 8:19:41 PM
+769 verbose etag W/"00444a8ead7b13ffbeebdc9d53e03b78"
+770 verbose lastModified Sun, 27 May 2018 18:25:32 GMT
+771 http request GET https://registry.npmjs.org/string-width
+772 silly get cb [ 304, undefined ]
+773 verbose etag https://registry.npmjs.org/mute-stream from cache
+774 verbose get saving mute-stream to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\mute-stream\.cache.json
+775 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+776 silly get cb [ 304, undefined ]
+777 verbose etag https://registry.npmjs.org/through from cache
+778 verbose get saving through to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\through\.cache.json
+779 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+780 silly get cb [ 304, undefined ]
+781 verbose etag https://registry.npmjs.org/string-width from cache
+782 verbose get saving string-width to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\string-width\.cache.json
+783 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+784 silly resolveWithNewModule cli-cursor@2.1.0 checking installable status
+785 silly cache add args [ 'cli-cursor@^2.1.0', null ]
+786 verbose cache add spec cli-cursor@^2.1.0
+787 silly cache add parsed spec Result {
+787 silly cache add   raw: 'cli-cursor@^2.1.0',
+787 silly cache add   scope: null,
+787 silly cache add   escapedName: 'cli-cursor',
+787 silly cache add   name: 'cli-cursor',
+787 silly cache add   rawSpec: '^2.1.0',
+787 silly cache add   spec: '>=2.1.0 <3.0.0',
+787 silly cache add   type: 'range' }
+788 silly addNamed cli-cursor@>=2.1.0 <3.0.0
+789 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for cli-cursor
+790 silly addNameRange { name: 'cli-cursor', range: '>=2.1.0 <3.0.0', hasData: false }
+791 silly mapToRegistry name cli-cursor
+792 silly mapToRegistry using default registry
+793 silly mapToRegistry registry https://registry.npmjs.org/
+794 silly mapToRegistry data Result {
+794 silly mapToRegistry   raw: 'cli-cursor',
+794 silly mapToRegistry   scope: null,
+794 silly mapToRegistry   escapedName: 'cli-cursor',
+794 silly mapToRegistry   name: 'cli-cursor',
+794 silly mapToRegistry   rawSpec: '',
+794 silly mapToRegistry   spec: 'latest',
+794 silly mapToRegistry   type: 'tag' }
+795 silly mapToRegistry uri https://registry.npmjs.org/cli-cursor
+796 verbose addNameRange registry:https://registry.npmjs.org/cli-cursor not in flight; fetching
+797 silly resolveWithNewModule external-editor@2.2.0 checking installable status
+798 silly cache add args [ 'external-editor@^2.0.1', null ]
+799 verbose cache add spec external-editor@^2.0.1
+800 silly cache add parsed spec Result {
+800 silly cache add   raw: 'external-editor@^2.0.1',
+800 silly cache add   scope: null,
+800 silly cache add   escapedName: 'external-editor',
+800 silly cache add   name: 'external-editor',
+800 silly cache add   rawSpec: '^2.0.1',
+800 silly cache add   spec: '>=2.0.1 <3.0.0',
+800 silly cache add   type: 'range' }
+801 silly addNamed external-editor@>=2.0.1 <3.0.0
+802 verbose addNamed ">=2.0.1 <3.0.0" is a valid semver range for external-editor
+803 silly addNameRange { name: 'external-editor',
+803 silly addNameRange   range: '>=2.0.1 <3.0.0',
+803 silly addNameRange   hasData: false }
+804 silly mapToRegistry name external-editor
+805 silly mapToRegistry using default registry
+806 silly mapToRegistry registry https://registry.npmjs.org/
+807 silly mapToRegistry data Result {
+807 silly mapToRegistry   raw: 'external-editor',
+807 silly mapToRegistry   scope: null,
+807 silly mapToRegistry   escapedName: 'external-editor',
+807 silly mapToRegistry   name: 'external-editor',
+807 silly mapToRegistry   rawSpec: '',
+807 silly mapToRegistry   spec: 'latest',
+807 silly mapToRegistry   type: 'tag' }
+808 silly mapToRegistry uri https://registry.npmjs.org/external-editor
+809 verbose addNameRange registry:https://registry.npmjs.org/external-editor not in flight; fetching
+810 silly resolveWithNewModule ansi-escapes@1.4.0 checking installable status
+811 silly cache add args [ 'ansi-escapes@^1.1.0', null ]
+812 verbose cache add spec ansi-escapes@^1.1.0
+813 silly cache add parsed spec Result {
+813 silly cache add   raw: 'ansi-escapes@^1.1.0',
+813 silly cache add   scope: null,
+813 silly cache add   escapedName: 'ansi-escapes',
+813 silly cache add   name: 'ansi-escapes',
+813 silly cache add   rawSpec: '^1.1.0',
+813 silly cache add   spec: '>=1.1.0 <2.0.0',
+813 silly cache add   type: 'range' }
+814 silly addNamed ansi-escapes@>=1.1.0 <2.0.0
+815 verbose addNamed ">=1.1.0 <2.0.0" is a valid semver range for ansi-escapes
+816 silly addNameRange { name: 'ansi-escapes', range: '>=1.1.0 <2.0.0', hasData: false }
+817 silly mapToRegistry name ansi-escapes
+818 silly mapToRegistry using default registry
+819 silly mapToRegistry registry https://registry.npmjs.org/
+820 silly mapToRegistry data Result {
+820 silly mapToRegistry   raw: 'ansi-escapes',
+820 silly mapToRegistry   scope: null,
+820 silly mapToRegistry   escapedName: 'ansi-escapes',
+820 silly mapToRegistry   name: 'ansi-escapes',
+820 silly mapToRegistry   rawSpec: '',
+820 silly mapToRegistry   spec: 'latest',
+820 silly mapToRegistry   type: 'tag' }
+821 silly mapToRegistry uri https://registry.npmjs.org/ansi-escapes
+822 verbose addNameRange registry:https://registry.npmjs.org/ansi-escapes not in flight; fetching
+823 silly resolveWithNewModule run-async@2.3.0 checking installable status
+824 silly cache add args [ 'run-async@^2.2.0', null ]
+825 verbose cache add spec run-async@^2.2.0
+826 silly cache add parsed spec Result {
+826 silly cache add   raw: 'run-async@^2.2.0',
+826 silly cache add   scope: null,
+826 silly cache add   escapedName: 'run-async',
+826 silly cache add   name: 'run-async',
+826 silly cache add   rawSpec: '^2.2.0',
+826 silly cache add   spec: '>=2.2.0 <3.0.0',
+826 silly cache add   type: 'range' }
+827 silly addNamed run-async@>=2.2.0 <3.0.0
+828 verbose addNamed ">=2.2.0 <3.0.0" is a valid semver range for run-async
+829 silly addNameRange { name: 'run-async', range: '>=2.2.0 <3.0.0', hasData: false }
+830 silly mapToRegistry name run-async
+831 silly mapToRegistry using default registry
+832 silly mapToRegistry registry https://registry.npmjs.org/
+833 silly mapToRegistry data Result {
+833 silly mapToRegistry   raw: 'run-async',
+833 silly mapToRegistry   scope: null,
+833 silly mapToRegistry   escapedName: 'run-async',
+833 silly mapToRegistry   name: 'run-async',
+833 silly mapToRegistry   rawSpec: '',
+833 silly mapToRegistry   spec: 'latest',
+833 silly mapToRegistry   type: 'tag' }
+834 silly mapToRegistry uri https://registry.npmjs.org/run-async
+835 verbose addNameRange registry:https://registry.npmjs.org/run-async not in flight; fetching
+836 silly resolveWithNewModule cli-width@2.2.0 checking installable status
+837 silly cache add args [ 'cli-width@^2.0.0', null ]
+838 verbose cache add spec cli-width@^2.0.0
+839 silly cache add parsed spec Result {
+839 silly cache add   raw: 'cli-width@^2.0.0',
+839 silly cache add   scope: null,
+839 silly cache add   escapedName: 'cli-width',
+839 silly cache add   name: 'cli-width',
+839 silly cache add   rawSpec: '^2.0.0',
+839 silly cache add   spec: '>=2.0.0 <3.0.0',
+839 silly cache add   type: 'range' }
+840 silly addNamed cli-width@>=2.0.0 <3.0.0
+841 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for cli-width
+842 silly addNameRange { name: 'cli-width', range: '>=2.0.0 <3.0.0', hasData: false }
+843 silly mapToRegistry name cli-width
+844 silly mapToRegistry using default registry
+845 silly mapToRegistry registry https://registry.npmjs.org/
+846 silly mapToRegistry data Result {
+846 silly mapToRegistry   raw: 'cli-width',
+846 silly mapToRegistry   scope: null,
+846 silly mapToRegistry   escapedName: 'cli-width',
+846 silly mapToRegistry   name: 'cli-width',
+846 silly mapToRegistry   rawSpec: '',
+846 silly mapToRegistry   spec: 'latest',
+846 silly mapToRegistry   type: 'tag' }
+847 silly mapToRegistry uri https://registry.npmjs.org/cli-width
+848 verbose addNameRange registry:https://registry.npmjs.org/cli-width not in flight; fetching
+849 silly resolveWithNewModule rx@4.1.0 checking installable status
+850 silly cache add args [ 'rx@^4.1.0', null ]
+851 verbose cache add spec rx@^4.1.0
+852 silly cache add parsed spec Result {
+852 silly cache add   raw: 'rx@^4.1.0',
+852 silly cache add   scope: null,
+852 silly cache add   escapedName: 'rx',
+852 silly cache add   name: 'rx',
+852 silly cache add   rawSpec: '^4.1.0',
+852 silly cache add   spec: '>=4.1.0 <5.0.0',
+852 silly cache add   type: 'range' }
+853 silly addNamed rx@>=4.1.0 <5.0.0
+854 verbose addNamed ">=4.1.0 <5.0.0" is a valid semver range for rx
+855 silly addNameRange { name: 'rx', range: '>=4.1.0 <5.0.0', hasData: false }
+856 silly mapToRegistry name rx
+857 silly mapToRegistry using default registry
+858 silly mapToRegistry registry https://registry.npmjs.org/
+859 silly mapToRegistry data Result {
+859 silly mapToRegistry   raw: 'rx',
+859 silly mapToRegistry   scope: null,
+859 silly mapToRegistry   escapedName: 'rx',
+859 silly mapToRegistry   name: 'rx',
+859 silly mapToRegistry   rawSpec: '',
+859 silly mapToRegistry   spec: 'latest',
+859 silly mapToRegistry   type: 'tag' }
+860 silly mapToRegistry uri https://registry.npmjs.org/rx
+861 verbose addNameRange registry:https://registry.npmjs.org/rx not in flight; fetching
+862 silly resolveWithNewModule figures@2.0.0 checking installable status
+863 silly cache add args [ 'figures@^2.0.0', null ]
+864 verbose cache add spec figures@^2.0.0
+865 silly cache add parsed spec Result {
+865 silly cache add   raw: 'figures@^2.0.0',
+865 silly cache add   scope: null,
+865 silly cache add   escapedName: 'figures',
+865 silly cache add   name: 'figures',
+865 silly cache add   rawSpec: '^2.0.0',
+865 silly cache add   spec: '>=2.0.0 <3.0.0',
+865 silly cache add   type: 'range' }
+866 silly addNamed figures@>=2.0.0 <3.0.0
+867 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for figures
+868 silly addNameRange { name: 'figures', range: '>=2.0.0 <3.0.0', hasData: false }
+869 silly mapToRegistry name figures
+870 silly mapToRegistry using default registry
+871 silly mapToRegistry registry https://registry.npmjs.org/
+872 silly mapToRegistry data Result {
+872 silly mapToRegistry   raw: 'figures',
+872 silly mapToRegistry   scope: null,
+872 silly mapToRegistry   escapedName: 'figures',
+872 silly mapToRegistry   name: 'figures',
+872 silly mapToRegistry   rawSpec: '',
+872 silly mapToRegistry   spec: 'latest',
+872 silly mapToRegistry   type: 'tag' }
+873 silly mapToRegistry uri https://registry.npmjs.org/figures
+874 verbose addNameRange registry:https://registry.npmjs.org/figures not in flight; fetching
+875 silly resolveWithNewModule string-width@2.1.1 checking installable status
+876 silly cache add args [ 'string-width@^2.0.0', null ]
+877 verbose cache add spec string-width@^2.0.0
+878 silly cache add parsed spec Result {
+878 silly cache add   raw: 'string-width@^2.0.0',
+878 silly cache add   scope: null,
+878 silly cache add   escapedName: 'string-width',
+878 silly cache add   name: 'string-width',
+878 silly cache add   rawSpec: '^2.0.0',
+878 silly cache add   spec: '>=2.0.0 <3.0.0',
+878 silly cache add   type: 'range' }
+879 silly addNamed string-width@>=2.0.0 <3.0.0
+880 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for string-width
+881 silly addNameRange { name: 'string-width', range: '>=2.0.0 <3.0.0', hasData: false }
+882 silly mapToRegistry name string-width
+883 silly mapToRegistry using default registry
+884 silly mapToRegistry registry https://registry.npmjs.org/
+885 silly mapToRegistry data Result {
+885 silly mapToRegistry   raw: 'string-width',
+885 silly mapToRegistry   scope: null,
+885 silly mapToRegistry   escapedName: 'string-width',
+885 silly mapToRegistry   name: 'string-width',
+885 silly mapToRegistry   rawSpec: '',
+885 silly mapToRegistry   spec: 'latest',
+885 silly mapToRegistry   type: 'tag' }
+886 silly mapToRegistry uri https://registry.npmjs.org/string-width
+887 verbose addNameRange registry:https://registry.npmjs.org/string-width not in flight; fetching
+888 silly resolveWithNewModule through@2.3.8 checking installable status
+889 silly cache add args [ 'through@^2.3.6', null ]
+890 verbose cache add spec through@^2.3.6
+891 silly cache add parsed spec Result {
+891 silly cache add   raw: 'through@^2.3.6',
+891 silly cache add   scope: null,
+891 silly cache add   escapedName: 'through',
+891 silly cache add   name: 'through',
+891 silly cache add   rawSpec: '^2.3.6',
+891 silly cache add   spec: '>=2.3.6 <3.0.0',
+891 silly cache add   type: 'range' }
+892 silly addNamed through@>=2.3.6 <3.0.0
+893 verbose addNamed ">=2.3.6 <3.0.0" is a valid semver range for through
+894 silly addNameRange { name: 'through', range: '>=2.3.6 <3.0.0', hasData: false }
+895 silly mapToRegistry name through
+896 silly mapToRegistry using default registry
+897 silly mapToRegistry registry https://registry.npmjs.org/
+898 silly mapToRegistry data Result {
+898 silly mapToRegistry   raw: 'through',
+898 silly mapToRegistry   scope: null,
+898 silly mapToRegistry   escapedName: 'through',
+898 silly mapToRegistry   name: 'through',
+898 silly mapToRegistry   rawSpec: '',
+898 silly mapToRegistry   spec: 'latest',
+898 silly mapToRegistry   type: 'tag' }
+899 silly mapToRegistry uri https://registry.npmjs.org/through
+900 verbose addNameRange registry:https://registry.npmjs.org/through not in flight; fetching
+901 silly resolveWithNewModule mute-stream@0.0.7 checking installable status
+902 silly cache add args [ 'mute-stream@0.0.7', null ]
+903 verbose cache add spec mute-stream@0.0.7
+904 silly cache add parsed spec Result {
+904 silly cache add   raw: 'mute-stream@0.0.7',
+904 silly cache add   scope: null,
+904 silly cache add   escapedName: 'mute-stream',
+904 silly cache add   name: 'mute-stream',
+904 silly cache add   rawSpec: '0.0.7',
+904 silly cache add   spec: '0.0.7',
+904 silly cache add   type: 'version' }
+905 silly addNamed mute-stream@0.0.7
+906 verbose addNamed "0.0.7" is a plain semver version for mute-stream
+907 silly mapToRegistry name mute-stream
+908 silly mapToRegistry using default registry
+909 silly mapToRegistry registry https://registry.npmjs.org/
+910 silly mapToRegistry data Result {
+910 silly mapToRegistry   raw: 'mute-stream',
+910 silly mapToRegistry   scope: null,
+910 silly mapToRegistry   escapedName: 'mute-stream',
+910 silly mapToRegistry   name: 'mute-stream',
+910 silly mapToRegistry   rawSpec: '',
+910 silly mapToRegistry   spec: 'latest',
+910 silly mapToRegistry   type: 'tag' }
+911 silly mapToRegistry uri https://registry.npmjs.org/mute-stream
+912 verbose addNameVersion registry:https://registry.npmjs.org/mute-stream not in flight; fetching
+913 verbose get https://registry.npmjs.org/cli-cursor not expired, no request
+914 silly addNameRange number 2 { name: 'cli-cursor', range: '>=2.1.0 <3.0.0', hasData: true }
+915 silly addNameRange versions [ 'cli-cursor',
+915 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '2.0.0', '2.1.0' ] ]
+916 silly addNamed cli-cursor@2.1.0
+917 verbose addNamed "2.1.0" is a plain semver version for cli-cursor
+918 verbose get https://registry.npmjs.org/external-editor not expired, no request
+919 silly addNameRange number 2 { name: 'external-editor',
+919 silly addNameRange   range: '>=2.0.1 <3.0.0',
+919 silly addNameRange   hasData: true }
+920 silly addNameRange versions [ 'external-editor',
+920 silly addNameRange   [ '1.0.1',
+920 silly addNameRange     '1.0.2',
+920 silly addNameRange     '1.0.3',
+920 silly addNameRange     '1.1.0',
+920 silly addNameRange     '1.1.1',
+920 silly addNameRange     '2.0.0',
+920 silly addNameRange     '2.0.1',
+920 silly addNameRange     '2.0.2',
+920 silly addNameRange     '2.0.3',
+920 silly addNameRange     '2.0.4',
+920 silly addNameRange     '2.0.5',
+920 silly addNameRange     '2.1.0',
+920 silly addNameRange     '2.2.0',
+920 silly addNameRange     '3.0.0' ] ]
+921 silly addNamed external-editor@2.2.0
+922 verbose addNamed "2.2.0" is a plain semver version for external-editor
+923 verbose get https://registry.npmjs.org/ansi-escapes not expired, no request
+924 silly addNameRange number 2 { name: 'ansi-escapes', range: '>=1.1.0 <2.0.0', hasData: true }
+925 silly addNameRange versions [ 'ansi-escapes',
+925 silly addNameRange   [ '1.0.0',
+925 silly addNameRange     '1.1.0',
+925 silly addNameRange     '1.1.1',
+925 silly addNameRange     '1.2.0',
+925 silly addNameRange     '1.3.0',
+925 silly addNameRange     '1.4.0',
+925 silly addNameRange     '2.0.0',
+925 silly addNameRange     '3.0.0',
+925 silly addNameRange     '3.1.0' ] ]
+926 silly addNamed ansi-escapes@1.4.0
+927 verbose addNamed "1.4.0" is a plain semver version for ansi-escapes
+928 verbose get https://registry.npmjs.org/cli-width not expired, no request
+929 silly addNameRange number 2 { name: 'cli-width', range: '>=2.0.0 <3.0.0', hasData: true }
+930 silly addNameRange versions [ 'cli-width',
+930 silly addNameRange   [ '1.0.0',
+930 silly addNameRange     '1.0.1',
+930 silly addNameRange     '1.1.0',
+930 silly addNameRange     '1.1.1',
+930 silly addNameRange     '2.0.0',
+930 silly addNameRange     '2.1.0',
+930 silly addNameRange     '2.1.1',
+930 silly addNameRange     '2.2.0' ] ]
+931 silly addNamed cli-width@2.2.0
+932 verbose addNamed "2.2.0" is a plain semver version for cli-width
+933 verbose get https://registry.npmjs.org/run-async not expired, no request
+934 silly addNameRange number 2 { name: 'run-async', range: '>=2.2.0 <3.0.0', hasData: true }
+935 silly addNameRange versions [ 'run-async',
+935 silly addNameRange   [ '0.1.0', '1.0.0', '2.0.0', '2.1.0', '2.2.0', '2.3.0' ] ]
+936 silly addNamed run-async@2.3.0
+937 verbose addNamed "2.3.0" is a plain semver version for run-async
+938 verbose get https://registry.npmjs.org/rx not expired, no request
+939 silly addNameRange number 2 { name: 'rx', range: '>=4.1.0 <5.0.0', hasData: true }
+940 silly addNameRange versions [ 'rx',
+940 silly addNameRange   [ '0.0.1',
+940 silly addNameRange     '0.0.2',
+940 silly addNameRange     '2.0.0',
+940 silly addNameRange     '2.0.1',
+940 silly addNameRange     '2.0.2',
+940 silly addNameRange     '2.1.0',
+940 silly addNameRange     '2.1.1',
+940 silly addNameRange     '2.1.2',
+940 silly addNameRange     '2.1.3',
+940 silly addNameRange     '2.1.4',
+940 silly addNameRange     '2.1.5',
+940 silly addNameRange     '2.1.6',
+940 silly addNameRange     '2.1.7',
+940 silly addNameRange     '2.1.8',
+940 silly addNameRange     '2.1.9',
+940 silly addNameRange     '2.1.10',
+940 silly addNameRange     '2.1.11',
+940 silly addNameRange     '2.1.12',
+940 silly addNameRange     '2.1.13',
+940 silly addNameRange     '2.1.14',
+940 silly addNameRange     '2.1.15',
+940 silly addNameRange     '2.1.16',
+940 silly addNameRange     '2.1.17',
+940 silly addNameRange     '2.1.18',
+940 silly addNameRange     '2.1.20',
+940 silly addNameRange     '2.1.21',
+940 silly addNameRange     '2.2.0',
+940 silly addNameRange     '2.2.2',
+940 silly addNameRange     '2.2.3',
+940 silly addNameRange     '2.2.4',
+940 silly addNameRange     '2.2.5',
+940 silly addNameRange     '2.2.7',
+940 silly addNameRange     '2.2.8',
+940 silly addNameRange     '2.2.9',
+940 silly addNameRange     '2.2.10',
+940 silly addNameRange     '2.2.12',
+940 silly addNameRange     '2.2.13',
+940 silly addNameRange     '2.2.14',
+940 silly addNameRange     '2.2.15',
+940 silly addNameRange     '2.2.16',
+940 silly addNameRange     '2.2.17',
+940 silly addNameRange     '2.2.18',
+940 silly addNameRange     '2.2.19',
+940 silly addNameRange     '2.2.20',
+940 silly addNameRange     '2.2.21',
+940 silly addNameRange     '2.2.22',
+940 silly addNameRange     '2.2.24',
+940 silly addNameRange     '2.2.25',
+940 silly addNameRange     '2.2.26',
+940 silly addNameRange     '2.2.27',
+940 silly addNameRange     '2.2.28',
+940 silly addNameRange     '2.3.0',
+940 silly addNameRange     '2.3.1',
+940 silly addNameRange     '2.3.2',
+940 silly addNameRange     '2.3.3',
+940 silly addNameRange     '2.3.4',
+940 silly addNameRange     '2.3.5',
+940 silly addNameRange     '2.3.6',
+940 silly addNameRange     '2.3.7',
+940 silly addNameRange     '2.3.8',
+940 silly addNameRange     '2.3.9',
+940 silly addNameRange     '2.3.10',
+940 silly addNameRange     '2.3.11',
+940 silly addNameRange     '2.3.12',
+940 silly addNameRange     '2.3.13',
+940 silly addNameRange     '2.3.14',
+940 silly addNameRange     '2.3.16',
+940 silly addNameRange     '2.3.17',
+940 silly addNameRange     '2.3.18',
+940 silly addNameRange     '2.3.19',
+940 silly addNameRange     '2.3.20',
+940 silly addNameRange     '2.3.22',
+940 silly addNameRange     '2.3.23',
+940 silly addNameRange     '2.3.24',
+940 silly addNameRange     '2.3.25',
+940 silly addNameRange     '2.4.0',
+940 silly addNameRange     '2.4.1',
+940 silly addNameRange     '2.4.3',
+940 silly addNameRange     '2.4.5',
+940 silly addNameRange     '2.4.6',
+940 silly addNameRange     '2.4.7',
+940 silly addNameRange     '2.4.8',
+940 silly addNameRange     '2.4.9',
+940 silly addNameRange     '2.4.10',
+940 silly addNameRange     '2.5.0',
+940 silly addNameRange     '2.5.1',
+940 silly addNameRange     '2.5.2',
+940 silly addNameRange     '2.5.3',
+940 silly addNameRange     '3.0.0',
+940 silly addNameRange     '3.0.1',
+940 silly addNameRange     '3.1.0',
+940 silly addNameRange     '3.1.1',
+940 silly addNameRange     '3.1.2',
+940 silly addNameRange     '4.0.0',
+940 silly addNameRange     '4.0.1',
+940 silly addNameRange     '4.0.2',
+940 silly addNameRange     '4.0.3',
+940 silly addNameRange     '4.0.4',
+940 silly addNameRange     '4.0.5',
+940 silly addNameRange     '4.0.6',
+940 silly addNameRange     ... 3 more items ] ]
+941 silly addNamed rx@4.1.0
+942 verbose addNamed "4.1.0" is a plain semver version for rx
+943 verbose get https://registry.npmjs.org/figures not expired, no request
+944 silly addNameRange number 2 { name: 'figures', range: '>=2.0.0 <3.0.0', hasData: true }
+945 silly addNameRange versions [ 'figures',
+945 silly addNameRange   [ '1.0.0',
+945 silly addNameRange     '1.0.1',
+945 silly addNameRange     '1.0.2',
+945 silly addNameRange     '1.1.0',
+945 silly addNameRange     '1.2.0',
+945 silly addNameRange     '1.3.0',
+945 silly addNameRange     '1.3.1',
+945 silly addNameRange     '1.3.2',
+945 silly addNameRange     '1.3.3',
+945 silly addNameRange     '1.3.4',
+945 silly addNameRange     '1.3.5',
+945 silly addNameRange     '1.4.0',
+945 silly addNameRange     '1.5.0',
+945 silly addNameRange     '1.6.0',
+945 silly addNameRange     '1.7.0',
+945 silly addNameRange     '2.0.0' ] ]
+946 silly addNamed figures@2.0.0
+947 verbose addNamed "2.0.0" is a plain semver version for figures
+948 verbose get https://registry.npmjs.org/string-width not expired, no request
+949 silly addNameRange number 2 { name: 'string-width', range: '>=2.0.0 <3.0.0', hasData: true }
+950 silly addNameRange versions [ 'string-width',
+950 silly addNameRange   [ '1.0.0', '1.0.1', '1.0.2', '2.0.0', '2.1.0', '2.1.1' ] ]
+951 silly addNamed string-width@2.1.1
+952 verbose addNamed "2.1.1" is a plain semver version for string-width
+953 verbose get https://registry.npmjs.org/through not expired, no request
+954 silly addNameRange number 2 { name: 'through', range: '>=2.3.6 <3.0.0', hasData: true }
+955 silly addNameRange versions [ 'through',
+955 silly addNameRange   [ '0.0.1',
+955 silly addNameRange     '0.0.2',
+955 silly addNameRange     '0.0.3',
+955 silly addNameRange     '0.0.4',
+955 silly addNameRange     '0.1.0',
+955 silly addNameRange     '0.1.1',
+955 silly addNameRange     '0.1.2',
+955 silly addNameRange     '0.1.3',
+955 silly addNameRange     '0.1.4',
+955 silly addNameRange     '1.0.0',
+955 silly addNameRange     '1.1.0',
+955 silly addNameRange     '1.1.1',
+955 silly addNameRange     '1.1.2',
+955 silly addNameRange     '2.0.0',
+955 silly addNameRange     '2.1.0',
+955 silly addNameRange     '2.2.0',
+955 silly addNameRange     '2.2.1',
+955 silly addNameRange     '2.2.2',
+955 silly addNameRange     '2.2.4',
+955 silly addNameRange     '2.2.5',
+955 silly addNameRange     '2.2.6',
+955 silly addNameRange     '2.2.7',
+955 silly addNameRange     '2.3.1',
+955 silly addNameRange     '2.3.2',
+955 silly addNameRange     '2.3.3',
+955 silly addNameRange     '2.3.4',
+955 silly addNameRange     '2.3.6',
+955 silly addNameRange     '2.3.7',
+955 silly addNameRange     '2.3.8' ] ]
+956 silly addNamed through@2.3.8
+957 verbose addNamed "2.3.8" is a plain semver version for through
+958 verbose get https://registry.npmjs.org/mute-stream not expired, no request
+959 silly cache afterAdd rx@4.1.0
+960 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\rx\4.1.0\package\package.json not in flight; writing
+961 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+962 silly cache afterAdd ansi-escapes@1.4.0
+963 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\ansi-escapes\1.4.0\package\package.json not in flight; writing
+964 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+965 silly cache afterAdd run-async@2.3.0
+966 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\run-async\2.3.0\package\package.json not in flight; writing
+967 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+968 silly cache afterAdd external-editor@2.2.0
+969 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\external-editor\2.2.0\package\package.json not in flight; writing
+970 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+971 silly cache afterAdd figures@2.0.0
+972 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\figures\2.0.0\package\package.json not in flight; writing
+973 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+974 silly cache afterAdd cli-width@2.2.0
+975 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\cli-width\2.2.0\package\package.json not in flight; writing
+976 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+977 silly cache afterAdd through@2.3.8
+978 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\through\2.3.8\package\package.json not in flight; writing
+979 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+980 silly cache afterAdd string-width@2.1.1
+981 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\string-width\2.1.1\package\package.json not in flight; writing
+982 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+983 silly cache afterAdd cli-cursor@2.1.0
+984 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\cli-cursor\2.1.0\package\package.json not in flight; writing
+985 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+986 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\rx\4.1.0\package\package.json written
+987 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\ansi-escapes\1.4.0\package\package.json written
+988 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\run-async\2.3.0\package\package.json written
+989 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\figures\2.0.0\package\package.json written
+990 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\external-editor\2.2.0\package\package.json written
+991 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\through\2.3.8\package\package.json written
+992 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\cli-width\2.2.0\package\package.json written
+993 silly cache afterAdd mute-stream@0.0.7
+994 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mute-stream\0.0.7\package\package.json not in flight; writing
+995 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+996 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\string-width\2.1.1\package\package.json written
+997 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\cli-cursor\2.1.0\package\package.json written
+998 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mute-stream\0.0.7\package\package.json written
+999 silly fetchNamedPackageData restore-cursor
+1000 silly mapToRegistry name restore-cursor
+1001 silly mapToRegistry using default registry
+1002 silly mapToRegistry registry https://registry.npmjs.org/
+1003 silly mapToRegistry data Result {
+1003 silly mapToRegistry   raw: 'restore-cursor',
+1003 silly mapToRegistry   scope: null,
+1003 silly mapToRegistry   escapedName: 'restore-cursor',
+1003 silly mapToRegistry   name: 'restore-cursor',
+1003 silly mapToRegistry   rawSpec: '',
+1003 silly mapToRegistry   spec: 'latest',
+1003 silly mapToRegistry   type: 'tag' }
+1004 silly mapToRegistry uri https://registry.npmjs.org/restore-cursor
+1005 verbose request uri https://registry.npmjs.org/restore-cursor
+1006 verbose request no auth needed
+1007 info attempt registry request try #1 at 8:19:43 PM
+1008 verbose etag W/"a6f08b7a7dd6ca9118984bbf0f32bf8e"
+1009 verbose lastModified Sun, 27 May 2018 15:59:22 GMT
+1010 http request GET https://registry.npmjs.org/restore-cursor
+1011 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1012 info attempt registry request try #2 at 8:19:53 PM
+1013 verbose etag W/"a6f08b7a7dd6ca9118984bbf0f32bf8e"
+1014 verbose lastModified Sun, 27 May 2018 15:59:22 GMT
+1015 http request GET https://registry.npmjs.org/restore-cursor
+1016 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1017 info attempt registry request try #3 at 8:20:53 PM
+1018 verbose etag W/"a6f08b7a7dd6ca9118984bbf0f32bf8e"
+1019 verbose lastModified Sun, 27 May 2018 15:59:22 GMT
+1020 http request GET https://registry.npmjs.org/restore-cursor
+1021 silly get cb [ 304, undefined ]
+1022 verbose etag https://registry.npmjs.org/restore-cursor from cache
+1023 verbose get saving restore-cursor to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\restore-cursor\.cache.json
+1024 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1025 silly resolveWithNewModule restore-cursor@2.0.0 checking installable status
+1026 silly cache add args [ 'restore-cursor@^2.0.0', null ]
+1027 verbose cache add spec restore-cursor@^2.0.0
+1028 silly cache add parsed spec Result {
+1028 silly cache add   raw: 'restore-cursor@^2.0.0',
+1028 silly cache add   scope: null,
+1028 silly cache add   escapedName: 'restore-cursor',
+1028 silly cache add   name: 'restore-cursor',
+1028 silly cache add   rawSpec: '^2.0.0',
+1028 silly cache add   spec: '>=2.0.0 <3.0.0',
+1028 silly cache add   type: 'range' }
+1029 silly addNamed restore-cursor@>=2.0.0 <3.0.0
+1030 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for restore-cursor
+1031 silly addNameRange { name: 'restore-cursor',
+1031 silly addNameRange   range: '>=2.0.0 <3.0.0',
+1031 silly addNameRange   hasData: false }
+1032 silly mapToRegistry name restore-cursor
+1033 silly mapToRegistry using default registry
+1034 silly mapToRegistry registry https://registry.npmjs.org/
+1035 silly mapToRegistry data Result {
+1035 silly mapToRegistry   raw: 'restore-cursor',
+1035 silly mapToRegistry   scope: null,
+1035 silly mapToRegistry   escapedName: 'restore-cursor',
+1035 silly mapToRegistry   name: 'restore-cursor',
+1035 silly mapToRegistry   rawSpec: '',
+1035 silly mapToRegistry   spec: 'latest',
+1035 silly mapToRegistry   type: 'tag' }
+1036 silly mapToRegistry uri https://registry.npmjs.org/restore-cursor
+1037 verbose addNameRange registry:https://registry.npmjs.org/restore-cursor not in flight; fetching
+1038 verbose get https://registry.npmjs.org/restore-cursor not expired, no request
+1039 silly addNameRange number 2 { name: 'restore-cursor',
+1039 silly addNameRange   range: '>=2.0.0 <3.0.0',
+1039 silly addNameRange   hasData: true }
+1040 silly addNameRange versions [ 'restore-cursor', [ '1.0.0', '1.0.1', '2.0.0' ] ]
+1041 silly addNamed restore-cursor@2.0.0
+1042 verbose addNamed "2.0.0" is a plain semver version for restore-cursor
+1043 silly cache afterAdd restore-cursor@2.0.0
+1044 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\restore-cursor\2.0.0\package\package.json not in flight; writing
+1045 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1046 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\restore-cursor\2.0.0\package\package.json written
+1047 silly fetchNamedPackageData onetime
+1048 silly mapToRegistry name onetime
+1049 silly mapToRegistry using default registry
+1050 silly mapToRegistry registry https://registry.npmjs.org/
+1051 silly mapToRegistry data Result {
+1051 silly mapToRegistry   raw: 'onetime',
+1051 silly mapToRegistry   scope: null,
+1051 silly mapToRegistry   escapedName: 'onetime',
+1051 silly mapToRegistry   name: 'onetime',
+1051 silly mapToRegistry   rawSpec: '',
+1051 silly mapToRegistry   spec: 'latest',
+1051 silly mapToRegistry   type: 'tag' }
+1052 silly mapToRegistry uri https://registry.npmjs.org/onetime
+1053 verbose request uri https://registry.npmjs.org/onetime
+1054 verbose request no auth needed
+1055 info attempt registry request try #1 at 8:20:54 PM
+1056 verbose etag W/"9b066a3674503f65f8fb94e40d6629d9"
+1057 verbose lastModified Sun, 27 May 2018 11:12:17 GMT
+1058 http request GET https://registry.npmjs.org/onetime
+1059 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1060 info attempt registry request try #2 at 8:21:04 PM
+1061 verbose etag W/"9b066a3674503f65f8fb94e40d6629d9"
+1062 verbose lastModified Sun, 27 May 2018 11:12:17 GMT
+1063 http request GET https://registry.npmjs.org/onetime
+1064 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1065 info attempt registry request try #3 at 8:22:04 PM
+1066 verbose etag W/"9b066a3674503f65f8fb94e40d6629d9"
+1067 verbose lastModified Sun, 27 May 2018 11:12:17 GMT
+1068 http request GET https://registry.npmjs.org/onetime
+1069 silly get cb [ 304, undefined ]
+1070 verbose etag https://registry.npmjs.org/onetime from cache
+1071 verbose get saving onetime to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\onetime\.cache.json
+1072 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1073 silly resolveWithNewModule onetime@2.0.1 checking installable status
+1074 silly cache add args [ 'onetime@^2.0.0', null ]
+1075 verbose cache add spec onetime@^2.0.0
+1076 silly cache add parsed spec Result {
+1076 silly cache add   raw: 'onetime@^2.0.0',
+1076 silly cache add   scope: null,
+1076 silly cache add   escapedName: 'onetime',
+1076 silly cache add   name: 'onetime',
+1076 silly cache add   rawSpec: '^2.0.0',
+1076 silly cache add   spec: '>=2.0.0 <3.0.0',
+1076 silly cache add   type: 'range' }
+1077 silly addNamed onetime@>=2.0.0 <3.0.0
+1078 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for onetime
+1079 silly addNameRange { name: 'onetime', range: '>=2.0.0 <3.0.0', hasData: false }
+1080 silly mapToRegistry name onetime
+1081 silly mapToRegistry using default registry
+1082 silly mapToRegistry registry https://registry.npmjs.org/
+1083 silly mapToRegistry data Result {
+1083 silly mapToRegistry   raw: 'onetime',
+1083 silly mapToRegistry   scope: null,
+1083 silly mapToRegistry   escapedName: 'onetime',
+1083 silly mapToRegistry   name: 'onetime',
+1083 silly mapToRegistry   rawSpec: '',
+1083 silly mapToRegistry   spec: 'latest',
+1083 silly mapToRegistry   type: 'tag' }
+1084 silly mapToRegistry uri https://registry.npmjs.org/onetime
+1085 verbose addNameRange registry:https://registry.npmjs.org/onetime not in flight; fetching
+1086 verbose get https://registry.npmjs.org/onetime not expired, no request
+1087 silly addNameRange number 2 { name: 'onetime', range: '>=2.0.0 <3.0.0', hasData: true }
+1088 silly addNameRange versions [ 'onetime',
+1088 silly addNameRange   [ '0.1.0', '0.1.1', '1.0.0', '1.1.0', '2.0.0', '2.0.1' ] ]
+1089 silly addNamed onetime@2.0.1
+1090 verbose addNamed "2.0.1" is a plain semver version for onetime
+1091 silly cache afterAdd onetime@2.0.1
+1092 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\onetime\2.0.1\package\package.json not in flight; writing
+1093 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1094 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\onetime\2.0.1\package\package.json written
+1095 silly fetchNamedPackageData mimic-fn
+1096 silly mapToRegistry name mimic-fn
+1097 silly mapToRegistry using default registry
+1098 silly mapToRegistry registry https://registry.npmjs.org/
+1099 silly mapToRegistry data Result {
+1099 silly mapToRegistry   raw: 'mimic-fn',
+1099 silly mapToRegistry   scope: null,
+1099 silly mapToRegistry   escapedName: 'mimic-fn',
+1099 silly mapToRegistry   name: 'mimic-fn',
+1099 silly mapToRegistry   rawSpec: '',
+1099 silly mapToRegistry   spec: 'latest',
+1099 silly mapToRegistry   type: 'tag' }
+1100 silly mapToRegistry uri https://registry.npmjs.org/mimic-fn
+1101 verbose request uri https://registry.npmjs.org/mimic-fn
+1102 verbose request no auth needed
+1103 info attempt registry request try #1 at 8:22:04 PM
+1104 verbose etag W/"c359fff51442b12f8e27888a1be6dec2"
+1105 verbose lastModified Sun, 27 May 2018 08:04:34 GMT
+1106 http request GET https://registry.npmjs.org/mimic-fn
+1107 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1108 info attempt registry request try #2 at 8:22:14 PM
+1109 verbose etag W/"c359fff51442b12f8e27888a1be6dec2"
+1110 verbose lastModified Sun, 27 May 2018 08:04:34 GMT
+1111 http request GET https://registry.npmjs.org/mimic-fn
+1112 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1113 info attempt registry request try #3 at 8:23:14 PM
+1114 verbose etag W/"c359fff51442b12f8e27888a1be6dec2"
+1115 verbose lastModified Sun, 27 May 2018 08:04:34 GMT
+1116 http request GET https://registry.npmjs.org/mimic-fn
+1117 silly get cb [ 304, undefined ]
+1118 verbose etag https://registry.npmjs.org/mimic-fn from cache
+1119 verbose get saving mimic-fn to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\mimic-fn\.cache.json
+1120 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1121 silly resolveWithNewModule mimic-fn@1.2.0 checking installable status
+1122 silly cache add args [ 'mimic-fn@^1.0.0', null ]
+1123 verbose cache add spec mimic-fn@^1.0.0
+1124 silly cache add parsed spec Result {
+1124 silly cache add   raw: 'mimic-fn@^1.0.0',
+1124 silly cache add   scope: null,
+1124 silly cache add   escapedName: 'mimic-fn',
+1124 silly cache add   name: 'mimic-fn',
+1124 silly cache add   rawSpec: '^1.0.0',
+1124 silly cache add   spec: '>=1.0.0 <2.0.0',
+1124 silly cache add   type: 'range' }
+1125 silly addNamed mimic-fn@>=1.0.0 <2.0.0
+1126 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for mimic-fn
+1127 silly addNameRange { name: 'mimic-fn', range: '>=1.0.0 <2.0.0', hasData: false }
+1128 silly mapToRegistry name mimic-fn
+1129 silly mapToRegistry using default registry
+1130 silly mapToRegistry registry https://registry.npmjs.org/
+1131 silly mapToRegistry data Result {
+1131 silly mapToRegistry   raw: 'mimic-fn',
+1131 silly mapToRegistry   scope: null,
+1131 silly mapToRegistry   escapedName: 'mimic-fn',
+1131 silly mapToRegistry   name: 'mimic-fn',
+1131 silly mapToRegistry   rawSpec: '',
+1131 silly mapToRegistry   spec: 'latest',
+1131 silly mapToRegistry   type: 'tag' }
+1132 silly mapToRegistry uri https://registry.npmjs.org/mimic-fn
+1133 verbose addNameRange registry:https://registry.npmjs.org/mimic-fn not in flight; fetching
+1134 verbose get https://registry.npmjs.org/mimic-fn not expired, no request
+1135 silly addNameRange number 2 { name: 'mimic-fn', range: '>=1.0.0 <2.0.0', hasData: true }
+1136 silly addNameRange versions [ 'mimic-fn', [ '1.0.0', '1.1.0', '1.2.0' ] ]
+1137 silly addNamed mimic-fn@1.2.0
+1138 verbose addNamed "1.2.0" is a plain semver version for mimic-fn
+1139 silly cache afterAdd mimic-fn@1.2.0
+1140 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mimic-fn\1.2.0\package\package.json not in flight; writing
+1141 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1142 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\mimic-fn\1.2.0\package\package.json written
+1143 silly fetchNamedPackageData chardet
+1144 silly mapToRegistry name chardet
+1145 silly mapToRegistry using default registry
+1146 silly mapToRegistry registry https://registry.npmjs.org/
+1147 silly mapToRegistry data Result {
+1147 silly mapToRegistry   raw: 'chardet',
+1147 silly mapToRegistry   scope: null,
+1147 silly mapToRegistry   escapedName: 'chardet',
+1147 silly mapToRegistry   name: 'chardet',
+1147 silly mapToRegistry   rawSpec: '',
+1147 silly mapToRegistry   spec: 'latest',
+1147 silly mapToRegistry   type: 'tag' }
+1148 silly mapToRegistry uri https://registry.npmjs.org/chardet
+1149 silly fetchNamedPackageData tmp
+1150 silly mapToRegistry name tmp
+1151 silly mapToRegistry using default registry
+1152 silly mapToRegistry registry https://registry.npmjs.org/
+1153 silly mapToRegistry data Result {
+1153 silly mapToRegistry   raw: 'tmp',
+1153 silly mapToRegistry   scope: null,
+1153 silly mapToRegistry   escapedName: 'tmp',
+1153 silly mapToRegistry   name: 'tmp',
+1153 silly mapToRegistry   rawSpec: '',
+1153 silly mapToRegistry   spec: 'latest',
+1153 silly mapToRegistry   type: 'tag' }
+1154 silly mapToRegistry uri https://registry.npmjs.org/tmp
+1155 verbose request uri https://registry.npmjs.org/chardet
+1156 verbose request no auth needed
+1157 info attempt registry request try #1 at 8:23:14 PM
+1158 verbose etag W/"b9a01d550ddf63a15a029c18cb6763fa"
+1159 verbose lastModified Sat, 26 May 2018 03:25:38 GMT
+1160 http request GET https://registry.npmjs.org/chardet
+1161 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1162 verbose request uri https://registry.npmjs.org/tmp
+1163 verbose request no auth needed
+1164 info attempt registry request try #1 at 8:23:14 PM
+1165 verbose etag W/"d5a3291a5874529f19c8c2084b63154b"
+1166 verbose lastModified Sun, 27 May 2018 19:36:40 GMT
+1167 http request GET https://registry.npmjs.org/tmp
+1168 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1169 info attempt registry request try #2 at 8:23:24 PM
+1170 verbose etag W/"b9a01d550ddf63a15a029c18cb6763fa"
+1171 verbose lastModified Sat, 26 May 2018 03:25:38 GMT
+1172 http request GET https://registry.npmjs.org/chardet
+1173 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1174 info attempt registry request try #2 at 8:23:24 PM
+1175 verbose etag W/"d5a3291a5874529f19c8c2084b63154b"
+1176 verbose lastModified Sun, 27 May 2018 19:36:40 GMT
+1177 http request GET https://registry.npmjs.org/tmp
+1178 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1179 info attempt registry request try #3 at 8:24:24 PM
+1180 verbose etag W/"b9a01d550ddf63a15a029c18cb6763fa"
+1181 verbose lastModified Sat, 26 May 2018 03:25:38 GMT
+1182 http request GET https://registry.npmjs.org/chardet
+1183 silly get cb [ 304, undefined ]
+1184 verbose etag https://registry.npmjs.org/chardet from cache
+1185 verbose get saving chardet to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\chardet\.cache.json
+1186 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1187 silly resolveWithNewModule chardet@0.4.2 checking installable status
+1188 silly cache add args [ 'chardet@^0.4.0', null ]
+1189 verbose cache add spec chardet@^0.4.0
+1190 silly cache add parsed spec Result {
+1190 silly cache add   raw: 'chardet@^0.4.0',
+1190 silly cache add   scope: null,
+1190 silly cache add   escapedName: 'chardet',
+1190 silly cache add   name: 'chardet',
+1190 silly cache add   rawSpec: '^0.4.0',
+1190 silly cache add   spec: '>=0.4.0 <0.5.0',
+1190 silly cache add   type: 'range' }
+1191 silly addNamed chardet@>=0.4.0 <0.5.0
+1192 verbose addNamed ">=0.4.0 <0.5.0" is a valid semver range for chardet
+1193 silly addNameRange { name: 'chardet', range: '>=0.4.0 <0.5.0', hasData: false }
+1194 silly mapToRegistry name chardet
+1195 silly mapToRegistry using default registry
+1196 silly mapToRegistry registry https://registry.npmjs.org/
+1197 silly mapToRegistry data Result {
+1197 silly mapToRegistry   raw: 'chardet',
+1197 silly mapToRegistry   scope: null,
+1197 silly mapToRegistry   escapedName: 'chardet',
+1197 silly mapToRegistry   name: 'chardet',
+1197 silly mapToRegistry   rawSpec: '',
+1197 silly mapToRegistry   spec: 'latest',
+1197 silly mapToRegistry   type: 'tag' }
+1198 silly mapToRegistry uri https://registry.npmjs.org/chardet
+1199 verbose addNameRange registry:https://registry.npmjs.org/chardet not in flight; fetching
+1200 info attempt registry request try #3 at 8:24:24 PM
+1201 verbose etag W/"d5a3291a5874529f19c8c2084b63154b"
+1202 verbose lastModified Sun, 27 May 2018 19:36:40 GMT
+1203 http request GET https://registry.npmjs.org/tmp
+1204 silly get cb [ 304, undefined ]
+1205 verbose etag https://registry.npmjs.org/tmp from cache
+1206 verbose get saving tmp to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\tmp\.cache.json
+1207 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1208 verbose get https://registry.npmjs.org/chardet not expired, no request
+1209 silly addNameRange number 2 { name: 'chardet', range: '>=0.4.0 <0.5.0', hasData: true }
+1210 silly addNameRange versions [ 'chardet',
+1210 silly addNameRange   [ '0.0.3',
+1210 silly addNameRange     '0.0.4',
+1210 silly addNameRange     '0.0.5',
+1210 silly addNameRange     '0.0.6',
+1210 silly addNameRange     '0.0.7',
+1210 silly addNameRange     '0.0.8',
+1210 silly addNameRange     '0.1.0',
+1210 silly addNameRange     '0.3.0',
+1210 silly addNameRange     '0.4.0',
+1210 silly addNameRange     '0.4.1',
+1210 silly addNameRange     '0.4.2',
+1210 silly addNameRange     '0.5.0' ] ]
+1211 silly addNamed chardet@0.4.2
+1212 verbose addNamed "0.4.2" is a plain semver version for chardet
+1213 silly cache afterAdd chardet@0.4.2
+1214 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\chardet\0.4.2\package\package.json not in flight; writing
+1215 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1216 silly resolveWithNewModule tmp@0.0.33 checking installable status
+1217 silly cache add args [ 'tmp@^0.0.33', null ]
+1218 verbose cache add spec tmp@^0.0.33
+1219 silly cache add parsed spec Result {
+1219 silly cache add   raw: 'tmp@^0.0.33',
+1219 silly cache add   scope: null,
+1219 silly cache add   escapedName: 'tmp',
+1219 silly cache add   name: 'tmp',
+1219 silly cache add   rawSpec: '^0.0.33',
+1219 silly cache add   spec: '>=0.0.33 <0.0.34',
+1219 silly cache add   type: 'range' }
+1220 silly addNamed tmp@>=0.0.33 <0.0.34
+1221 verbose addNamed ">=0.0.33 <0.0.34" is a valid semver range for tmp
+1222 silly addNameRange { name: 'tmp', range: '>=0.0.33 <0.0.34', hasData: false }
+1223 silly mapToRegistry name tmp
+1224 silly mapToRegistry using default registry
+1225 silly mapToRegistry registry https://registry.npmjs.org/
+1226 silly mapToRegistry data Result {
+1226 silly mapToRegistry   raw: 'tmp',
+1226 silly mapToRegistry   scope: null,
+1226 silly mapToRegistry   escapedName: 'tmp',
+1226 silly mapToRegistry   name: 'tmp',
+1226 silly mapToRegistry   rawSpec: '',
+1226 silly mapToRegistry   spec: 'latest',
+1226 silly mapToRegistry   type: 'tag' }
+1227 silly mapToRegistry uri https://registry.npmjs.org/tmp
+1228 verbose addNameRange registry:https://registry.npmjs.org/tmp not in flight; fetching
+1229 verbose get https://registry.npmjs.org/tmp not expired, no request
+1230 silly addNameRange number 2 { name: 'tmp', range: '>=0.0.33 <0.0.34', hasData: true }
+1231 silly addNameRange versions [ 'tmp',
+1231 silly addNameRange   [ '0.0.1',
+1231 silly addNameRange     '0.0.2',
+1231 silly addNameRange     '0.0.3',
+1231 silly addNameRange     '0.0.4',
+1231 silly addNameRange     '0.0.5',
+1231 silly addNameRange     '0.0.6',
+1231 silly addNameRange     '0.0.7',
+1231 silly addNameRange     '0.0.8',
+1231 silly addNameRange     '0.0.9',
+1231 silly addNameRange     '0.0.10',
+1231 silly addNameRange     '0.0.11',
+1231 silly addNameRange     '0.0.12',
+1231 silly addNameRange     '0.0.13',
+1231 silly addNameRange     '0.0.14',
+1231 silly addNameRange     '0.0.15',
+1231 silly addNameRange     '0.0.16',
+1231 silly addNameRange     '0.0.17',
+1231 silly addNameRange     '0.0.18',
+1231 silly addNameRange     '0.0.20',
+1231 silly addNameRange     '0.0.21',
+1231 silly addNameRange     '0.0.22',
+1231 silly addNameRange     '0.0.23',
+1231 silly addNameRange     '0.0.24',
+1231 silly addNameRange     '0.0.25',
+1231 silly addNameRange     '0.0.26',
+1231 silly addNameRange     '0.0.27',
+1231 silly addNameRange     '0.0.28',
+1231 silly addNameRange     '0.0.29',
+1231 silly addNameRange     '0.0.30',
+1231 silly addNameRange     '0.0.31',
+1231 silly addNameRange     '0.0.33' ] ]
+1232 silly addNamed tmp@0.0.33
+1233 verbose addNamed "0.0.33" is a plain semver version for tmp
+1234 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\chardet\0.4.2\package\package.json written
+1235 silly cache afterAdd tmp@0.0.33
+1236 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\tmp\0.0.33\package\package.json not in flight; writing
+1237 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1238 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\tmp\0.0.33\package\package.json written
+1239 silly fetchNamedPackageData is-promise
+1240 silly mapToRegistry name is-promise
+1241 silly mapToRegistry using default registry
+1242 silly mapToRegistry registry https://registry.npmjs.org/
+1243 silly mapToRegistry data Result {
+1243 silly mapToRegistry   raw: 'is-promise',
+1243 silly mapToRegistry   scope: null,
+1243 silly mapToRegistry   escapedName: 'is-promise',
+1243 silly mapToRegistry   name: 'is-promise',
+1243 silly mapToRegistry   rawSpec: '',
+1243 silly mapToRegistry   spec: 'latest',
+1243 silly mapToRegistry   type: 'tag' }
+1244 silly mapToRegistry uri https://registry.npmjs.org/is-promise
+1245 verbose request uri https://registry.npmjs.org/is-promise
+1246 verbose request no auth needed
+1247 info attempt registry request try #1 at 8:24:25 PM
+1248 verbose etag W/"6fd51f65d6d4f34d1a15e6224db5fd80"
+1249 verbose lastModified Sat, 26 May 2018 12:52:53 GMT
+1250 http request GET https://registry.npmjs.org/is-promise
+1251 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1252 info attempt registry request try #2 at 8:24:35 PM
+1253 verbose etag W/"6fd51f65d6d4f34d1a15e6224db5fd80"
+1254 verbose lastModified Sat, 26 May 2018 12:52:53 GMT
+1255 http request GET https://registry.npmjs.org/is-promise
+1256 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1257 info attempt registry request try #3 at 8:25:35 PM
+1258 verbose etag W/"6fd51f65d6d4f34d1a15e6224db5fd80"
+1259 verbose lastModified Sat, 26 May 2018 12:52:53 GMT
+1260 http request GET https://registry.npmjs.org/is-promise
+1261 silly get cb [ 304, undefined ]
+1262 verbose etag https://registry.npmjs.org/is-promise from cache
+1263 verbose get saving is-promise to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\is-promise\.cache.json
+1264 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1265 silly resolveWithNewModule is-promise@2.1.0 checking installable status
+1266 silly cache add args [ 'is-promise@^2.1.0', null ]
+1267 verbose cache add spec is-promise@^2.1.0
+1268 silly cache add parsed spec Result {
+1268 silly cache add   raw: 'is-promise@^2.1.0',
+1268 silly cache add   scope: null,
+1268 silly cache add   escapedName: 'is-promise',
+1268 silly cache add   name: 'is-promise',
+1268 silly cache add   rawSpec: '^2.1.0',
+1268 silly cache add   spec: '>=2.1.0 <3.0.0',
+1268 silly cache add   type: 'range' }
+1269 silly addNamed is-promise@>=2.1.0 <3.0.0
+1270 verbose addNamed ">=2.1.0 <3.0.0" is a valid semver range for is-promise
+1271 silly addNameRange { name: 'is-promise', range: '>=2.1.0 <3.0.0', hasData: false }
+1272 silly mapToRegistry name is-promise
+1273 silly mapToRegistry using default registry
+1274 silly mapToRegistry registry https://registry.npmjs.org/
+1275 silly mapToRegistry data Result {
+1275 silly mapToRegistry   raw: 'is-promise',
+1275 silly mapToRegistry   scope: null,
+1275 silly mapToRegistry   escapedName: 'is-promise',
+1275 silly mapToRegistry   name: 'is-promise',
+1275 silly mapToRegistry   rawSpec: '',
+1275 silly mapToRegistry   spec: 'latest',
+1275 silly mapToRegistry   type: 'tag' }
+1276 silly mapToRegistry uri https://registry.npmjs.org/is-promise
+1277 verbose addNameRange registry:https://registry.npmjs.org/is-promise not in flight; fetching
+1278 verbose get https://registry.npmjs.org/is-promise not expired, no request
+1279 silly addNameRange number 2 { name: 'is-promise', range: '>=2.1.0 <3.0.0', hasData: true }
+1280 silly addNameRange versions [ 'is-promise', [ '1.0.0', '1.0.1', '2.0.0', '2.1.0' ] ]
+1281 silly addNamed is-promise@2.1.0
+1282 verbose addNamed "2.1.0" is a plain semver version for is-promise
+1283 silly cache afterAdd is-promise@2.1.0
+1284 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\is-promise\2.1.0\package\package.json not in flight; writing
+1285 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1286 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\is-promise\2.1.0\package\package.json written
+1287 silly fetchNamedPackageData is-fullwidth-code-point
+1288 silly mapToRegistry name is-fullwidth-code-point
+1289 silly mapToRegistry using default registry
+1290 silly mapToRegistry registry https://registry.npmjs.org/
+1291 silly mapToRegistry data Result {
+1291 silly mapToRegistry   raw: 'is-fullwidth-code-point',
+1291 silly mapToRegistry   scope: null,
+1291 silly mapToRegistry   escapedName: 'is-fullwidth-code-point',
+1291 silly mapToRegistry   name: 'is-fullwidth-code-point',
+1291 silly mapToRegistry   rawSpec: '',
+1291 silly mapToRegistry   spec: 'latest',
+1291 silly mapToRegistry   type: 'tag' }
+1292 silly mapToRegistry uri https://registry.npmjs.org/is-fullwidth-code-point
+1293 silly fetchNamedPackageData strip-ansi
+1294 silly mapToRegistry name strip-ansi
+1295 silly mapToRegistry using default registry
+1296 silly mapToRegistry registry https://registry.npmjs.org/
+1297 silly mapToRegistry data Result {
+1297 silly mapToRegistry   raw: 'strip-ansi',
+1297 silly mapToRegistry   scope: null,
+1297 silly mapToRegistry   escapedName: 'strip-ansi',
+1297 silly mapToRegistry   name: 'strip-ansi',
+1297 silly mapToRegistry   rawSpec: '',
+1297 silly mapToRegistry   spec: 'latest',
+1297 silly mapToRegistry   type: 'tag' }
+1298 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+1299 verbose request uri https://registry.npmjs.org/is-fullwidth-code-point
+1300 verbose request no auth needed
+1301 info attempt registry request try #1 at 8:25:36 PM
+1302 verbose etag W/"6ca438f369cb1059d65dde05ff236099"
+1303 verbose lastModified Sun, 27 May 2018 04:59:01 GMT
+1304 http request GET https://registry.npmjs.org/is-fullwidth-code-point
+1305 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1306 verbose request uri https://registry.npmjs.org/strip-ansi
+1307 verbose request no auth needed
+1308 info attempt registry request try #1 at 8:25:36 PM
+1309 verbose etag W/"9b61f21a8a63120ec3119e762be94e5f"
+1310 verbose lastModified Sun, 27 May 2018 18:26:00 GMT
+1311 http request GET https://registry.npmjs.org/strip-ansi
+1312 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1313 info attempt registry request try #2 at 8:25:46 PM
+1314 verbose etag W/"6ca438f369cb1059d65dde05ff236099"
+1315 verbose lastModified Sun, 27 May 2018 04:59:01 GMT
+1316 http request GET https://registry.npmjs.org/is-fullwidth-code-point
+1317 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1318 info attempt registry request try #2 at 8:25:46 PM
+1319 verbose etag W/"9b61f21a8a63120ec3119e762be94e5f"
+1320 verbose lastModified Sun, 27 May 2018 18:26:00 GMT
+1321 http request GET https://registry.npmjs.org/strip-ansi
+1322 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1323 info attempt registry request try #3 at 8:26:46 PM
+1324 verbose etag W/"6ca438f369cb1059d65dde05ff236099"
+1325 verbose lastModified Sun, 27 May 2018 04:59:01 GMT
+1326 http request GET https://registry.npmjs.org/is-fullwidth-code-point
+1327 info attempt registry request try #3 at 8:26:46 PM
+1328 verbose etag W/"9b61f21a8a63120ec3119e762be94e5f"
+1329 verbose lastModified Sun, 27 May 2018 18:26:00 GMT
+1330 http request GET https://registry.npmjs.org/strip-ansi
+1331 silly get cb [ 304, undefined ]
+1332 verbose etag https://registry.npmjs.org/is-fullwidth-code-point from cache
+1333 verbose get saving is-fullwidth-code-point to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\is-fullwidth-code-point\.cache.json
+1334 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1335 silly get cb [ 304, undefined ]
+1336 verbose etag https://registry.npmjs.org/strip-ansi from cache
+1337 verbose get saving strip-ansi to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\strip-ansi\.cache.json
+1338 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1339 silly resolveWithNewModule is-fullwidth-code-point@2.0.0 checking installable status
+1340 silly cache add args [ 'is-fullwidth-code-point@^2.0.0', null ]
+1341 verbose cache add spec is-fullwidth-code-point@^2.0.0
+1342 silly cache add parsed spec Result {
+1342 silly cache add   raw: 'is-fullwidth-code-point@^2.0.0',
+1342 silly cache add   scope: null,
+1342 silly cache add   escapedName: 'is-fullwidth-code-point',
+1342 silly cache add   name: 'is-fullwidth-code-point',
+1342 silly cache add   rawSpec: '^2.0.0',
+1342 silly cache add   spec: '>=2.0.0 <3.0.0',
+1342 silly cache add   type: 'range' }
+1343 silly addNamed is-fullwidth-code-point@>=2.0.0 <3.0.0
+1344 verbose addNamed ">=2.0.0 <3.0.0" is a valid semver range for is-fullwidth-code-point
+1345 silly addNameRange { name: 'is-fullwidth-code-point',
+1345 silly addNameRange   range: '>=2.0.0 <3.0.0',
+1345 silly addNameRange   hasData: false }
+1346 silly mapToRegistry name is-fullwidth-code-point
+1347 silly mapToRegistry using default registry
+1348 silly mapToRegistry registry https://registry.npmjs.org/
+1349 silly mapToRegistry data Result {
+1349 silly mapToRegistry   raw: 'is-fullwidth-code-point',
+1349 silly mapToRegistry   scope: null,
+1349 silly mapToRegistry   escapedName: 'is-fullwidth-code-point',
+1349 silly mapToRegistry   name: 'is-fullwidth-code-point',
+1349 silly mapToRegistry   rawSpec: '',
+1349 silly mapToRegistry   spec: 'latest',
+1349 silly mapToRegistry   type: 'tag' }
+1350 silly mapToRegistry uri https://registry.npmjs.org/is-fullwidth-code-point
+1351 verbose addNameRange registry:https://registry.npmjs.org/is-fullwidth-code-point not in flight; fetching
+1352 silly resolveWithNewModule strip-ansi@4.0.0 checking installable status
+1353 silly cache add args [ 'strip-ansi@^4.0.0', null ]
+1354 verbose cache add spec strip-ansi@^4.0.0
+1355 silly cache add parsed spec Result {
+1355 silly cache add   raw: 'strip-ansi@^4.0.0',
+1355 silly cache add   scope: null,
+1355 silly cache add   escapedName: 'strip-ansi',
+1355 silly cache add   name: 'strip-ansi',
+1355 silly cache add   rawSpec: '^4.0.0',
+1355 silly cache add   spec: '>=4.0.0 <5.0.0',
+1355 silly cache add   type: 'range' }
+1356 silly addNamed strip-ansi@>=4.0.0 <5.0.0
+1357 verbose addNamed ">=4.0.0 <5.0.0" is a valid semver range for strip-ansi
+1358 silly addNameRange { name: 'strip-ansi', range: '>=4.0.0 <5.0.0', hasData: false }
+1359 silly mapToRegistry name strip-ansi
+1360 silly mapToRegistry using default registry
+1361 silly mapToRegistry registry https://registry.npmjs.org/
+1362 silly mapToRegistry data Result {
+1362 silly mapToRegistry   raw: 'strip-ansi',
+1362 silly mapToRegistry   scope: null,
+1362 silly mapToRegistry   escapedName: 'strip-ansi',
+1362 silly mapToRegistry   name: 'strip-ansi',
+1362 silly mapToRegistry   rawSpec: '',
+1362 silly mapToRegistry   spec: 'latest',
+1362 silly mapToRegistry   type: 'tag' }
+1363 silly mapToRegistry uri https://registry.npmjs.org/strip-ansi
+1364 verbose addNameRange registry:https://registry.npmjs.org/strip-ansi not in flight; fetching
+1365 verbose get https://registry.npmjs.org/is-fullwidth-code-point not expired, no request
+1366 silly addNameRange number 2 { name: 'is-fullwidth-code-point',
+1366 silly addNameRange   range: '>=2.0.0 <3.0.0',
+1366 silly addNameRange   hasData: true }
+1367 silly addNameRange versions [ 'is-fullwidth-code-point', [ '1.0.0', '2.0.0' ] ]
+1368 silly addNamed is-fullwidth-code-point@2.0.0
+1369 verbose addNamed "2.0.0" is a plain semver version for is-fullwidth-code-point
+1370 verbose get https://registry.npmjs.org/strip-ansi not expired, no request
+1371 silly addNameRange number 2 { name: 'strip-ansi', range: '>=4.0.0 <5.0.0', hasData: true }
+1372 silly addNameRange versions [ 'strip-ansi',
+1372 silly addNameRange   [ '0.1.0',
+1372 silly addNameRange     '0.1.1',
+1372 silly addNameRange     '0.2.0',
+1372 silly addNameRange     '0.2.1',
+1372 silly addNameRange     '0.2.2',
+1372 silly addNameRange     '0.3.0',
+1372 silly addNameRange     '1.0.0',
+1372 silly addNameRange     '2.0.0',
+1372 silly addNameRange     '2.0.1',
+1372 silly addNameRange     '3.0.0',
+1372 silly addNameRange     '3.0.1',
+1372 silly addNameRange     '4.0.0' ] ]
+1373 silly addNamed strip-ansi@4.0.0
+1374 verbose addNamed "4.0.0" is a plain semver version for strip-ansi
+1375 silly cache afterAdd is-fullwidth-code-point@2.0.0
+1376 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\is-fullwidth-code-point\2.0.0\package\package.json not in flight; writing
+1377 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1378 silly cache afterAdd strip-ansi@4.0.0
+1379 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\strip-ansi\4.0.0\package\package.json not in flight; writing
+1380 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1381 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\is-fullwidth-code-point\2.0.0\package\package.json written
+1382 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\strip-ansi\4.0.0\package\package.json written
+1383 silly fetchNamedPackageData ansi-regex
+1384 silly mapToRegistry name ansi-regex
+1385 silly mapToRegistry using default registry
+1386 silly mapToRegistry registry https://registry.npmjs.org/
+1387 silly mapToRegistry data Result {
+1387 silly mapToRegistry   raw: 'ansi-regex',
+1387 silly mapToRegistry   scope: null,
+1387 silly mapToRegistry   escapedName: 'ansi-regex',
+1387 silly mapToRegistry   name: 'ansi-regex',
+1387 silly mapToRegistry   rawSpec: '',
+1387 silly mapToRegistry   spec: 'latest',
+1387 silly mapToRegistry   type: 'tag' }
+1388 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+1389 verbose request uri https://registry.npmjs.org/ansi-regex
+1390 verbose request no auth needed
+1391 info attempt registry request try #1 at 8:26:46 PM
+1392 verbose etag W/"e12fff8bc4d880f367e56655cc9ef735"
+1393 verbose lastModified Sat, 26 May 2018 00:28:34 GMT
+1394 http request GET https://registry.npmjs.org/ansi-regex
+1395 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1396 info attempt registry request try #2 at 8:26:56 PM
+1397 verbose etag W/"e12fff8bc4d880f367e56655cc9ef735"
+1398 verbose lastModified Sat, 26 May 2018 00:28:34 GMT
+1399 http request GET https://registry.npmjs.org/ansi-regex
+1400 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1401 info attempt registry request try #3 at 8:27:56 PM
+1402 verbose etag W/"e12fff8bc4d880f367e56655cc9ef735"
+1403 verbose lastModified Sat, 26 May 2018 00:28:34 GMT
+1404 http request GET https://registry.npmjs.org/ansi-regex
+1405 silly get cb [ 304, undefined ]
+1406 verbose etag https://registry.npmjs.org/ansi-regex from cache
+1407 verbose get saving ansi-regex to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\ansi-regex\.cache.json
+1408 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1409 silly resolveWithNewModule ansi-regex@3.0.0 checking installable status
+1410 silly cache add args [ 'ansi-regex@^3.0.0', null ]
+1411 verbose cache add spec ansi-regex@^3.0.0
+1412 silly cache add parsed spec Result {
+1412 silly cache add   raw: 'ansi-regex@^3.0.0',
+1412 silly cache add   scope: null,
+1412 silly cache add   escapedName: 'ansi-regex',
+1412 silly cache add   name: 'ansi-regex',
+1412 silly cache add   rawSpec: '^3.0.0',
+1412 silly cache add   spec: '>=3.0.0 <4.0.0',
+1412 silly cache add   type: 'range' }
+1413 silly addNamed ansi-regex@>=3.0.0 <4.0.0
+1414 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for ansi-regex
+1415 silly addNameRange { name: 'ansi-regex', range: '>=3.0.0 <4.0.0', hasData: false }
+1416 silly mapToRegistry name ansi-regex
+1417 silly mapToRegistry using default registry
+1418 silly mapToRegistry registry https://registry.npmjs.org/
+1419 silly mapToRegistry data Result {
+1419 silly mapToRegistry   raw: 'ansi-regex',
+1419 silly mapToRegistry   scope: null,
+1419 silly mapToRegistry   escapedName: 'ansi-regex',
+1419 silly mapToRegistry   name: 'ansi-regex',
+1419 silly mapToRegistry   rawSpec: '',
+1419 silly mapToRegistry   spec: 'latest',
+1419 silly mapToRegistry   type: 'tag' }
+1420 silly mapToRegistry uri https://registry.npmjs.org/ansi-regex
+1421 verbose addNameRange registry:https://registry.npmjs.org/ansi-regex not in flight; fetching
+1422 verbose get https://registry.npmjs.org/ansi-regex not expired, no request
+1423 silly addNameRange number 2 { name: 'ansi-regex', range: '>=3.0.0 <4.0.0', hasData: true }
+1424 silly addNameRange versions [ 'ansi-regex',
+1424 silly addNameRange   [ '0.1.0',
+1424 silly addNameRange     '0.2.0',
+1424 silly addNameRange     '0.2.1',
+1424 silly addNameRange     '1.0.0',
+1424 silly addNameRange     '1.1.0',
+1424 silly addNameRange     '1.1.1',
+1424 silly addNameRange     '2.0.0',
+1424 silly addNameRange     '2.1.1',
+1424 silly addNameRange     '3.0.0' ] ]
+1425 silly addNamed ansi-regex@3.0.0
+1426 verbose addNamed "3.0.0" is a plain semver version for ansi-regex
+1427 silly cache afterAdd ansi-regex@3.0.0
+1428 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\ansi-regex\3.0.0\package\package.json not in flight; writing
+1429 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1430 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\ansi-regex\3.0.0\package\package.json written
+1431 silly fetchNamedPackageData clamp
+1432 silly mapToRegistry name clamp
+1433 silly mapToRegistry using default registry
+1434 silly mapToRegistry registry https://registry.npmjs.org/
+1435 silly mapToRegistry data Result {
+1435 silly mapToRegistry   raw: 'clamp',
+1435 silly mapToRegistry   scope: null,
+1435 silly mapToRegistry   escapedName: 'clamp',
+1435 silly mapToRegistry   name: 'clamp',
+1435 silly mapToRegistry   rawSpec: '',
+1435 silly mapToRegistry   spec: 'latest',
+1435 silly mapToRegistry   type: 'tag' }
+1436 silly mapToRegistry uri https://registry.npmjs.org/clamp
+1437 silly fetchNamedPackageData path-to-regexp
+1438 silly mapToRegistry name path-to-regexp
+1439 silly mapToRegistry using default registry
+1440 silly mapToRegistry registry https://registry.npmjs.org/
+1441 silly mapToRegistry data Result {
+1441 silly mapToRegistry   raw: 'path-to-regexp',
+1441 silly mapToRegistry   scope: null,
+1441 silly mapToRegistry   escapedName: 'path-to-regexp',
+1441 silly mapToRegistry   name: 'path-to-regexp',
+1441 silly mapToRegistry   rawSpec: '',
+1441 silly mapToRegistry   spec: 'latest',
+1441 silly mapToRegistry   type: 'tag' }
+1442 silly mapToRegistry uri https://registry.npmjs.org/path-to-regexp
+1443 silly resolveWithNewModule path-to-regexp@1.7.0 checking installable status
+1444 silly cache add args [ 'path-to-regexp@^1.7.0', null ]
+1445 verbose cache add spec path-to-regexp@^1.7.0
+1446 silly fetchNamedPackageData react-lifecycles-compat
+1447 silly mapToRegistry name react-lifecycles-compat
+1448 silly mapToRegistry using default registry
+1449 silly mapToRegistry registry https://registry.npmjs.org/
+1450 silly mapToRegistry data Result {
+1450 silly mapToRegistry   raw: 'react-lifecycles-compat',
+1450 silly mapToRegistry   scope: null,
+1450 silly mapToRegistry   escapedName: 'react-lifecycles-compat',
+1450 silly mapToRegistry   name: 'react-lifecycles-compat',
+1450 silly mapToRegistry   rawSpec: '',
+1450 silly mapToRegistry   spec: 'latest',
+1450 silly mapToRegistry   type: 'tag' }
+1451 silly mapToRegistry uri https://registry.npmjs.org/react-lifecycles-compat
+1452 silly fetchNamedPackageData react-native-drawer-layout-polyfill
+1453 silly mapToRegistry name react-native-drawer-layout-polyfill
+1454 silly mapToRegistry using default registry
+1455 silly mapToRegistry registry https://registry.npmjs.org/
+1456 silly mapToRegistry data Result {
+1456 silly mapToRegistry   raw: 'react-native-drawer-layout-polyfill',
+1456 silly mapToRegistry   scope: null,
+1456 silly mapToRegistry   escapedName: 'react-native-drawer-layout-polyfill',
+1456 silly mapToRegistry   name: 'react-native-drawer-layout-polyfill',
+1456 silly mapToRegistry   rawSpec: '',
+1456 silly mapToRegistry   spec: 'latest',
+1456 silly mapToRegistry   type: 'tag' }
+1457 silly mapToRegistry uri https://registry.npmjs.org/react-native-drawer-layout-polyfill
+1458 silly fetchNamedPackageData react-native-safe-area-view
+1459 silly mapToRegistry name react-native-safe-area-view
+1460 silly mapToRegistry using default registry
+1461 silly mapToRegistry registry https://registry.npmjs.org/
+1462 silly mapToRegistry data Result {
+1462 silly mapToRegistry   raw: 'react-native-safe-area-view',
+1462 silly mapToRegistry   scope: null,
+1462 silly mapToRegistry   escapedName: 'react-native-safe-area-view',
+1462 silly mapToRegistry   name: 'react-native-safe-area-view',
+1462 silly mapToRegistry   rawSpec: '',
+1462 silly mapToRegistry   spec: 'latest',
+1462 silly mapToRegistry   type: 'tag' }
+1463 silly mapToRegistry uri https://registry.npmjs.org/react-native-safe-area-view
+1464 silly cache add parsed spec Result {
+1464 silly cache add   raw: 'path-to-regexp@^1.7.0',
+1464 silly cache add   scope: null,
+1464 silly cache add   escapedName: 'path-to-regexp',
+1464 silly cache add   name: 'path-to-regexp',
+1464 silly cache add   rawSpec: '^1.7.0',
+1464 silly cache add   spec: '>=1.7.0 <2.0.0',
+1464 silly cache add   type: 'range' }
+1465 silly addNamed path-to-regexp@>=1.7.0 <2.0.0
+1466 verbose addNamed ">=1.7.0 <2.0.0" is a valid semver range for path-to-regexp
+1467 silly addNameRange { name: 'path-to-regexp',
+1467 silly addNameRange   range: '>=1.7.0 <2.0.0',
+1467 silly addNameRange   hasData: false }
+1468 silly mapToRegistry name path-to-regexp
+1469 silly mapToRegistry using default registry
+1470 silly mapToRegistry registry https://registry.npmjs.org/
+1471 silly mapToRegistry data Result {
+1471 silly mapToRegistry   raw: 'path-to-regexp',
+1471 silly mapToRegistry   scope: null,
+1471 silly mapToRegistry   escapedName: 'path-to-regexp',
+1471 silly mapToRegistry   name: 'path-to-regexp',
+1471 silly mapToRegistry   rawSpec: '',
+1471 silly mapToRegistry   spec: 'latest',
+1471 silly mapToRegistry   type: 'tag' }
+1472 silly mapToRegistry uri https://registry.npmjs.org/path-to-regexp
+1473 verbose addNameRange registry:https://registry.npmjs.org/path-to-regexp not in flight; fetching
+1474 silly fetchOtherPackageData react-native-tab-view@github:react-navigation/react-native-tab-view
+1475 silly cache add args [ 'react-native-tab-view@github:react-navigation/react-native-tab-view',
+1475 silly cache add   null ]
+1476 verbose cache add spec react-native-tab-view@github:react-navigation/react-native-tab-view
+1477 silly cache add parsed spec Result {
+1477 silly cache add   raw: 'react-native-tab-view@github:react-navigation/react-native-tab-view',
+1477 silly cache add   scope: null,
+1477 silly cache add   escapedName: 'react-native-tab-view',
+1477 silly cache add   name: 'react-native-tab-view',
+1477 silly cache add   rawSpec: 'github:react-navigation/react-native-tab-view',
+1477 silly cache add   spec: 'github:react-navigation/react-native-tab-view',
+1477 silly cache add   type: 'hosted',
+1477 silly cache add   hosted:
+1477 silly cache add    { type: 'github',
+1477 silly cache add      ssh: 'git@github.com:react-navigation/react-native-tab-view.git',
+1477 silly cache add      sshUrl: 'git+ssh://git@github.com/react-navigation/react-native-tab-view.git',
+1477 silly cache add      httpsUrl: 'git+https://github.com/react-navigation/react-native-tab-view.git',
+1477 silly cache add      gitUrl: 'git://github.com/react-navigation/react-native-tab-view.git',
+1477 silly cache add      shortcut: 'github:react-navigation/react-native-tab-view',
+1477 silly cache add      directUrl: 'https://raw.githubusercontent.com/react-navigation/react-native-tab-view/master/package.json' } }
+1478 verbose addRemoteGit caching github:react-navigation/react-native-tab-view
+1479 verbose addRemoteGit react-navigation/react-native-tab-view is a repository hosted by github
+1480 silly tryGitProto attempting to clone git://github.com/react-navigation/react-native-tab-view.git
+1481 silly tryClone cloning react-navigation/react-native-tab-view via git://github.com/react-navigation/react-native-tab-view.git
+1482 verbose tryClone git-github-com-react-navigation-react-native-tab-view-git-9747c439 not in flight; caching
+1483 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+1484 verbose request uri https://registry.npmjs.org/react-native-drawer-layout-polyfill
+1485 verbose request no auth needed
+1486 info attempt registry request try #1 at 8:27:57 PM
+1487 verbose etag W/"e3b99698eb0a0a67767cab5155cb8b1f"
+1488 verbose lastModified Sun, 27 May 2018 14:25:25 GMT
+1489 http request GET https://registry.npmjs.org/react-native-drawer-layout-polyfill
+1490 verbose request uri https://registry.npmjs.org/clamp
+1491 verbose request no auth needed
+1492 info attempt registry request try #1 at 8:27:57 PM
+1493 verbose etag W/"f0c5ca6e90104c019913356c00947f4d"
+1494 verbose lastModified Sat, 26 May 2018 03:39:21 GMT
+1495 http request GET https://registry.npmjs.org/clamp
+1496 verbose request uri https://registry.npmjs.org/react-lifecycles-compat
+1497 verbose request no auth needed
+1498 info attempt registry request try #1 at 8:27:57 PM
+1499 verbose etag W/"7035494850f8de867485e8a1c118716f"
+1500 verbose lastModified Sun, 27 May 2018 14:08:14 GMT
+1501 http request GET https://registry.npmjs.org/react-lifecycles-compat
+1502 verbose request uri https://registry.npmjs.org/react-native-safe-area-view
+1503 verbose request no auth needed
+1504 info attempt registry request try #1 at 8:27:57 PM
+1505 verbose etag W/"ab795c298e24800f41678cb2780d140c"
+1506 verbose lastModified Mon, 11 Jun 2018 23:51:01 GMT
+1507 http request GET https://registry.npmjs.org/react-native-safe-area-view
+1508 verbose request uri https://registry.npmjs.org/path-to-regexp
+1509 verbose request no auth needed
+1510 info attempt registry request try #1 at 8:27:57 PM
+1511 verbose etag W/"1ac8a9a32f349a225e39a7e2b5d872fd"
+1512 verbose lastModified Sun, 27 May 2018 11:56:55 GMT
+1513 http request GET https://registry.npmjs.org/path-to-regexp
+1514 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1515 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1516 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1517 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1518 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1519 warn addRemoteGit Error: not found: git
+1519 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1519 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1519 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1519 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1519 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1519 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1519 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15)
+1519 warn addRemoteGit  react-navigation/react-native-tab-view resetting remote C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-9747c439 because of error: { Error: not found: git
+1519 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1519 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1519 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1519 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1519 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1519 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1519 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+1520 info resetRemote resetting C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-9747c439 for react-navigation/react-native-tab-view
+1521 silly gentlyRm C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-9747c439 is being purged
+1522 verbose gentlyRm don't care about contents; nuking C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-9747c439
+1523 silly vacuum-fs purging C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-9747c439
+1524 silly tryHTTPS attempting to clone git+https://github.com/react-navigation/react-native-tab-view.git
+1525 silly tryClone cloning react-navigation/react-native-tab-view via git+https://github.com/react-navigation/react-native-tab-view.git
+1526 verbose tryClone git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d not in flight; caching
+1527 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+1528 warn addRemoteGit Error: not found: git
+1528 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1528 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1528 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1528 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1528 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1528 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1528 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15)
+1528 warn addRemoteGit  react-navigation/react-native-tab-view resetting remote C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d because of error: { Error: not found: git
+1528 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1528 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1528 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1528 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1528 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1528 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1528 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+1529 info resetRemote resetting C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d for react-navigation/react-native-tab-view
+1530 silly gentlyRm C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d is being purged
+1531 verbose gentlyRm don't care about contents; nuking C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d
+1532 silly vacuum-fs purging C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d
+1533 silly vacuum-fs quitting because other entries in C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes
+1534 error git clone --template=C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/react-navigation/react-native-tab-view.git C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d: undefined
+1534 error git clone --template=C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/react-navigation/react-native-tab-view.git C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-react-navigation-react-native-tab-view-git-0c5c085d: undefined
+1535 silly trySSH attempting to clone git@github.com:react-navigation/react-native-tab-view.git
+1536 silly tryClone cloning react-navigation/react-native-tab-view via git@github.com:react-navigation/react-native-tab-view.git
+1537 verbose tryClone git-github-com-react-navigation-react-native-tab-view-git-b354594d not in flight; caching
+1538 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+1539 warn addRemoteGit Error: not found: git
+1539 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1539 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1539 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1539 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1539 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1539 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1539 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15)
+1539 warn addRemoteGit  react-navigation/react-native-tab-view resetting remote C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d because of error: { Error: not found: git
+1539 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1539 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1539 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1539 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1539 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1539 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1539 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+1540 info resetRemote resetting C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d for react-navigation/react-native-tab-view
+1541 silly gentlyRm C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d is being purged
+1542 verbose gentlyRm don't care about contents; nuking C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d
+1543 silly vacuum-fs purging C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d
+1544 silly vacuum-fs quitting because other entries in C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes
+1545 error git clone --template=C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react-navigation/react-native-tab-view.git C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d: undefined
+1545 error git clone --template=C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:react-navigation/react-native-tab-view.git C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\_git-remotes\git-github-com-react-navigation-react-native-tab-view-git-b354594d: undefined
+1546 silly fetchPackageMetaData Error: not found: git
+1546 silly fetchPackageMetaData     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1546 silly fetchPackageMetaData     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1546 silly fetchPackageMetaData     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1546 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1546 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1546 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1546 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+1546 silly fetchPackageMetaData  error for react-native-tab-view@github:react-navigation/react-native-tab-view { Error: not found: git
+1546 silly fetchPackageMetaData     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1546 silly fetchPackageMetaData     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1546 silly fetchPackageMetaData     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1546 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1546 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1546 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1546 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+1547 info attempt registry request try #2 at 8:28:07 PM
+1548 verbose etag W/"e3b99698eb0a0a67767cab5155cb8b1f"
+1549 verbose lastModified Sun, 27 May 2018 14:25:25 GMT
+1550 http request GET https://registry.npmjs.org/react-native-drawer-layout-polyfill
+1551 info attempt registry request try #2 at 8:28:07 PM
+1552 verbose etag W/"f0c5ca6e90104c019913356c00947f4d"
+1553 verbose lastModified Sat, 26 May 2018 03:39:21 GMT
+1554 http request GET https://registry.npmjs.org/clamp
+1555 info attempt registry request try #2 at 8:28:07 PM
+1556 verbose etag W/"7035494850f8de867485e8a1c118716f"
+1557 verbose lastModified Sun, 27 May 2018 14:08:14 GMT
+1558 http request GET https://registry.npmjs.org/react-lifecycles-compat
+1559 info attempt registry request try #2 at 8:28:07 PM
+1560 verbose etag W/"ab795c298e24800f41678cb2780d140c"
+1561 verbose lastModified Mon, 11 Jun 2018 23:51:01 GMT
+1562 http request GET https://registry.npmjs.org/react-native-safe-area-view
+1563 info attempt registry request try #2 at 8:28:07 PM
+1564 verbose etag W/"1ac8a9a32f349a225e39a7e2b5d872fd"
+1565 verbose lastModified Sun, 27 May 2018 11:56:55 GMT
+1566 http request GET https://registry.npmjs.org/path-to-regexp
+1567 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1568 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1569 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1570 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1571 info retry will retry, error on last attempt: Error: getaddrinfo ENOENT registry.npmjs.org:443
+1572 info attempt registry request try #3 at 8:29:07 PM
+1573 verbose etag W/"e3b99698eb0a0a67767cab5155cb8b1f"
+1574 verbose lastModified Sun, 27 May 2018 14:25:25 GMT
+1575 http request GET https://registry.npmjs.org/react-native-drawer-layout-polyfill
+1576 info attempt registry request try #3 at 8:29:07 PM
+1577 verbose etag W/"f0c5ca6e90104c019913356c00947f4d"
+1578 verbose lastModified Sat, 26 May 2018 03:39:21 GMT
+1579 http request GET https://registry.npmjs.org/clamp
+1580 info attempt registry request try #3 at 8:29:07 PM
+1581 verbose etag W/"7035494850f8de867485e8a1c118716f"
+1582 verbose lastModified Sun, 27 May 2018 14:08:14 GMT
+1583 http request GET https://registry.npmjs.org/react-lifecycles-compat
+1584 info attempt registry request try #3 at 8:29:07 PM
+1585 verbose etag W/"ab795c298e24800f41678cb2780d140c"
+1586 verbose lastModified Mon, 11 Jun 2018 23:51:01 GMT
+1587 http request GET https://registry.npmjs.org/react-native-safe-area-view
+1588 info attempt registry request try #3 at 8:29:07 PM
+1589 verbose etag W/"1ac8a9a32f349a225e39a7e2b5d872fd"
+1590 verbose lastModified Sun, 27 May 2018 11:56:55 GMT
+1591 http request GET https://registry.npmjs.org/path-to-regexp
+1592 silly get cb [ 304, undefined ]
+1593 verbose etag https://registry.npmjs.org/react-native-drawer-layout-polyfill from cache
+1594 verbose get saving react-native-drawer-layout-polyfill to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-drawer-layout-polyfill\.cache.json
+1595 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1596 silly get cb [ 304, undefined ]
+1597 verbose etag https://registry.npmjs.org/clamp from cache
+1598 verbose get saving clamp to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\clamp\.cache.json
+1599 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1600 silly get cb [ 304, undefined ]
+1601 verbose etag https://registry.npmjs.org/react-lifecycles-compat from cache
+1602 verbose get saving react-lifecycles-compat to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\react-lifecycles-compat\.cache.json
+1603 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1604 silly get cb [ 304, undefined ]
+1605 verbose etag https://registry.npmjs.org/react-native-safe-area-view from cache
+1606 verbose get saving react-native-safe-area-view to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\react-native-safe-area-view\.cache.json
+1607 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1608 silly get cb [ 304, undefined ]
+1609 verbose etag https://registry.npmjs.org/path-to-regexp from cache
+1610 verbose get saving path-to-regexp to C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\registry.npmjs.org\path-to-regexp\.cache.json
+1611 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1612 silly resolveWithNewModule clamp@1.0.1 checking installable status
+1613 silly cache add args [ 'clamp@^1.0.1', null ]
+1614 verbose cache add spec clamp@^1.0.1
+1615 silly cache add parsed spec Result {
+1615 silly cache add   raw: 'clamp@^1.0.1',
+1615 silly cache add   scope: null,
+1615 silly cache add   escapedName: 'clamp',
+1615 silly cache add   name: 'clamp',
+1615 silly cache add   rawSpec: '^1.0.1',
+1615 silly cache add   spec: '>=1.0.1 <2.0.0',
+1615 silly cache add   type: 'range' }
+1616 silly addNamed clamp@>=1.0.1 <2.0.0
+1617 verbose addNamed ">=1.0.1 <2.0.0" is a valid semver range for clamp
+1618 silly addNameRange { name: 'clamp', range: '>=1.0.1 <2.0.0', hasData: false }
+1619 silly mapToRegistry name clamp
+1620 silly mapToRegistry using default registry
+1621 silly mapToRegistry registry https://registry.npmjs.org/
+1622 silly mapToRegistry data Result {
+1622 silly mapToRegistry   raw: 'clamp',
+1622 silly mapToRegistry   scope: null,
+1622 silly mapToRegistry   escapedName: 'clamp',
+1622 silly mapToRegistry   name: 'clamp',
+1622 silly mapToRegistry   rawSpec: '',
+1622 silly mapToRegistry   spec: 'latest',
+1622 silly mapToRegistry   type: 'tag' }
+1623 silly mapToRegistry uri https://registry.npmjs.org/clamp
+1624 verbose addNameRange registry:https://registry.npmjs.org/clamp not in flight; fetching
+1625 silly resolveWithNewModule react-native-drawer-layout-polyfill@1.3.2 checking installable status
+1626 silly cache add args [ 'react-native-drawer-layout-polyfill@^1.3.2', null ]
+1627 verbose cache add spec react-native-drawer-layout-polyfill@^1.3.2
+1628 silly cache add parsed spec Result {
+1628 silly cache add   raw: 'react-native-drawer-layout-polyfill@^1.3.2',
+1628 silly cache add   scope: null,
+1628 silly cache add   escapedName: 'react-native-drawer-layout-polyfill',
+1628 silly cache add   name: 'react-native-drawer-layout-polyfill',
+1628 silly cache add   rawSpec: '^1.3.2',
+1628 silly cache add   spec: '>=1.3.2 <2.0.0',
+1628 silly cache add   type: 'range' }
+1629 silly addNamed react-native-drawer-layout-polyfill@>=1.3.2 <2.0.0
+1630 verbose addNamed ">=1.3.2 <2.0.0" is a valid semver range for react-native-drawer-layout-polyfill
+1631 silly addNameRange { name: 'react-native-drawer-layout-polyfill',
+1631 silly addNameRange   range: '>=1.3.2 <2.0.0',
+1631 silly addNameRange   hasData: false }
+1632 silly mapToRegistry name react-native-drawer-layout-polyfill
+1633 silly mapToRegistry using default registry
+1634 silly mapToRegistry registry https://registry.npmjs.org/
+1635 silly mapToRegistry data Result {
+1635 silly mapToRegistry   raw: 'react-native-drawer-layout-polyfill',
+1635 silly mapToRegistry   scope: null,
+1635 silly mapToRegistry   escapedName: 'react-native-drawer-layout-polyfill',
+1635 silly mapToRegistry   name: 'react-native-drawer-layout-polyfill',
+1635 silly mapToRegistry   rawSpec: '',
+1635 silly mapToRegistry   spec: 'latest',
+1635 silly mapToRegistry   type: 'tag' }
+1636 silly mapToRegistry uri https://registry.npmjs.org/react-native-drawer-layout-polyfill
+1637 verbose addNameRange registry:https://registry.npmjs.org/react-native-drawer-layout-polyfill not in flight; fetching
+1638 silly resolveWithNewModule react-lifecycles-compat@1.1.4 checking installable status
+1639 silly cache add args [ 'react-lifecycles-compat@^1.0.2', null ]
+1640 verbose cache add spec react-lifecycles-compat@^1.0.2
+1641 silly cache add parsed spec Result {
+1641 silly cache add   raw: 'react-lifecycles-compat@^1.0.2',
+1641 silly cache add   scope: null,
+1641 silly cache add   escapedName: 'react-lifecycles-compat',
+1641 silly cache add   name: 'react-lifecycles-compat',
+1641 silly cache add   rawSpec: '^1.0.2',
+1641 silly cache add   spec: '>=1.0.2 <2.0.0',
+1641 silly cache add   type: 'range' }
+1642 silly addNamed react-lifecycles-compat@>=1.0.2 <2.0.0
+1643 verbose addNamed ">=1.0.2 <2.0.0" is a valid semver range for react-lifecycles-compat
+1644 silly addNameRange { name: 'react-lifecycles-compat',
+1644 silly addNameRange   range: '>=1.0.2 <2.0.0',
+1644 silly addNameRange   hasData: false }
+1645 silly mapToRegistry name react-lifecycles-compat
+1646 silly mapToRegistry using default registry
+1647 silly mapToRegistry registry https://registry.npmjs.org/
+1648 silly mapToRegistry data Result {
+1648 silly mapToRegistry   raw: 'react-lifecycles-compat',
+1648 silly mapToRegistry   scope: null,
+1648 silly mapToRegistry   escapedName: 'react-lifecycles-compat',
+1648 silly mapToRegistry   name: 'react-lifecycles-compat',
+1648 silly mapToRegistry   rawSpec: '',
+1648 silly mapToRegistry   spec: 'latest',
+1648 silly mapToRegistry   type: 'tag' }
+1649 silly mapToRegistry uri https://registry.npmjs.org/react-lifecycles-compat
+1650 verbose addNameRange registry:https://registry.npmjs.org/react-lifecycles-compat not in flight; fetching
+1651 silly resolveWithNewModule react-native-safe-area-view@0.7.0 checking installable status
+1652 silly cache add args [ 'react-native-safe-area-view@^0.7.0', null ]
+1653 verbose cache add spec react-native-safe-area-view@^0.7.0
+1654 silly cache add parsed spec Result {
+1654 silly cache add   raw: 'react-native-safe-area-view@^0.7.0',
+1654 silly cache add   scope: null,
+1654 silly cache add   escapedName: 'react-native-safe-area-view',
+1654 silly cache add   name: 'react-native-safe-area-view',
+1654 silly cache add   rawSpec: '^0.7.0',
+1654 silly cache add   spec: '>=0.7.0 <0.8.0',
+1654 silly cache add   type: 'range' }
+1655 silly addNamed react-native-safe-area-view@>=0.7.0 <0.8.0
+1656 verbose addNamed ">=0.7.0 <0.8.0" is a valid semver range for react-native-safe-area-view
+1657 silly addNameRange { name: 'react-native-safe-area-view',
+1657 silly addNameRange   range: '>=0.7.0 <0.8.0',
+1657 silly addNameRange   hasData: false }
+1658 silly mapToRegistry name react-native-safe-area-view
+1659 silly mapToRegistry using default registry
+1660 silly mapToRegistry registry https://registry.npmjs.org/
+1661 silly mapToRegistry data Result {
+1661 silly mapToRegistry   raw: 'react-native-safe-area-view',
+1661 silly mapToRegistry   scope: null,
+1661 silly mapToRegistry   escapedName: 'react-native-safe-area-view',
+1661 silly mapToRegistry   name: 'react-native-safe-area-view',
+1661 silly mapToRegistry   rawSpec: '',
+1661 silly mapToRegistry   spec: 'latest',
+1661 silly mapToRegistry   type: 'tag' }
+1662 silly mapToRegistry uri https://registry.npmjs.org/react-native-safe-area-view
+1663 verbose addNameRange registry:https://registry.npmjs.org/react-native-safe-area-view not in flight; fetching
+1664 verbose get https://registry.npmjs.org/clamp not expired, no request
+1665 silly addNameRange number 2 { name: 'clamp', range: '>=1.0.1 <2.0.0', hasData: true }
+1666 silly addNameRange versions [ 'clamp', [ '0.0.0', '1.0.0', '1.0.1' ] ]
+1667 silly addNamed clamp@1.0.1
+1668 verbose addNamed "1.0.1" is a plain semver version for clamp
+1669 verbose get https://registry.npmjs.org/react-native-drawer-layout-polyfill not expired, no request
+1670 silly addNameRange number 2 { name: 'react-native-drawer-layout-polyfill',
+1670 silly addNameRange   range: '>=1.3.2 <2.0.0',
+1670 silly addNameRange   hasData: true }
+1671 silly addNameRange versions [ 'react-native-drawer-layout-polyfill',
+1671 silly addNameRange   [ '0.0.0',
+1671 silly addNameRange     '1.0.0-0',
+1671 silly addNameRange     '1.0.0-1',
+1671 silly addNameRange     '1.0.0',
+1671 silly addNameRange     '1.0.1',
+1671 silly addNameRange     '1.0.2',
+1671 silly addNameRange     '1.0.3',
+1671 silly addNameRange     '1.0.4',
+1671 silly addNameRange     '1.0.5',
+1671 silly addNameRange     '1.1.0',
+1671 silly addNameRange     '1.1.2',
+1671 silly addNameRange     '1.2.0-0',
+1671 silly addNameRange     '1.2.0',
+1671 silly addNameRange     '1.2.1-0',
+1671 silly addNameRange     '1.2.1',
+1671 silly addNameRange     '1.3.0',
+1671 silly addNameRange     '1.3.1',
+1671 silly addNameRange     '1.3.2',
+1671 silly addNameRange     '2.0.0' ] ]
+1672 silly addNamed react-native-drawer-layout-polyfill@1.3.2
+1673 verbose addNamed "1.3.2" is a plain semver version for react-native-drawer-layout-polyfill
+1674 verbose get https://registry.npmjs.org/react-lifecycles-compat not expired, no request
+1675 silly addNameRange number 2 { name: 'react-lifecycles-compat',
+1675 silly addNameRange   range: '>=1.0.2 <2.0.0',
+1675 silly addNameRange   hasData: true }
+1676 silly addNameRange versions [ 'react-lifecycles-compat',
+1676 silly addNameRange   [ '0.0.0',
+1676 silly addNameRange     '1.0.0',
+1676 silly addNameRange     '1.0.1',
+1676 silly addNameRange     '1.0.2',
+1676 silly addNameRange     '1.1.0',
+1676 silly addNameRange     '1.1.1',
+1676 silly addNameRange     '1.1.2',
+1676 silly addNameRange     '1.1.3',
+1676 silly addNameRange     '1.1.4',
+1676 silly addNameRange     '2.0.0',
+1676 silly addNameRange     '2.0.1',
+1676 silly addNameRange     '3.0.0',
+1676 silly addNameRange     '3.0.1',
+1676 silly addNameRange     '3.0.2',
+1676 silly addNameRange     '2.0.2',
+1676 silly addNameRange     '3.0.3',
+1676 silly addNameRange     '3.0.4' ] ]
+1677 silly addNamed react-lifecycles-compat@1.1.4
+1678 verbose addNamed "1.1.4" is a plain semver version for react-lifecycles-compat
+1679 verbose get https://registry.npmjs.org/react-native-safe-area-view not expired, no request
+1680 silly addNameRange number 2 { name: 'react-native-safe-area-view',
+1680 silly addNameRange   range: '>=0.7.0 <0.8.0',
+1680 silly addNameRange   hasData: true }
+1681 silly addNameRange versions [ 'react-native-safe-area-view',
+1681 silly addNameRange   [ '0.1.0',
+1681 silly addNameRange     '0.2.0',
+1681 silly addNameRange     '0.3.0',
+1681 silly addNameRange     '0.4.0',
+1681 silly addNameRange     '0.5.0',
+1681 silly addNameRange     '0.6.0',
+1681 silly addNameRange     '0.7.0',
+1681 silly addNameRange     '0.8.0',
+1681 silly addNameRange     '0.9.0' ] ]
+1682 silly addNamed react-native-safe-area-view@0.7.0
+1683 verbose addNamed "0.7.0" is a plain semver version for react-native-safe-area-view
+1684 silly addNameRange number 2 { name: 'path-to-regexp',
+1684 silly addNameRange   range: '>=1.7.0 <2.0.0',
+1684 silly addNameRange   hasData: true }
+1685 silly addNameRange versions [ 'path-to-regexp',
+1685 silly addNameRange   [ '0.0.1',
+1685 silly addNameRange     '0.0.2',
+1685 silly addNameRange     '0.1.0',
+1685 silly addNameRange     '0.1.1',
+1685 silly addNameRange     '0.1.2',
+1685 silly addNameRange     '0.2.0',
+1685 silly addNameRange     '0.2.1',
+1685 silly addNameRange     '0.1.3',
+1685 silly addNameRange     '0.2.2',
+1685 silly addNameRange     '0.2.3',
+1685 silly addNameRange     '0.2.4',
+1685 silly addNameRange     '0.2.5',
+1685 silly addNameRange     '1.0.0',
+1685 silly addNameRange     '1.0.1',
+1685 silly addNameRange     '1.0.2',
+1685 silly addNameRange     '1.0.3',
+1685 silly addNameRange     '0.1.4',
+1685 silly addNameRange     '0.1.5',
+1685 silly addNameRange     '1.1.0',
+1685 silly addNameRange     '1.1.1',
+1685 silly addNameRange     '1.2.0',
+1685 silly addNameRange     '0.1.6',
+1685 silly addNameRange     '0.1.7',
+1685 silly addNameRange     '1.2.1',
+1685 silly addNameRange     '1.3.0',
+1685 silly addNameRange     '1.4.0',
+1685 silly addNameRange     '1.5.0',
+1685 silly addNameRange     '1.5.1',
+1685 silly addNameRange     '1.5.2',
+1685 silly addNameRange     '1.5.3',
+1685 silly addNameRange     '1.6.0',
+1685 silly addNameRange     '1.7.0',
+1685 silly addNameRange     '2.0.0',
+1685 silly addNameRange     '2.1.0',
+1685 silly addNameRange     '2.2.0',
+1685 silly addNameRange     '2.2.1' ] ]
+1686 silly addNamed path-to-regexp@1.7.0
+1687 verbose addNamed "1.7.0" is a plain semver version for path-to-regexp
+1688 silly cache afterAdd clamp@1.0.1
+1689 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\clamp\1.0.1\package\package.json not in flight; writing
+1690 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1691 silly cache afterAdd react-native-drawer-layout-polyfill@1.3.2
+1692 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-native-drawer-layout-polyfill\1.3.2\package\package.json not in flight; writing
+1693 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1694 silly cache afterAdd react-lifecycles-compat@1.1.4
+1695 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-lifecycles-compat\1.1.4\package\package.json not in flight; writing
+1696 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1697 silly cache afterAdd react-native-safe-area-view@0.7.0
+1698 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-native-safe-area-view\0.7.0\package\package.json not in flight; writing
+1699 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1700 silly cache afterAdd path-to-regexp@1.7.0
+1701 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\path-to-regexp\1.7.0\package\package.json not in flight; writing
+1702 verbose correctMkdir C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1703 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\clamp\1.0.1\package\package.json written
+1704 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-native-drawer-layout-polyfill\1.3.2\package\package.json written
+1705 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-lifecycles-compat\1.1.4\package\package.json written
+1706 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\react-native-safe-area-view\0.7.0\package\package.json written
+1707 verbose afterAdd C:\Users\Aphrem Thomas\AppData\Roaming\npm-cache\path-to-regexp\1.7.0\package\package.json written
+1708 silly rollbackFailedOptional Starting
+1709 silly rollbackFailedOptional Finishing
+1710 silly runTopLevelLifecycles Finishing
+1711 silly install printInstalled
+1712 verbose stack Error: not found: git
+1712 verbose stack     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+1712 verbose stack     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+1712 verbose stack     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+1712 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+1712 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+1712 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+1712 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+1713 verbose cwd C:\Users\Aphrem Thomas\reachPhoneExpo\reach-mobile
+1714 error Windows_NT 10.0.16299
+1715 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "react-native-router-flux" "--save"
+1716 error node v6.9.1
+1717 error npm  v3.10.8
+1718 error code ENOGIT
+1719 error not found: git
+1720 error Failed using git.
+1720 error This is most likely not a problem with npm itself.
+1720 error Please check if you have git installed and in your PATH.
+1721 verbose exit [ 1, true ]
