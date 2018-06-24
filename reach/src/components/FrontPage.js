@@ -30,6 +30,9 @@ class FrontPage extends React.Component{
                     <Button title='Refugee management' color='orange' onPress={()=>Actions.refugeesecondpage()}/>
                     <Button title='Supply Chain' color='orange'/>
                 </View>
+                <View >
+                    <Text>Powered by Blockchain</Text>
+                </View>
             </View>
         );
     
@@ -39,7 +42,7 @@ const styles = StyleSheet.create({
     viewStyle:{
         flex:1,
         flexDirection:'column',
-        backgroundColor:'#222',
+        backgroundColor:'#FFF',
         alignItems:'center',
         justifyContent:'center',
            
@@ -48,11 +51,11 @@ const styles = StyleSheet.create({
        flexDirection:'row',
     },
     redTextStyle:{
-        color:'red',
+        color:'#FF0000',
         fontSize:30
     },
     whiteTextStyle:{
-        color:'white',
+        color:'black',
         fontSize:30
     }
 

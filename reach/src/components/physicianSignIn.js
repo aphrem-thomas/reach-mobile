@@ -1,6 +1,7 @@
 import React from 'react';
 import RectNative from 'react-native';
-import {Text,View,StyleSheet} from 'react-native';
+import {LayoutAnimation} from 'react-native';
+import {Text,View,StyleSheet,KeyboardAvoidingView,ScrollView} from 'react-native';
 import Button from './Button.js';
 import {Actions} from 'react-native-router-flux';
 import InputText from './InputText.js';
@@ -13,18 +14,24 @@ class PhysicianSignIn extends React.Component{
    onPress(){
 
    }
+   
     render(){
         return(
-            <View style={styles.viewStyle} >
+            
+            <KeyboardAvoidingView style={styles.viewStyle} behavior={"position"} enabled>
+            <Text style={{flex:1, fontSize:30}}>Physician signin</Text>
+            <View style={{flex:4}}>
                 <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text)=>{
                     this.props.dispatch(actionCreator.refugeeIdField(text))
                 }}/>
                 <InputText label="Physician ID" value={this.props.physicianId} onChangeText={(text)=>{
                     this.props.dispatch(actionCreator.physicianIdField(text))
                 }}/>
-                <InputText label="Password"/>
+                <InputText secureTextEntry={true} label="Password"/>
                 <Button title="submit"/>
-            </View>
+                </View>
+            </KeyboardAvoidingView>
+            
         );
     
     }
@@ -33,7 +40,7 @@ const styles = StyleSheet.create({
     viewStyle:{
         flex:1,
         flexDirection:'column',
-        backgroundColor:'#222',
+        backgroundColor:'#FFF',
         justifyContent:'center'      
     }
    

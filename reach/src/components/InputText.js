@@ -12,10 +12,10 @@ class PhysicianSignIn extends React.Component{
         return(
             <View style={styles.viewStyle}>
                 <Text style={styles.textStyle}>{this.props.label}</Text>
-                <TextInput onChangeText={this.props.onChangeText}
+                <TextInput onChangeText={this.props.onChangeText} secureTextEntry={this.props.secureTextEntry}
                     underlineColorAndroid ='transparent'
                     style={styles.inputStyle} 
-                    value={this.props.value}/>
+                    placeholder={this.props.value}/>
             </View>
         );
     
@@ -25,7 +25,7 @@ class PhysicianSignIn extends React.Component{
 const styles = StyleSheet.create({
     viewStyle:{
         flexDirection:'row',
-        backgroundColor:'#222',
+        backgroundColor:'#FFF',
         justifyContent:'center',
         alignItems:'center',
         marginTop:10,
@@ -34,14 +34,17 @@ const styles = StyleSheet.create({
         height:50,
         width:150,
         borderWidth:1,
-        borderColor:'#f8a557',
+        borderColor:'#007aff',
         borderRadius:10,
         backgroundColor:'#FFF',
         color:'#000',
+        alignItems:'center',
+        justifyContent:'center',
+        paddingLeft:5
         
     },
     textStyle:{
-        color:"#FFF",
+        color:"#000",
         paddingLeft:5,
         paddingRight:5
     }

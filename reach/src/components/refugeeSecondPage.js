@@ -1,21 +1,54 @@
 import React from 'react';
 import RectNative from 'react-native';
-import {Text,View,StyleSheet} from 'react-native';
-import Button from './Button.js';
+import {Text,View,StyleSheet, KeyboardAvoidingView, LayoutAnimation,Platform,Button} from 'react-native';
+//import Button from './Button.js';
 import PhysicianSignIn from './physicianSignIn.js';
 import RefugeeSignIn from './refugeeSignIn.js';
 import Navbar from './Navbar.js'
+import {UIManager} from 'react-native';
 class RefugeeSecondPage extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={option:"patient",
+        button1:true,
+        button2:false
+    };
+        if (Platform.OS === 'android') {
+            UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
+          }
+    }
+    options(){
+        if (this.state.option==="patient"){
+            return ( 
+            <View style={styles.signinStyle}>
+                <RefugeeSignIn/>
+            </View>);
+        }
+        else{
+            return(
+            <View style={styles.signinStyle}>
+                <PhysicianSignIn/>
+            </View>
+            );
+        }
+    }
+    clickhandlePatient(){
+        this.setState({option:"patient", button2:false, button1:true});
+    }
+    clickhandlePhysician(){
+        this.setState({option:"physician", button2:true, button1:false});
+    }
+    componentWillUpdate(){
+        LayoutAnimation.linear();
+   }
     render(){
         return(
             <View style={styles.viewStyle1}>
             <View style={styles.buttonStyle}>
-                    <Button title='Patient' color='orange'/>
-                    <Button title='Doctor' color='orange'/>
+                    <Button title='Patient' disabled={this.state.button1}  onPress={this.clickhandlePatient.bind(this)}/>
+                    <Button title='Doctor' disabled={this.state.button2} onPress={this.clickhandlePhysician.bind(this)}/>
             </View>
-            <View style={styles.signinStyle}>
-                <RefugeeSignIn/>
-            </View>
+            {this.options()}
            </View>
            
         );
@@ -26,20 +59,20 @@ const styles = StyleSheet.create({
     viewStyle1:{
         flex:1,
         flexDirection:'column',
-        backgroundColor:'#222',
+        backgroundColor:'#FFF',
         justifyContent:'center'      
     },
     buttonStyle:{
         flex:1,
         flexDirection:'row',
         height:30,
-        backgroundColor:'#222',
+        backgroundColor:'#FFF',
         justifyContent:'center',
         alignItems:'center'         
     },
     signinStyle:{
         flex:5,
-        backgroundColor:'#222',
+        backgroundColor:'#FFF',
         justifyContent:'center',
         alignItems:'center',
         

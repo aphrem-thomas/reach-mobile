@@ -6,7 +6,7 @@ import FrontPage from './FrontPage.js'
 class Button extends React.Component{
     render(){
         return(
-            <TouchableOpacity onPress={this.props.onPress} style={styles.buttonstyle}>
+            <TouchableOpacity activeOpacity={this.props.disabled ? 1 : 0.7} disabled={this.props.disabled} onPress={this.props.onPress} style={styles.buttonstyle}>
                 <Text style={styles.textStyle}>{this.props.title}</Text>
             </TouchableOpacity>
         );
@@ -17,17 +17,19 @@ const styles = StyleSheet.create({
     buttonstyle:{
         height:60,
         alignSelf:'stretch',
-        backgroundColor:'#f8a557',
+        backgroundColor:'#007aff',
         alignItems:'center',
         justifyContent:'center',
+        borderWidth:1,
         borderRadius:30,
+        borderColor:'#007aff',
         marginTop:10,
         marginBottom:10,
         marginLeft:10,
         marginRight:10
     },
     textStyle:{
-        color:'black',
+        color:'#fff',
         fontSize:20,
         padding:10,
     }

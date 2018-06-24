@@ -10,6 +10,8 @@ import {refreshUpdate,doctorDetails,refugeeIdField,physicianIdField} from './src
 import {refresh_vaccine,refresh_medicine,refresh_syringe,refresh_blood,VendorDetails} from './src/components/reducers/reducer_supply.js';
 import { applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
+import UserPage from './src/components/UserPage.js';
+import UserOption from './src/components/UserOption.js';
 
 const TheReducer=combineReducers({
   PhysicianField:physicianIdField,
@@ -29,10 +31,14 @@ const store= createStore(TheReducer,applyMiddleware(thunk));
 const App=()=>{
     return(
       <Provider store={store}>
-        <Router navigationBarStyle={{ backgroundColor:'#4c4a49'}} titleStyle={{color:'#f9f9f9'}} >
+        <Router navigationBarStyle={{ backgroundColor:'#e8edf4'}} titleStyle={{color:'#000'}} >
             <Stack key="root">
                 <Scene title="ReACH" key="firstpage" component={FrontPage} initial/>
-                <Scene title="RefugeeSecondPage" key="refugeesecondpage" component={RefugeeSecondPage} />
+                <Scene title="RMS" key="refugeesecondpage" component={RefugeeSecondPage} />
+                {/* <Scene title="SupplyChain" key="supplychain" component={SupplySecondPage} /> */}
+                <Scene title="User Page" key="userpage" component={UserPage} >
+                  <Scene title="ReACH" key="useroptions" component={UserOption} />                
+                </Scene>
 
             </Stack>
         </Router>
