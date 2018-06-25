@@ -21,7 +21,7 @@ render(){
     let medicalRecords=[{"date":"1/2/2018", "hospital":"akfjldk","issue":"jdljkfds","physician":"kjdkfaf#dan","admitDate":"03/25/2015","dischargeDate":"2/5/2018","prescription":"fa;ldkfj;"}];
     const state = this.state;
     const tableData = [];
-    medicalRecords.map((item)=>{
+    this.props.refugee.medicalRecords.map((item)=>{
         let temp=[];
         let doc = item.physician.split('#');
         temp.push(item.date);

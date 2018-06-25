@@ -15,15 +15,15 @@ class UserLabel extends React.Component{
                 <View style={styles.userinfovertical}>
                 <View style={styles.userinfohorizontal}>
                 <Text>Name : </Text>
-                <Text style={styles.textStyle}>{this.props.refugee.name}</Text>
+                <Text style={styles.textStyle}>{this.props.refugee.firstName}</Text>
                 </View>
-                <View>
+                <View style={styles.userinfohorizontal}>
                 <Text>Date of birth: </Text>
                 <Text style={styles.textStyle}>{this.props.refugee.dob}</Text>
                 </View>
-                <View>
+                <View style={styles.userinfohorizontal}>
                 <Text>Nationality : </Text>
-                <Text style={styles.textStyle}>{this.props.refugee.country}</Text>
+                <Text style={styles.textStyle}>{this.props.refugee.nationality}</Text>
                 </View>
                </View>
             </View>

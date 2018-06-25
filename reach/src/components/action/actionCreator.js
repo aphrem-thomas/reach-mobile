@@ -14,7 +14,7 @@ export function physicianIdField(value){
 }
 
 export function fetch(id, callback){
-    console.log("inside fetch");
+    console.log("inside fetch with id:"+id);
     return(function(dispatch){
         return axios.get("https://hps-bna-client.mybluemix.net/getAssetDetails",{
             params: {

@@ -13,7 +13,7 @@ class RefugeeSignIn extends React.Component{
         
     }
    onPress(){
-        this.props.dispatch(actionCreator.fetch(this.props.RefugeeField)).then(()=>{
+        this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(()=>{
             Actions.userpage();
         })
    }
