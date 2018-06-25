@@ -1,6 +1,6 @@
 import React from 'react';
 import RectNative from 'react-native';
-import {Text,View,StyleSheet, KeyboardAvoidingView, LayoutAnimation,Platform,Button} from 'react-native';
+import {Text,View,StyleSheet, KeyboardAvoidingView, LayoutAnimation,Platform,Button, ScrollView} from 'react-native';
 //import Button from './Button.js';
 import PhysicianSignIn from './physicianSignIn.js';
 import RefugeeSignIn from './refugeeSignIn.js';
@@ -43,13 +43,17 @@ class RefugeeSecondPage extends React.Component{
    }
     render(){
         return(
+            
             <View style={styles.viewStyle1}>
             <View style={styles.buttonStyle}>
                     <Button title='Patient' disabled={this.state.button1}  onPress={this.clickhandlePatient.bind(this)}/>
                     <Button title='Doctor' disabled={this.state.button2} onPress={this.clickhandlePhysician.bind(this)}/>
             </View>
+            
             {this.options()}
+            
            </View>
+           
            
         );
     

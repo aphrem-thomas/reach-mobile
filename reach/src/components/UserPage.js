@@ -8,7 +8,7 @@ import UserLabel from './UserLabel.js';
 import { Router, Scene, Stack } from 'react-native-router-flux';
 import UserOption from './UserOption.js';
 import UserMedicalRecord from './UserMedicalRecord.js';
-
+import UserVaccineRecord from './UserVaccineRecord.js';
 class UserPage extends React.Component {
     // clickHandle1(){
     //     Actions.refugeesecondpage();
@@ -54,7 +54,7 @@ class UserPage extends React.Component {
         if(this.state.medicalbutton)
             return(<UserMedicalRecord/>);
         else if(this.state.vaccinebutton)
-            return null;
+            return (<UserVaccineRecord/>);
         else if(this.state.vaccinebutton)
             return null;
         else

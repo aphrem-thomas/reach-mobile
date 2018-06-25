@@ -18,13 +18,13 @@ class VaccineDone extends React.Component {
                 <View style={styles.userinfovertical}>
                     <View style={styles.userinfohorizontal}>
                         <Text>Vaccine name : </Text>
-                        <Text style={styles.textStyle}>{this.props.name}</Text>
+                        <Text style={styles.textStyle}>{this.props.vaccine}</Text>
                     </View>
-                    <View>
+                    <View style={styles.userinfohorizontal}>
                         <Text>Date of Vaccination: </Text>
                         <Text style={styles.textStyle}>{this.props.date}</Text>
                     </View>
-                    <View>
+                    <View style={styles.userinfohorizontal}>
                         <Text>Location : </Text>
                         <Text style={styles.textStyle}>{this.props.location}</Text>
                     </View>
@@ -37,14 +37,21 @@ class VaccineDone extends React.Component {
 const styles = StyleSheet.create({
     viewStyle: {
         flex: 1,
-        height:50,
+        height:65,
+        width:300,
         flexDirection: 'column',
         backgroundColor: '#6bf442',
         alignItems: 'center',
-        paddingLeft:10,
-        paddingRight:10,
-        paddingTop:10,
-        paddingBottom:10,
+        marginLeft:10,
+        marginRight:10,
+        marginTop:10,
+        marginBottom:10,
+        borderWidth:1,
+        borderRadius:5,
+        paddingLeft:5,
+        paddingRight:5,
+        paddingTop:5,
+        borderColor:"#000"
     },
     
     userinfovertical:{

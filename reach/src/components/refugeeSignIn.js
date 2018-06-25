@@ -1,6 +1,6 @@
 import React from 'react';
 import RectNative from 'react-native';
-import {Text,View,StyleSheet,KeyboardAvoidingView,Image} from 'react-native';
+import {Text,View,StyleSheet,KeyboardAvoidingView,Image,ScrollView} from 'react-native';
 import Button from './Button.js';
 import {Actions} from 'react-native-router-flux';
 import InputText from './InputText.js';
@@ -20,6 +20,7 @@ class RefugeeSignIn extends React.Component{
     render(){
         return(
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"position"} enabled>
+            <ScrollView>
             <Text style={{flex:1, fontSize:30}}>Patient signin</Text>
             <Image source={require("./images/doctor.jpg")} style={{height:150, width:300}}/>
             <View style={{flex:4}}>
@@ -29,6 +30,7 @@ class RefugeeSignIn extends React.Component{
                
                 <Button title="submit" onPress={this.onPress.bind(this)}/>
                 </View>
+                </ScrollView>
             </KeyboardAvoidingView>
         );
     
