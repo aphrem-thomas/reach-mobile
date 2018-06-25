@@ -14,7 +14,7 @@ constructor(props) {
     super(props);
     this.state = {
         tableHead: ['Date', 'Hospital', 'Medical Issue', 'Physician', 'Admited', 'Released', 'Prescription'],
-        widthArr: [40, 60, 80, 100, 120, 140, 160, 180, 200]
+        widthArr: [40, 60, 80, 100, 120, 140, 160]
     }
 }
 render(){
@@ -36,6 +36,7 @@ render(){
 
     return (
         <View style={styles.container}>
+            <Text style={{fontSize:20}}>Medical Record</Text>
             <ScrollView horizontal={true}>
                 <View>
                     <Table borderStyle={{ borderColor: '#C1C0B9' }}>
