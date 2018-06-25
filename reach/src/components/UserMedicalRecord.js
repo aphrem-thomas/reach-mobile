@@ -8,6 +8,7 @@ import UserLabel from './UserLabel.js';
 import { Router, Scene, Stack } from 'react-native-router-flux';
 import UserOption from './UserOption.js';
 import { Table, Row, Rows } from 'react-native-table-component';
+import * as actionCreator from './action/actionCreator.js';
 
 class UserMedicalRecord extends React.Component{ 
 constructor(props) {
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
     },
     container:
         {
-            flex: 1, padding: 16, paddingTop: 30,
+            flex: 1, padding: 16, paddingTop: 30
         },
     header:
         {
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
         },
     dataWrapper:
         {
-            marginTop: -1
+            marginTop: -1,
         },
     row:
         {

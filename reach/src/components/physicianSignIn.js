@@ -6,15 +6,40 @@ import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
 import InputText from './InputText.js';
 import { connect } from 'react-redux';
-import * as actionCreator from './action/actionCreator.js'
+import * as actionCreator from './action/actionCreator.js';
+
 class PhysicianSignIn extends React.Component {
     constructor(props) {
         super(props);
         this.state={picker1:"Country", picker2:"Location"}
     }
-    onPress() {
+    onSubmit() {
+        let today = new Date();
+        let dd = today.getDate();
+        let mm = today.getMonth() + 1; //January is 0!
+        let yyyy = today.getFullYear();
 
-    }
+        if (dd < 10) {
+            dd = '0' + dd
+        }
+
+        if (mm < 10) {
+            mm = '0' + mm
+        }
+
+        today = yyyy + '/' + mm + '/' + dd;
+        let doc = {
+            "name": this.props.refugeeId,
+            "location": this.state.location,
+            "camp": this.state.camp,
+            "date":today.toString()
+        }
+            this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
+                Actions.userpage();
+                this.props.dispatch(actionCreator.updateDoctor(doc));
+            });
+        }
+       
 
     render() {
         return (
@@ -52,7 +77,7 @@ class PhysicianSignIn extends React.Component {
                     </Picker>
                     </View>
                     </View>
-                    <Button title="submit" />
+                    <Button title="submit" onPress={this.onSubmit.bind(this)}/>
                 </View>
                 </ScrollView>
             </KeyboardAvoidingView>

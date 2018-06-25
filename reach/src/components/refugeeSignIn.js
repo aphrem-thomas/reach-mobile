@@ -7,15 +7,26 @@ import InputText from './InputText.js';
 import {connect} from 'react-redux';
 import * as actionCreator from './action/actionCreator.js'
 import doctorphoto from './images/doctor.jpg';
+import Spinner from './Spinner.js';
 class RefugeeSignIn extends React.Component{
     constructor(props){
         super(props);
+        this.state={loading:false}
         
     }
    onPress(){
+       this.setState({loading:true})
         this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(()=>{
+            this.setState({loading:false})
             Actions.userpage();
         })
+   }
+   ButtonLoading(){
+       if(this.state.loading)
+            return( <Spinner size={"large"} color={"#007aff"}/>);
+        else
+            return( <Button title="submit" onPress={this.onPress.bind(this)}/>);
+            
    }
     render(){
         return(
@@ -27,8 +38,7 @@ class RefugeeSignIn extends React.Component{
                 <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text)=>{
                     this.props.dispatch(actionCreator.refugeeIdField(text))
                 }}/>
-               
-                <Button title="submit" onPress={this.onPress.bind(this)}/>
+               {this.ButtonLoading()}
                 </View>
                 </ScrollView>
             </KeyboardAvoidingView>
