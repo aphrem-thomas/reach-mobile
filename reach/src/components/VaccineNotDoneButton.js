@@ -1,45 +1,20 @@
 import React from 'react';
 import RectNative from 'react-native';
-import { Text, View, StyleSheet, KeyboardAvoidingView, Image } from 'react-native';
-import Button from './Button.js';
+import { Text, View, StyleSheet, KeyboardAvoidingView, Image, Button } from 'react-native';
+//import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
 import InputText from './InputText.js';
 import { connect } from 'react-redux';
 import * as actionCreator from './action/actionCreator.js'
 import doctorphoto from './images/doctor.jpg';
-import Spinner from './Spinner.js';
-class VaccineNotDone extends React.Component {
+class VaccineNotDoneButton extends React.Component {
     constructor(props) {
         super(props);
-        this.state={loading:false,}
+        this.state
 
     }
-    onClickHandle(){
-                this.setState({loading:true})
-                let data={
-                  transactionName:"Vaccination",
-                  refugee:this.props.refugee.refugeeId,
-                  doctor:this.props.physicianId,
-                  vaccine:this.props.vaccine,
-                  quantity:2,
-                  location: this.props.doctor.location,
-                  camp: this.props.doctor.camp,
-                  date: this.props.doctor.date
-                }
-               console.log("/n original data "+JSON.stringify(data))
-    this.props.dispatch(actionCreator.updateVaccineRecord(this.props.refugee.refugeeId,data)).then(()=>{
-      this.setState({loading:false})
-    })
-    }
     buttonChoose(){
-        if(this.props.doctor.name!=null){
-            if(this.state.loading){
-                return(<Spinner size={"small"}/>)
-            }
-            else{
-                return(<Button title={"done"} onPress={this.onClickHandle.bind(this)}/>)
-            }
-        }
+
     }
     render() {
         return (
@@ -98,9 +73,7 @@ const styles = StyleSheet.create({
 function mapStateToProps(state, ownProps) {
     return ({
         refugeeId: state.RefugeeField,
-        refugee:state.RefugeeDetails,
-        doctor:state.DoctorDetails,
-        physicianId: state.PhysicianField
+        doctor:DoctorDetails
     })
 }
-export default connect(mapStateToProps)(VaccineNotDone);
+export default connect(mapStateToProps)(VaccineNotDoneButton);

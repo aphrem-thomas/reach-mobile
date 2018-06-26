@@ -30,7 +30,7 @@ export function fetch(id, callback){
 
 export function updateVaccineRecord(id,data){
     return(function(dispatch){
-        console.log("id in updateVaccine"+ id);
+        console.log("data received is"+JSON.stringify(data));
         return axios.post("https://hps-bna-client.mybluemix.net/calltransaction",
                 {
                     'transactionName':data.transactionName,
@@ -43,7 +43,7 @@ export function updateVaccineRecord(id,data){
                     'date': data.date
                 }
                 ).then((res)=>{
-            console.log("response is "+res);
+            console.log("response is "+JSON.stringify(res));
             dispatch(fetch(id));
         })
     })

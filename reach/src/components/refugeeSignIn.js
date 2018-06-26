@@ -31,7 +31,7 @@ class RefugeeSignIn extends React.Component{
     render(){
         return(
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"position"} enabled>
-            <ScrollView>
+            <ScrollView style={{flex:1}}>
             <Text style={{flex:1, fontSize:30}}>Patient signin</Text>
             <Image source={require("./images/doctor.jpg")} style={{height:150, width:300}}/>
             <View style={{flex:4}}>

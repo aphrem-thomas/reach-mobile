@@ -66,15 +66,15 @@ class UserVaccineRecord extends React.Component {
             </View>
                 );
             }
-    componentDidMount() {
-                    this.intervalvariable = setInterval(() => {
-                        this.props.dispatch(actionCreator.fetch(this.props.refugee.refugeeId))
-                    }, 5000)
-                }
-                componentWillUnmount() {
-                    clearInterval(this.intervalvariable);
-                }
-            }
+    // componentDidMount() {
+    //                 this.intervalvariable = setInterval(() => {
+    //                     this.props.dispatch(actionCreator.fetch(this.props.refugee.refugeeId))
+    //                 }, 5000)
+    //             }
+    //             componentWillUnmount() {
+    //                 clearInterval(this.intervalvariable);
+    //             }
+             }
 const styles = StyleSheet.create({
                     tabbuttons: {
                     flexDirection: 'row',
@@ -127,7 +127,8 @@ const styles = StyleSheet.create({
         });
 function mapStateToProps(state, ownProps) {
     return ({
-                    refugee: state.RefugeeDetails
+                    refugee: state.RefugeeDetails,
+                    doctor:state.DoctorDetails
             });
         }
 export default connect(mapStateToProps)(UserVaccineRecord);

@@ -1,6 +1,6 @@
 import React from 'react';
 import RectNative from 'react-native';
-import { Text, View, StyleSheet, TextInput, Image, Button,ScrollView } from 'react-native';
+import { Text, View, StyleSheet, TextInput, Image, Button,ScrollView,Modal } from 'react-native';
 // import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
@@ -9,14 +9,27 @@ import { Router, Scene, Stack } from 'react-native-router-flux';
 import UserOption from './UserOption.js';
 import { Table, Row, Rows } from 'react-native-table-component';
 import * as actionCreator from './action/actionCreator.js';
+import ModalView from './ModalView.js';
 
 class UserMedicalRecord extends React.Component{ 
 constructor(props) {
     super(props);
     this.state = {
         tableHead: ['Date', 'Hospital', 'Medical Issue', 'Physician', 'Admited', 'Released', 'Prescription'],
-        widthArr: [40, 60, 80, 100, 120, 140, 160]
+        widthArr: [40, 60, 80, 100, 120, 140, 160],
+        modalVisible:false
     }
+}
+onPress(){
+    this.setState({modalVisible:true})
+}
+buttonChoose(){
+    if(this.props.doctor.name!=null){
+        return(<Button onPress={this.onPress.bind(this)} title="Add"/>)
+    }
+}
+flipState(){
+    this.setState({modalVisible:false})
 }
 render(){
     let medicalRecords=[{"date":"1/2/2018", "hospital":"akfjldk","issue":"jdljkfds","physician":"kjdkfaf#dan","admitDate":"03/25/2015","dischargeDate":"2/5/2018","prescription":"fa;ldkfj;"}];
@@ -60,6 +73,25 @@ render(){
                     </ScrollView>
                 </View>
             </ScrollView>
+            {this.buttonChoose()}
+           
+            <Modal animationType="slide"
+            transparent={true}
+            visible={this.state.modalVisible}
+            style={styles.modalstyle}
+            onRequestClose={() => {
+              alert('Modal has been closed.');
+            }}>
+            <View style={{justifyContent:"center",alignItems:'center',flex:1}}>
+            <View style={styles.modalstyle}>
+            <View>
+              <Text>Hello World!</Text>
+            </View>
+            <Button title="close" onPress={this.flipState.bind(this)}/>
+            </View>
+            </View>
+            </Modal>
+            
         </View>
     )
 }
@@ -81,7 +113,14 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginLeft: 5,
         marginRight: 5,
+        
 
+    },
+    modalstyle:{
+        height:400,
+        width:300,
+        backgroundColor:'rgba(0,0,0,0.75)',
+        borderRadius:10
     },
     container:
         {
@@ -125,7 +164,10 @@ const styles = StyleSheet.create({
 });
 function mapStateToProps(state, ownProps) {
     return ({
-        refugee: state.RefugeeDetails
+        refugeeId: state.RefugeeField,
+        refugee:state.RefugeeDetails,
+        doctor:state.DoctorDetails,
+        physicianId: state.PhysicianField
     });
 }
 export default connect(mapStateToProps)(UserMedicalRecord);
