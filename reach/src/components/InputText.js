@@ -25,10 +25,11 @@ class PhysicianSignIn extends React.Component{
 const styles = StyleSheet.create({
     viewStyle:{
         flexDirection:'row',
-        backgroundColor:'#FFF',
         justifyContent:'center',
         alignItems:'center',
         marginTop:10,
+        alignSelf:'stretch',
+
     },
     inputStyle:{
         height:50,
