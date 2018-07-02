@@ -1,8 +1,9 @@
 import React from 'react';
 import RectNative from 'react-native';
-import {Text,View,StyleSheet} from 'react-native';
+import {Text,View,StyleSheet,Image} from 'react-native';
 import Button from './Button.js';
 import {Actions} from 'react-native-router-flux';
+import {reachlogo} from './images/logoreachwhite.png';
 class FrontPage extends React.Component{
     clickHandle1(){
         Actions.refugeesecondpage();
@@ -10,20 +11,23 @@ class FrontPage extends React.Component{
     render(){
         return(
             <View style={styles.viewStyle}>
+                <View>
+                <Image source={reachlogo} style={styles.imageStyle}/>
+                </View>
                 <View style={styles.eachline}>
-                    <Text style={styles.redTextStyle}>Re</Text>
+                    <Text style={styles.blueTextStyle}>Re</Text>
                     <Text style={styles.whiteTextStyle}>fugee</Text>
                 </View >
                 <View style={styles.eachline}>
-                    <Text style={styles.redTextStyle}>A</Text>
+                    <Text style={styles.blueTextStyle}>A</Text>
                     <Text style={styles.whiteTextStyle}>ssistance in</Text>
                 </View>
                 <View style={styles.eachline}>
-                    <Text style={styles.redTextStyle}>C</Text>
+                    <Text style={styles.blueTextStyle}>C</Text>
                     <Text style={styles.whiteTextStyle}>linics and</Text>
                 </View>
                 <View style={styles.eachline}>
-                    <Text style={styles.redTextStyle}>H</Text>
+                    <Text style={styles.blueTextStyle}>H</Text>
                     <Text style={styles.whiteTextStyle}>ospitals</Text>
                 </View>
                 <View style={{marginTop:60}}>
@@ -31,7 +35,7 @@ class FrontPage extends React.Component{
                     <Button title='Supply Chain' color='orange'/>
                 </View>
                 <View >
-                    <Text>Powered by Blockchain</Text>
+                    <Text style={{color:'#f8a557'}}>Powered by Blockchain</Text>
                 </View>
             </View>
         );
@@ -42,7 +46,7 @@ const styles = StyleSheet.create({
     viewStyle:{
         flex:1,
         flexDirection:'column',
-        backgroundColor:'#FFF',
+        backgroundColor:'#222',
         alignItems:'center',
         justifyContent:'center',
            
@@ -50,13 +54,18 @@ const styles = StyleSheet.create({
     eachline:{
        flexDirection:'row',
     },
-    redTextStyle:{
-        color:'#FF0000',
+    blueTextStyle:{
+        color:'#007aff',
         fontSize:30
     },
     whiteTextStyle:{
-        color:'black',
+        color:'#FFF',
         fontSize:30
+    },
+    imageStyle:{
+        flex:1,
+        height:100,
+        width:150
     }
 
 

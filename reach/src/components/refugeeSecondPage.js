@@ -63,20 +63,20 @@ const styles = StyleSheet.create({
     viewStyle1:{
         flex:1,
         flexDirection:'column',
-        backgroundColor:'#FFF',
+        backgroundColor:'#222',
         justifyContent:'center'      
     },
     buttonStyle:{
         flex:1,
         flexDirection:'row',
         height:30,
-        backgroundColor:'#FFF',
+        backgroundColor:'#222',
         justifyContent:'center',
         alignItems:'center'         
     },
     signinStyle:{
         flex:5,
-        backgroundColor:'#FFF',
+        backgroundColor:'#222',
         justifyContent:'center',
         alignItems:'center',
         

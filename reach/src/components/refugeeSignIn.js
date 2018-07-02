@@ -32,7 +32,7 @@ class RefugeeSignIn extends React.Component{
         return(
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"position"} enabled>
             <ScrollView style={{flex:1}}>
-            <Text style={{flex:1, fontSize:30}}>Patient signin</Text>
+            <Text style={{flex:1, fontSize:30,color:'#f8a557'}}>Patient signin</Text>
             <Image source={require("./images/doctor.jpg")} style={{height:150, width:300}}/>
             <View style={{flex:4}}>
                 <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text)=>{
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     viewStyle:{
         flex:1,
         flexDirection:'column',
-        backgroundColor:'#FFF',
+        backgroundColor:'#222',
         justifyContent:'center'      
     }
    

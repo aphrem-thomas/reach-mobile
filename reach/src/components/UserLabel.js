@@ -11,7 +11,7 @@ class UserLabel extends React.Component{
     render(){
         return(
             <View style={styles.viewStyle}>
-                <Image source={{uri:"http://realitysteve.com/wp-content/uploads/2016/03/Sal1.jpeg"}} style={styles.imageStyle }/>
+                <Image source={{uri:this.props.refugee.refugeeImage}} style={styles.imageStyle }/>
                 <View style={styles.userinfovertical}>
                 <View style={styles.userinfohorizontal}>
                 <Text>Name : </Text>

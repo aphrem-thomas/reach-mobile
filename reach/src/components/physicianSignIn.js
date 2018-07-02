@@ -41,7 +41,7 @@ class PhysicianSignIn extends React.Component {
         }
         ButtonLoading(){
             if(this.state.loading)
-                 return( <Spinner size={"large"} color={"#007aff"}/>);
+                 return( <Spinner size={"large"} color={"#f8a557"}/>);
              else
                  return( <Button title="submit" onPress={this.onSubmit.bind(this)}/>);
                  
@@ -52,7 +52,7 @@ class PhysicianSignIn extends React.Component {
 
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
             <ScrollView style={{flex:1}}>
-                <Text style={{ flex: 1, fontSize: 30 }}>Physician signin</Text>
+                <Text style={{ flex: 1, fontSize: 30,color:'#f8a557' }}>Physician signin</Text>
                 <View style={{ flex: 4 }}>
                     <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
                         this.props.dispatch(actionCreator.refugeeIdField(text))
@@ -98,12 +98,13 @@ const styles = StyleSheet.create({
     viewStyle: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: '#FFF',
+        backgroundColor: '#222',
         justifyContent: 'center'
     },
     pickerStyle:{
         borderWidth:1,
-        borderColor:"#007aff",
+        borderColor:"#f8a557",
+        backgroundColor:'#FFF',
         marginTop:5,
         borderRadius:2
     }
