@@ -26,14 +26,14 @@ class FrontPage extends React.Component {
                     <View style={{ flex: 1, alignSelf: 'stretch', justifyContent: 'flex-end' ,alignItems:'center'}}>
                         <View style={styles.eachline}>
                             <Text style={styles.orangeTextStyle}>Re</Text>
-                            <Text style={styles.whiteTextStyle}>fugee</Text>
+                            <Text style={styles.whiteTextStyle}>fugee </Text>
                        
                             <Text style={styles.orangeTextStyle}>A</Text>
                             <Text style={styles.whiteTextStyle}>ssistance in</Text>
                         </View>
                         <View style={styles.eachline}>
                             <Text style={styles.orangeTextStyle}>C</Text>
-                            <Text style={styles.whiteTextStyle}>linics and</Text>
+                            <Text style={styles.whiteTextStyle}>linics and </Text>
                         
                             <Text style={styles.orangeTextStyle}>H</Text>
                             <Text style={styles.whiteTextStyle}>ospitals</Text>

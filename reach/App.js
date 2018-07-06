@@ -33,11 +33,11 @@ const App=()=>{
   
     return(
       <Provider store={store}>
-        <Router>
+        <Router navigationBarStyle={{ backgroundColor: 'rgba(0,0,225,0)' }}>
             <Stack key="root" hideNavBar>
               <Scene key="frontpage">
                 <Scene style={{flex:1}} title="ReACH" key="firstpage" component={FrontPage} hideNavBar initial/>
-                <Scene title="RMS" key="refugeesecondpage" component={RefugeeSecondPage} />
+                <Scene title="RMS" key="refugeesecondpage" component={RefugeeSecondPage}  />
                 {/* <Scene title="SupplyChain" key="supplychain" component={SupplySecondPage} /> */}
                 <Scene title="User Page" key="userpage" component={UserPage} />
               </Scene>

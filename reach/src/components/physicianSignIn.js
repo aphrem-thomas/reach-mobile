@@ -53,7 +53,7 @@ class PhysicianSignIn extends React.Component {
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
             <ScrollView style={{flex:1}}>
                 <Text style={{ flex: 1, fontSize: 30,color:'#f8a557' }}>Physician signin</Text>
-                <View style={{ flex: 4 }}>
+                {/* <View style={{ flex: 4 }}>
                     <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
                         this.props.dispatch(actionCreator.refugeeIdField(text))
                     }} />
@@ -86,7 +86,9 @@ class PhysicianSignIn extends React.Component {
                     </View>
                     
                     {this.ButtonLoading()}
-                </View>
+                </View> */}
+                <Text>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Text>
+                <Button title="login" background="red"/>
                 </ScrollView>
             </KeyboardAvoidingView>
 
@@ -98,7 +100,7 @@ const styles = StyleSheet.create({
     viewStyle: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: '#222',
+        backgroundColor: 'rgba(225,225,225,0)',
         justifyContent: 'center'
     },
     pickerStyle:{
