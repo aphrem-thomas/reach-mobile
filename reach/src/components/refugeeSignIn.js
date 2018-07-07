@@ -31,6 +31,7 @@ class RefugeeSignIn extends React.Component{
     render(){
         return(
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"position"} enabled>
+            <Text style={{fontSize:30,color:'#f8a557'}}>Patient signin</Text>
             {/* <ScrollView>
             <Text style={{fontSize:30,color:'#f8a557'}}>Patient signin</Text>
             <View style={{justifyContent:'center'}}>
@@ -54,7 +55,8 @@ const styles = StyleSheet.create({
     viewStyle:{
         flexDirection:'column',
         backgroundColor:'rgba(225,225,225,0)',
-        justifyContent:'center'      
+        justifyContent:'center',
+        alignContent:'center'      
     }
    
 

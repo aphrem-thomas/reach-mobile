@@ -11,13 +11,13 @@ class ClickCard extends React.Component {
     
     render() {
         return (
-            
-            <TouchableOpacity onPress={this.props.onPress} style={styles.viewStyle}>
+            <View style={styles.viewStyle}>
+            <TouchableOpacity onPress={this.props.onPress} style={{flex:1}}>
                 <View style={{flex:1, justifyContent:'center', alignItems:"center"}}>
                     {this.props.children}
                 </View>
             </TouchableOpacity>
-            
+            </View>
 
         );
 
@@ -29,8 +29,7 @@ const styles = StyleSheet.create({
         height:150,
         width:150,
         
-        backgroundColor:'rgba(0,0,0,0.50)',
-        borderRadius:5,
+        backgroundColor:'#fff',
         marginLeft:4,
         marginRight:4,
         marginTop:2,
@@ -39,10 +38,12 @@ const styles = StyleSheet.create({
         shadowColor: '#000000',
         shadowOffset: {
             width: 0,
-            height: 3
+            height: 10
         },
-        shadowRadius: 5,
-        shadowOpacity: 1.0
+        shadowRadius: 20,
+        shadowOpacity: 1.0,
+        elevation:10
+
 
     }
    

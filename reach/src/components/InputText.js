@@ -11,11 +11,11 @@ class PhysicianSignIn extends React.Component{
     render(){
         return(
             <View style={styles.viewStyle}>
-                <Text style={styles.textStyle}>{this.props.label}</Text>
+                {/* <Text style={styles.textStyle}>{this.props.label}</Text> */}
                 <TextInput onChangeText={this.props.onChangeText} secureTextEntry={this.props.secureTextEntry}
-                    underlineColorAndroid ='transparent'
+                    underlineColorAndroid ='orange' multiline={true} borderBottomColor="orange"
                     style={styles.inputStyle} 
-                    placeholder={this.props.value}/>
+                    placeholder={this.props.label}/>
             </View>
         );
     
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     viewStyle:{
         flexDirection:'row',
         justifyContent:'center',
-        alignItems:'center',
         marginTop:10,
         alignSelf:'stretch',
 
@@ -34,11 +33,7 @@ const styles = StyleSheet.create({
     inputStyle:{
         height:50,
         width:150,
-        borderWidth:1,
-        borderColor:'#007aff',
-        borderRadius:10,
-        backgroundColor:'#FFF',
-        color:'#000',
+        color:'#FFF',
         alignItems:'center',
         justifyContent:'center',
         paddingLeft:5
