@@ -11,7 +11,27 @@ class ClickCard extends React.Component {
     
     render() {
         return (
-            <View style={styles.viewStyle}>
+            <View style={{
+                flex:1,
+                height:this.props.height,
+                width:this.props.width,
+                backgroundColor:this.props.backgroundColor,
+                marginLeft:4,
+                marginRight:4,
+                marginTop:2,
+                marginBottom:2,
+                justifyContent:'center',
+                shadowColor: '#000000',
+                shadowOffset: {
+                    width: 0,
+                    height: 10
+                },
+                shadowRadius: 20,
+                shadowOpacity: 1.0,
+                elevation:10
+        
+        
+            }}>
             <TouchableOpacity onPress={this.props.onPress} style={{flex:1}}>
                 <View style={{flex:1, justifyContent:'center', alignItems:"center"}}>
                     {this.props.children}
@@ -23,31 +43,7 @@ class ClickCard extends React.Component {
 
     }
 }
-const styles = StyleSheet.create({
-    viewStyle: {
-        flex:1,
-        height:150,
-        width:150,
-        
-        backgroundColor:'#fff',
-        marginLeft:4,
-        marginRight:4,
-        marginTop:2,
-        marginBottom:2,
-        justifyContent:'center',
-        shadowColor: '#000000',
-        shadowOffset: {
-            width: 0,
-            height: 10
-        },
-        shadowRadius: 20,
-        shadowOpacity: 1.0,
-        elevation:10
-
-
-    }
-   
-
-
-});
+const styles = StyleSheet.create(
+  
+);
 export default ClickCard;

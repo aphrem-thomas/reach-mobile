@@ -59,9 +59,11 @@ class PhysicianSignIn extends React.Component {
 
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
                 <ScrollView style={{ flex: 1 }}>
-                    <Text style={{ flex: 1, fontSize: 30, color: '#f8a557' }}>Physician signin</Text>
-                    <Text style={{ fontFamily: "sans-serif" }}>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Text>
-                    <Button title="login" background="red" onPress={this.signinModal.bind(this)} />
+                    <View style={{ flex: 1, justifyContent: 'center' }}>
+                        <Text style={{ flex: 1, fontSize: 30, color: '#007aff' }}>Physician signin</Text>
+                        <Text style={{ fontFamily: "sans-serif" }}>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Text>
+                        <Button title="login" background="red" onPress={this.signinModal.bind(this)} />
+                    </View>
                 </ScrollView>
 
                 <Modal animationType="slide"
@@ -73,7 +75,7 @@ class PhysicianSignIn extends React.Component {
                     }}>
                     <View style={{ justifyContent: "center", alignItems: 'center', flex: 1 }}>
                         <View style={styles.modalstyle}>
-                            <Text style={{fontSize:50,color:"#007aff",marginLeft:5}}>Login</Text>
+                            <Text style={{ fontSize: 50, color: "#007aff", marginLeft: 5 }}>Login</Text>
                             <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
                                 this.props.dispatch(actionCreator.refugeeIdField(text))
                             }} />
@@ -95,7 +97,7 @@ class PhysicianSignIn extends React.Component {
                                 </View>
                                 <View style={styles.pickerStyle}>
                                     <Picker
-                                        itemStyle={{color:'orange'}}
+                                        itemStyle={{ color: 'orange' }}
                                         selectedValue={this.state.camp}
                                         style={{ height: 50, width: 150 }}
                                         onValueChange={(itemValue, itemIndex) => this.setState({ camp: itemValue })}>
@@ -107,42 +109,42 @@ class PhysicianSignIn extends React.Component {
                             </View>
                             {this.ButtonLoading()}
                             <Button background="red" title="close" onPress={this.flipState.bind(this)} />
-                            </View>
                         </View>
+                    </View>
                 </Modal>
             </KeyboardAvoidingView>
 
-                );
-        
-            }
-        }
+        );
+
+    }
+}
 const styles = StyleSheet.create({
-                viewStyle: {
-                flex: 1,
-                flexDirection: 'column',
-                backgroundColor: 'rgba(225,225,225,0)',
-                justifyContent: 'center',
-                alignContent:'center'
-            },
-    pickerStyle:{
-                marginTop:5,
-                borderRadius:2
-            },
+    viewStyle: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: 'rgba(225,225,225,0)',
+        justifyContent: 'center',
+        alignContent: 'center'
+    },
+    pickerStyle: {
+        marginTop: 5,
+        borderRadius: 2
+    },
     modalstyle: {
-                height: 450,
-                width: 350,
-                backgroundColor: 'rgba(0,0,0,0.9)',
-                borderRadius: 10,
-                flexDirection: 'column'
-            }
-        
-        
-        });
-        
+        height: 450,
+        width: 350,
+        backgroundColor: 'rgba(0,0,0,0.9)',
+        borderRadius: 10,
+        flexDirection: 'column'
+    }
+
+
+});
+
 function mapStateToProps(state, ownProps) {
     return ({
-                    refugeeId: state.RefugeeField,
-                physicianId: state.PhysicianField
-            })
-        }
+        refugeeId: state.RefugeeField,
+        physicianId: state.PhysicianField
+    })
+}
 export default connect(mapStateToProps)(PhysicianSignIn);

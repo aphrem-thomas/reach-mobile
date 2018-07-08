@@ -18,10 +18,6 @@ class UserLabel extends React.Component{
                 <Text style={styles.textStyle}>{this.props.refugee.firstName}</Text>
                 </View>
                 <View style={styles.userinfohorizontal}>
-                <Text>Date of birth: </Text>
-                <Text style={styles.textStyle}>{this.props.refugee.dob}</Text>
-                </View>
-                <View style={styles.userinfohorizontal}>
                 <Text>Nationality : </Text>
                 <Text style={styles.textStyle}>{this.props.refugee.nationality}</Text>
                 </View>
@@ -34,27 +30,39 @@ class UserLabel extends React.Component{
 
 const styles = StyleSheet.create({
     viewStyle:{
-        flexDirection:'row',
+        flexDirection:'column',
         backgroundColor:'#FFF',
+        justifyContent:'center',
         alignItems:'center',
         marginTop:10,
-        height:100,
-        borderWidth:2,
+        marginRight:5,
+        marginLeft:5,
+        borderRadius:10,
+        shadowColor: '#000000',
+        shadowOffset: {
+            width: 0,
+            height: 10
+        },
+        shadowRadius: 20,
+        shadowOpacity: 1.0,
+        elevation:1,
     },
     imageStyle:{
-        flex:1,
-        height:85,
-        width:85,
-        paddingLeft:15,
-        paddingRight:15,
+        height:100,
+        width:100,
+        borderRadius:100,
+        marginTop:3,
+        marginBottom:3,
+
     },
     userinfovertical:{
+        justifyContent:'center',
         flexDirection:'column',
-        flex:4,
         paddingLeft:15
     },
     userinfohorizontal:{
         flexDirection:'row',
+        justifyContent:'center',
     },
     
     textStyle:{

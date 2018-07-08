@@ -31,8 +31,9 @@ const styles = StyleSheet.create({
 
     },
     inputStyle:{
-        height:50,
-        width:150,
+        height:60,
+        width:250,
+        fontSize:25,
         color:'#FFF',
         alignItems:'center',
         justifyContent:'center',

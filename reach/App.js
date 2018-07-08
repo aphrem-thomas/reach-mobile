@@ -37,12 +37,12 @@ const App=()=>{
             <Stack key="root" hideNavBar>
               <Scene key="frontpage">
                 <Scene title="ReACH" key="firstpage" component={FrontPage} hideNavBar initial/>
-                <Scene title="RMS" key="refugeesecondpage" component={RefugeeSecondPage}/>
+                <Scene title="Select your account" key="refugeesecondpage" component={RefugeeSecondPage}/>
                 {/* <Scene title="SupplyChain" key="supplychain" component={SupplySecondPage} /> */}
                 <Scene title="User Page" key="userpage" component={UserPage}/>
               </Scene>
                 <Scene key="doctorView">
-                  <Scene title="RMS" key="doctorpage" component={UserPage}/>
+                  <Scene title="Select your account" key="doctorpage" component={UserPage}/>
                 </Scene>
             </Stack>
         </Router>

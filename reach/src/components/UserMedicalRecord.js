@@ -1,6 +1,15 @@
 import React from 'react';
 import RectNative from 'react-native';
-import { Text, View, StyleSheet, TextInput, Image, Button, ScrollView, Modal } from 'react-native';
+import {
+    Text,
+    View,
+    StyleSheet,
+    TextInput,
+    Image,
+    Button,
+    ScrollView,
+    Modal
+} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import UserLabel from './UserLabel.js';
@@ -88,8 +97,8 @@ class UserMedicalRecord extends React.Component {
         return (
             <View style={styles.container}>
                 <Text style={{ fontSize: 20 }}>Medical Record</Text>
-                <ScrollView horizontal={true}>
-                    <View>
+                <ScrollView horizontal={true} style={{ flex: 1 }}>
+                    <View style={{ flex: 1 }} >
                         <Table borderStyle={{ borderColor: '#C1C0B9' }}>
                             <Row data={state.tableHead} widthArr={state.widthArr} style={styles.header} textStyle={styles.text} />
                         </Table>

@@ -38,7 +38,7 @@ class UserVaccineRecord extends React.Component {
         vaccinenot = difference(mandatoryVacc, vaccinedone);
         return (
             <View>
-                <Text>Vaccine Record</Text>
+                 <Text style={{ fontSize: 20 , marginLeft:10,marginTop:10}}>Vaccine Record</Text>
                 <View style={{ flexDirection: 'column' }}>
                 <View style={{ flexDirection: 'row' }}>
                     <View style={{ justifyContent: 'flex-start' , marginLeft: 20}}>
