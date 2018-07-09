@@ -13,6 +13,9 @@ class PhysicianSignIn extends React.Component {
         super(props);
         this.state = { country: "Country", camp: "Location", loading: false, modalVisible: false }
     }
+    componentWillUnmount(){
+        this.setState({loading:false})
+    }
     onSubmit() {
         let today = new Date();
         let dd = today.getDate();

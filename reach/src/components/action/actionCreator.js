@@ -13,6 +13,39 @@ export function physicianIdField(value){
     return({'type':'PHYFIELD', 'payload':value})
 }
 
+export function addDependent(value){
+    return({type:'ADDDEPENDENT',payload:value})
+}
+
+
+
+export function emptyDependent(){
+    return({type:"EMPTYDEPENDENT"})
+}
+
+export function updateDependent(id,parent){
+    return function(dispatch){
+        return axios.get("https://hps-bna-client.mybluemix.net/getAssetDetails",{
+            params: {
+                param0: 'Refugee',
+                param1:id
+            }
+          }).then((response)=>{
+            console.log("parent is "+parent);
+              let pid=parent;  
+              let child={
+                  "image":response.data.refugeeImage,
+                  "name":response.data.firstName,
+                  "dob":response.data.dob,
+                  "id":response.data.refugeeId,
+                  "parentId":pid
+              }  
+              console.log("child created ="+JSON.stringify(child))
+        return dispatch(addDependent(child));
+        }).catch((error)=>{throw(error);}); 
+}
+}
+
 export function fetch(id, callback){
     console.log("inside fetch with id:"+id);
     return(function(dispatch){

@@ -1,5 +1,6 @@
 import initState from './refugeeInitialState.js';
 import docState from './doctorInitialState.js';
+import dependentInt from './dependentInitState.js';
 
 export function refreshUpdate(state=initState, action){
     switch(action.type){
@@ -8,6 +9,18 @@ export function refreshUpdate(state=initState, action){
             return newState;
         }
         default: return state;
+    }
+}
+
+export function dependentRecord(state=dependentInt,action){
+    switch(action.type){
+        case 'ADDDEPENDENT':{
+            return [...state,action.payload]
+        }
+        case 'EMPTYDEPENDENT':{
+            return dependentInt
+        }
+        default : return state;
     }
 }
 

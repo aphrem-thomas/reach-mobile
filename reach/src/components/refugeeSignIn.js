@@ -14,6 +14,9 @@ class RefugeeSignIn extends React.Component{
         this.state={loading:false,modalVisible:false}
         
     }
+    componentWillUnmount(){
+        this.setState({loading:false})
+    }
     flipState(){
         if(this.state.modalVisible===true)
             this.setState({modalVisible:false})

@@ -1,5 +1,7 @@
 import React from 'react';
 import RectNative from 'react-native';
+import * as actionCreator from './action/actionCreator.js';
+
 import {
     Text,
     View,
@@ -20,6 +22,7 @@ import { Router, Scene, Stack } from 'react-native-router-flux';
 import UserOption from './UserOption.js';
 import UserMedicalRecord from './UserMedicalRecord.js';
 import UserVaccineRecord from './UserVaccineRecord.js';
+import ClickCard from './clickCard.js';
 class UserPage extends React.Component {
     // clickHandle1(){
     //     Actions.refugeesecondpage();
@@ -27,7 +30,7 @@ class UserPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            medicalbutton: true,
+            medicalbutton: false,
             vaccinebutton: false,
             parentbutton: false,
             childrenbutton: false
@@ -35,6 +38,30 @@ class UserPage extends React.Component {
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         }
+    }
+    componentWillMount(){
+        let arrayChildren = [];
+        let children = this.props.refugee.children;
+        if (children) {
+            children.map((item) => {
+                let child1 = item.child.split('#');
+                arrayChildren.push(child1[1])
+            })
+        }
+        let parent=this.props.refugee.parents;
+        if (parent) {
+            let father = parent.father.split('#');
+            let mother = parent.mother.split('#');
+            arrayChildren.push(father[1]);
+            arrayChildren.push(mother[1]);
+        }
+        this.props.dispatch(actionCreator.emptyDependent());
+        console.log("array children"+arrayChildren)
+        arrayChildren.map((item) => {
+              //otherwise everytime we go back and return to same screen child list will get populated
+                this.props.dispatch(actionCreator.updateDependent(item, this.props.refugee.refugeeId))
+         
+        })
     }
     componentWillUpdate() {
         LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
@@ -105,7 +132,16 @@ class UserPage extends React.Component {
                 </View>
                
                 <View style={{ flex: 1 }}>
+                <ScrollView>
                     {this.chooseComponent()}
+                    {this.props.dependent.map((item,i)=>{
+                        return(
+                        <ClickCard key={i} height={60} width={250}>
+                            <Image source={{uri:item.image}} style={{height:50,width:50, borderRadius:50}}/>
+                        </ClickCard>
+                    )
+                    })}
+                </ScrollView>
                 </View>
             </View>
         );
@@ -162,7 +198,8 @@ const styles = StyleSheet.create({
 });
 function mapStateToProps(state, ownProps) {
     return ({
-        refugee: state.RefugeeDetails
+        refugee: state.RefugeeDetails,
+        dependent:state.Dependent
     });
 }
 export default connect(mapStateToProps)(UserPage);

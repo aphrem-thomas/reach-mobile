@@ -12,7 +12,6 @@ class ClickCard extends React.Component {
     render() {
         return (
             <View style={{
-                flex:1,
                 height:this.props.height,
                 width:this.props.width,
                 backgroundColor:this.props.backgroundColor,
@@ -20,7 +19,6 @@ class ClickCard extends React.Component {
                 marginRight:4,
                 marginTop:2,
                 marginBottom:2,
-                justifyContent:'center',
                 shadowColor: '#000000',
                 shadowOffset: {
                     width: 0,
