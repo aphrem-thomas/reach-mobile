@@ -54,7 +54,7 @@ class PhysicianSignIn extends React.Component {
         this.setState({ modalVisible: true })
     }
     flipState() {
-        this.setState({ modalVisible: false })
+        this.setState({ modalVisible: false,loading:false })
     }
 
     render() {

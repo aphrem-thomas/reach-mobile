@@ -12,7 +12,9 @@ import {
     ScrollView,
     LayoutAnimation,
     Platform,
-    UIManager
+    UIManager,
+    Dimensions,
+    Modal
 } from 'react-native';
 // import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
@@ -32,14 +34,14 @@ class UserPage extends React.Component {
         this.state = {
             medicalbutton: false,
             vaccinebutton: false,
-            parentbutton: false,
-            childrenbutton: false
+            modalView: false,
         }
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         }
+        var {height,width}=Dimensions.get('window');
     }
-    componentWillMount(){
+    componentWillMount() {
         let arrayChildren = [];
         let children = this.props.refugee.children;
         if (children) {
@@ -48,7 +50,7 @@ class UserPage extends React.Component {
                 arrayChildren.push(child1[1])
             })
         }
-        let parent=this.props.refugee.parents;
+        let parent = this.props.refugee.parents;
         if (parent) {
             let father = parent.father.split('#');
             let mother = parent.mother.split('#');
@@ -56,40 +58,21 @@ class UserPage extends React.Component {
             arrayChildren.push(mother[1]);
         }
         this.props.dispatch(actionCreator.emptyDependent());
-        console.log("array children"+arrayChildren)
+        console.log("array children" + arrayChildren)
         arrayChildren.map((item) => {
-              //otherwise everytime we go back and return to same screen child list will get populated
-                this.props.dispatch(actionCreator.updateDependent(item, this.props.refugee.refugeeId))
-         
+            //otherwise everytime we go back and return to same screen child list will get populated
+            this.props.dispatch(actionCreator.updateDependent(item, this.props.refugee.refugeeId))
+
         })
     }
     componentWillUpdate() {
         LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
     }
-    onClickChildren() {
-        this.setState({
-            medicalbutton: false,
-            vaccinebutton: false,
-            parentbutton: false,
-            childrenbutton: true
-        })
-    }
-
-    onClickParent() {
-        this.setState({
-            medicalbutton: false,
-            vaccinebutton: false,
-            parentbutton: true,
-            childrenbutton: false
-        })
-    }
-
+  
     onClickVaccine() {
         this.setState({
             medicalbutton: false,
             vaccinebutton: true,
-            parentbutton: false,
-            childrenbutton: false
         })
     }
 
@@ -97,15 +80,23 @@ class UserPage extends React.Component {
         this.setState({
             medicalbutton: true,
             vaccinebutton: false,
-            parentbutton: false,
-            childrenbutton: false
+            modalView:true,
         })
     }
 
     chooseComponent() {
         if (this.state.medicalbutton) {
             return (<View style={styles.sectionStyle}>
+            <Modal animationType="slide"
+                    transparent={false}
+                    visible={this.state.modalView}
+                    style={styles.modalstyle}
+                    onRequestClose={() => {
+                        alert('Modal has been closed.');
+                    }}>
                 <UserMedicalRecord />
+                <Button title="close" background="red" onPress={()=>{this.setState({modalView:false})}}/>
+            </Modal>
             </View>);
         }
         else if (this.state.vaccinebutton) {
@@ -121,7 +112,7 @@ class UserPage extends React.Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel />
+                <UserLabel/>
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
                         <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
@@ -130,18 +121,41 @@ class UserPage extends React.Component {
                         <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine Record" />
                     </View>
                 </View>
-               
+
                 <View style={{ flex: 1 }}>
-                <ScrollView>
-                    {this.chooseComponent()}
-                    {this.props.dependent.map((item,i)=>{
-                        return(
-                        <ClickCard key={i} height={60} width={250}>
-                            <Image source={{uri:item.image}} style={{height:50,width:50, borderRadius:50}}/>
-                        </ClickCard>
-                    )
-                    })}
-                </ScrollView>
+                    
+                       
+                        {this.chooseComponent()}
+                        <ScrollView onScroll={()=>{this.setState({ medicalbutton: false,vaccinebutton: false})}}>
+                        {this.props.dependent.map((item, i) => {
+                            return (
+                                <ClickCard key={i} height={100} width={this.width-20}>
+                                    <View style={{
+                                        height:98,
+                                        backgroundColor:"#FFF",
+                                        // marginTop: '5',
+                                        // marginRight: '3',
+                                        // marginLeft: '3',
+                                        borderRadius:10,
+                                        flexDirection:'row',
+                                        shadowColor: '#000000',
+                                        shadowOffset: {
+                                            width: 0,
+                                            height: 10
+                                        },
+                                        shadowRadius: 20,
+                                        shadowOpacity: 1.0,
+                                        elevation: 1,
+                                        alignItems:'center'
+
+                                    }}>
+                                        <Image source={{ uri: item.image }} style={{ height: 70, width: 70, borderRadius: 70,marginLeft:20,marginRight:20}} />
+                                        <Text style={{fontSize:20}}>{item.name}</Text>                                   
+                                    </View>
+                                </ClickCard>
+                            )
+                        })}
+                    </ScrollView>
                 </View>
             </View>
         );
@@ -158,6 +172,14 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         marginRight: 5,
 
+    },
+    modalstyle: {
+        height: 400,
+        width: 300,
+        backgroundColor: 'rgba(255,255,255,0.75)',
+        borderRadius: 10,
+        justifyContent: 'center',
+        flexDirection: 'column'
     },
     sectionStyle: {
         flex: 1,
@@ -193,13 +215,28 @@ const styles = StyleSheet.create({
         color: "#000",
         paddingLeft: 5,
         paddingRight: 5
+    },
+    dependentStyle: {
+        backgroundColor: "#FFF",
+        marginTop: '5',
+        marginRight: '3',
+        marginLeft: '3',
+        shadowColor: '#000000',
+        shadowOffset: {
+            width: 0,
+            height: 10
+        },
+        shadowRadius: 20,
+        shadowOpacity: 1.0,
+        elevation: 1,
+
     }
 
 });
 function mapStateToProps(state, ownProps) {
     return ({
         refugee: state.RefugeeDetails,
-        dependent:state.Dependent
+        dependent: state.Dependent
     });
 }
 export default connect(mapStateToProps)(UserPage);

@@ -61,33 +61,39 @@ class RefugeeSecondPage extends React.Component {
         return (
             <View style={styles.viewStyle}>
                 <View style={styles.scrollside}>
-                    <ScrollView horizontal={true} style={{flex:1}}>
+                    <ScrollView horizontal={true} style={{ flex: 1 }}>
                         <ClickCard
-                        style={{flex:1}}
-                        backgroundColor='#FFF'
-                        height={200}
-                         width={150}  
-                        onPress={this.clickhandlePatient.bind(this)}>
-                            <Image source={require("./images/patient.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
-                            <Text style={{fontSize:20}}>Patient</Text>
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={200}
+                            width={150}
+                            onPress={this.clickhandlePatient.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/patient.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>Patient</Text>
+                            </View>
                         </ClickCard>
                         <ClickCard
-                        style={{flex:1}}
-                         backgroundColor='#FFF'
-                         height={200}
-                         width={150}
-                         onPress={this.clickhandlePhysician.bind(this)}>
-                            <Image source={require("./images/doctor.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
-                            <Text style={{fontSize:20}}>Physician</Text>
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={200}
+                            width={150}
+                            onPress={this.clickhandlePhysician.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/doctor.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>Physician</Text>
+                            </View>
                         </ClickCard>
                         <ClickCard
-                        style={{flex:1}}
-                         backgroundColor='#FFF'
-                         height={200}
-                         width={150} 
-                         onPress={this.clickhandleUno.bind(this)}>
-                            <Image source={require("./images/un.jpeg")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
-                            <Text style={{fontSize:20}}>UN Official</Text>
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={200}
+                            width={150}
+                            onPress={this.clickhandleUno.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/un.jpeg")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>UN Official</Text>
+                            </View>
                         </ClickCard>
 
                     </ScrollView>

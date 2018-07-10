@@ -26,14 +26,14 @@ class ClickCard extends React.Component {
                 },
                 shadowRadius: 20,
                 shadowOpacity: 1.0,
-                elevation:10
-        
+                elevation:10,
+                justifyContent:'center',
         
             }}>
             <TouchableOpacity onPress={this.props.onPress} style={{flex:1}}>
-                <View style={{flex:1, justifyContent:'center', alignItems:"center"}}>
+               
                     {this.props.children}
-                </View>
+                
             </TouchableOpacity>
             </View>
 
