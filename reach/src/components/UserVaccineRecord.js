@@ -31,23 +31,25 @@ class UserVaccineRecord extends React.Component {
             "DEPTERIA", "ROTAVIRUS", "MMR", "HPV", "TDAP", "MEASLES", "MUMPS", "HEPATITISA", "HEPATITISB", "POLIO"];
         var vaccinedone = [];
         var vaccinenot = [];
-        this.props.refugee.vaccinationRecords.map((item) => {
-            vaccinedone.push(item.vaccineName);
-        });
+        if (this.props.refugee.vaccinationRecords) {
+            this.props.refugee.vaccinationRecords.map((item) => {
+                vaccinedone.push(item.vaccineName);
+            });
+        }
         console.log("vaccine done" + vaccinedone);
         vaccinenot = difference(mandatoryVacc, vaccinedone);
         return (
             <View>
-                 <Text style={{ fontSize: 20 , marginLeft:10,marginTop:10}}>Vaccine Record</Text>
+                <Text style={{ fontSize: 20, marginLeft: 10, marginTop: 10 }}>Vaccine Record</Text>
                 <View style={{ flexDirection: 'column' }}>
-                <View style={{ flexDirection: 'row' }}>
-                    <View style={{ justifyContent: 'flex-start' , marginLeft: 20}}>
-                        <Button onPress={this.done.bind(this)} title="Done" color="#65f442" />
+                    <View style={{ flexDirection: 'row' }}>
+                        <View style={{ justifyContent: 'flex-start', marginLeft: 20 }}>
+                            <Button onPress={this.done.bind(this)} title="Over" color="#65f442" />
+                        </View>
+                        <View style={{ justifyContent: 'flex-end', marginRight: 10, marginLeft: 200 }}>
+                            <Button onPress={this.notdone.bind(this)} title="Pending" color="#ef2710" />
+                        </View>
                     </View>
-                    <View style={{ justifyContent: 'flex-end',marginRight: 10, marginLeft:200 }}>
-                        <Button onPress={this.notdone.bind(this)}  title="Pending" color="#ef2710" />
-                    </View>
-                </View>
                     <View style={{ justifyContent: 'center' }}>
                         <ScrollView style={{ height: 250 }}>
                             <View style={{ flex: 1, justifyContent: 'center' }}>
@@ -64,71 +66,71 @@ class UserVaccineRecord extends React.Component {
                     </View>
                 </View>
             </View>
-                );
-            }
+        );
+    }
     componentDidMount() {
-                    this.intervalvariable = setInterval(() => {
-                        this.props.dispatch(actionCreator.fetch(this.props.refugee.refugeeId))
-                    }, 5000)
-                }
+        this.intervalvariable = setInterval(() => {
+            this.props.dispatch(actionCreator.fetch(this.props.refugee.refugeeId))
+        }, 5000)
+    }
     componentWillUnmount() {
-                    clearInterval(this.intervalvariable);
-                }
-             }
+        clearInterval(this.intervalvariable);
+    }
+}
 const styles = StyleSheet.create({
-                    tabbuttons: {
-                    flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: 10,
-                marginLeft: 5,
-                marginRight: 5,
-        
-            },
-            container:
+    tabbuttons: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+        marginLeft: 5,
+        marginRight: 5,
+
+    },
+    container:
         {
-                    flex: 1, padding: 16, paddingTop: 30,
-            },
-        header:
+            flex: 1, padding: 16, paddingTop: 30,
+        },
+    header:
         {
-                    height: 50, backgroundColor: '#537791'
-            },
-        text:
+            height: 50, backgroundColor: '#537791'
+        },
+    text:
         {
-                    textAlign: 'center', fontWeight: '100'
-            },
-        dataWrapper:
+            textAlign: 'center', fontWeight: '100'
+        },
+    dataWrapper:
         {
-                    marginTop: -1
-            },
-        row:
+            marginTop: -1
+        },
+    row:
         {
-                    height: 40, backgroundColor: '#E7E6E1'
-            },
+            height: 40, backgroundColor: '#E7E6E1'
+        },
     inputStyle: {
-                    height: 50,
-                width: 150,
-                borderWidth: 1,
-                borderColor: '#007aff',
-                borderRadius: 10,
-                backgroundColor: '#FFF',
-                color: '#000',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingLeft: 5
-        
-            },
+        height: 50,
+        width: 150,
+        borderWidth: 1,
+        borderColor: '#007aff',
+        borderRadius: 10,
+        backgroundColor: '#FFF',
+        color: '#000',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingLeft: 5
+
+    },
     textStyle: {
-                    color: "#000",
-                paddingLeft: 5,
-                paddingRight: 5
-            }
-        
-        });
+        color: "#000",
+        paddingLeft: 5,
+        paddingRight: 5
+    }
+
+});
 function mapStateToProps(state, ownProps) {
     return ({
-                    refugee: state.RefugeeDetails,
-                    doctor:state.DoctorDetails
-            });
-        }
+        refugee: state.RefugeeDetails,
+        doctor: state.DoctorDetails
+    });
+}
 export default connect(mapStateToProps)(UserVaccineRecord);

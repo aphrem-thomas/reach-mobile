@@ -1,13 +1,15 @@
 import React from 'react';
 import RectNative from 'react-native';
-import {Text,View,StyleSheet,TextInput,Image} from 'react-native';
+import {Text,View,StyleSheet,TextInput,Image,TouchableOpacity} from 'react-native';
 import Button from './Button.js';
 import {Actions} from 'react-native-router-flux';
 import {connect} from 'react-redux';
+import * as actionCreator from './action/actionCreator.js';
 class UserLabel extends React.Component{
     // clickHandle1(){
     //     Actions.refugeesecondpage();
     // }
+    
     render(){
         return(
             <View style={styles.viewStyle}>
@@ -21,7 +23,14 @@ class UserLabel extends React.Component{
                 <Text>Nationality : </Text>
                 <Text style={styles.textStyle}>{this.props.refugee.nationality}</Text>
                 </View>
-               </View>
+                <View style={styles.userinfohorizontal}>
+                <View style={{flex:1,justifyContent:'flex-end'}}>
+                    <TouchableOpacity onPress={this.props.onLogout}>
+                        <Text style={{color:"#007aff"}}>Logout</Text>
+                    </TouchableOpacity>
+                </View>
+                </View>
+                </View>
             </View>
         );
     
@@ -56,13 +65,16 @@ const styles = StyleSheet.create({
 
     },
     userinfovertical:{
+        alignSelf:'stretch',
         justifyContent:'center',
         flexDirection:'column',
         paddingLeft:15
     },
     userinfohorizontal:{
+        alignSelf:'stretch',
         flexDirection:'row',
         justifyContent:'center',
+        
     },
     
     textStyle:{

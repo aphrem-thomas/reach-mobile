@@ -83,20 +83,18 @@ class UserPage extends React.Component {
             modalView:true,
         })
     }
+    logout(){
+        Actions.pop();
+    }
 
+    dependentPage(id){
+        this.props.dispatch(actionCreator.emptyDependent())
+        this.props.dispatch(actionCreator.fetch(id))
+    }
     chooseComponent() {
         if (this.state.medicalbutton) {
             return (<View style={styles.sectionStyle}>
-            <Modal animationType="slide"
-                    transparent={false}
-                    visible={this.state.modalView}
-                    style={styles.modalstyle}
-                    onRequestClose={() => {
-                        alert('Modal has been closed.');
-                    }}>
-                <UserMedicalRecord />
-                <Button title="close" background="red" onPress={()=>{this.setState({modalView:false})}}/>
-            </Modal>
+                <UserMedicalRecord/>
             </View>);
         }
         else if (this.state.vaccinebutton) {
@@ -112,7 +110,7 @@ class UserPage extends React.Component {
     render() {
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel/>
+                <UserLabel onLogout={this.logout.bind(this)}/>
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
                         <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
@@ -123,13 +121,13 @@ class UserPage extends React.Component {
                 </View>
 
                 <View style={{ flex: 1 }}>
-                    
-                       
-                        {this.chooseComponent()}
-                        <ScrollView onScroll={()=>{this.setState({ medicalbutton: false,vaccinebutton: false})}}>
+                        
+                            {this.chooseComponent()}
+                        
+                        <ScrollView style={{flex:1}} onScroll={()=>{this.setState({ medicalbutton: false,vaccinebutton: false})}}>
                         {this.props.dependent.map((item, i) => {
                             return (
-                                <ClickCard key={i} height={100} width={this.width-20}>
+                                <ClickCard key={i} height={100} width={this.width-20} onPress={()=>{this.dependentPage(item.id)}}> 
                                     <View style={{
                                         height:98,
                                         backgroundColor:"#FFF",
@@ -182,7 +180,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column'
     },
     sectionStyle: {
-        flex: 1,
+        flex: 4,
         backgroundColor: "#FFF",
         marginLeft: 5,
         marginRight: 5,

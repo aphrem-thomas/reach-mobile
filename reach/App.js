@@ -36,19 +36,28 @@ const App=()=>{
     return(
       <Provider store={store}>
         <Router>
-            <Stack key="root" hideNavBar>
+            <Scene key="root" hideNavBar>
               <Scene key="frontpage">
-                <Scene title="ReACH" key="firstpage" component={FrontPage} hideNavBar initial/>
-                <Scene title="Select your account" key="refugeesecondpage" component={RefugeeSecondPage}/>
+                <Scene  title="ReACH" key="firstpage" component={FrontPage} hideNavBar initial/>
+                <Scene  title="Select your account" key="refugeesecondpage" component={RefugeeSecondPage}/>
                 {/* <Scene title="SupplyChain" key="supplychain" component={SupplySecondPage} /> */}
                 <Scene title="User Page" key="userpage" component={UserPage}/>
               </Scene>
                 <Scene key="doctorView">
-                  <Scene title="Select your account" key="doctorpage" component={UserPage}/>
+                  <Scene type='replace' title="Physician's page" key="doctorpage" component={UserPage}/>
                 </Scene>
-            </Stack>
+            </Scene>
         </Router>
       </Provider>
     );
 }
 export default App;
+
+// export default createStackNavigator({
+//   Home: {
+//     screen: FrontPage,
+//     navigationOptions: {
+//       header: null,
+//     }
+//   },
+// });

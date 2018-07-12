@@ -18,7 +18,12 @@ export function addDependent(value){
 }
 
 
-
+export function emptyRefugee(){
+    return({type:"EMPTYREFUGEE"})
+}
+export function emptyPhysician(){
+    return({type:"EMPTYPHYSICIAN"})
+}
 export function emptyDependent(){
     return({type:"EMPTYDEPENDENT"})
 }
@@ -40,7 +45,7 @@ export function updateDependent(id,parent){
                   "id":response.data.refugeeId,
                   "parentId":pid
               }  
-              console.log("child created ="+JSON.stringify(child))
+              
         return dispatch(addDependent(child));
         }).catch((error)=>{throw(error);}); 
 }
@@ -54,8 +59,7 @@ export function fetch(id, callback){
                 param0: 'Refugee',
                 param1:id
             }
-          }).then((response)=>{
-        console.log(response.data);    
+          }).then((response)=>{  
         dispatch(refresh(response.data));
         }).catch((error)=>{throw(error);});
     })
@@ -76,7 +80,6 @@ export function updateVaccineRecord(id,data){
                     'date': data.date
                 }
                 ).then((res)=>{
-            console.log("response is "+JSON.stringify(res));
             dispatch(fetch(id));
         })
     })
@@ -129,8 +132,7 @@ export function Blood(){
                 param0: 'Blood',
                 param1:'all'
             }
-          }).then((response)=>{
-            console.log("response data received blood "+JSON.stringify(response.data));     
+          }).then((response)=>{ 
         dispatch(refresh_blood(response.data));
         }).catch((error)=>{throw(error);});
     })
@@ -159,7 +161,6 @@ export function Medicine(){
                 param1:'all'
             }
           }).then((response)=>{
-        console.log("response data received medicine "+JSON.stringify(response.data));    
         dispatch(refresh_medicine(response.data));
         }).catch((error)=>{throw(error);});
     })
@@ -173,7 +174,6 @@ export function Syringe(){
                 param1:'all'
             }
           }).then((response)=>{
-        console.log(response.data);    
         dispatch(refresh_syringe(response.data));
         }).catch((error)=>{throw(error);});
     })

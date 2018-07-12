@@ -7,7 +7,11 @@ export function refreshUpdate(state=initState, action){
         case 'REFRESH':{
             let newState=action.payload;
             return newState;
-        }
+        };break;
+        case 'EMPTYREFUGEE':{
+            console.log("inside EMPTYREFUGEE");
+            return initState;
+        };break;
         default: return state;
     }
 }
@@ -49,7 +53,10 @@ export function doctorDetails(state=docState,action){
         case 'DOC_DTL':{
             let newState=action.payload;
             return newState;
-        }
+        };break;
+        case 'EMPTYPHYSICIAN':{
+            return docState;
+        };break;
         default:return state;
     }
 }

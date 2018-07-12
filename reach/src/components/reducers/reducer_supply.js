@@ -25,7 +25,6 @@ export  function refresh_medicine(state=medicineState, action){
 }
 
 export  function refresh_blood(state=bloodState, action){
-    console.log("inside refresh_blood"+JSON.stringify(action.payload));
     switch(action.type){
         case 'REFRESH_BLOOD':{
             let newState=action.payload;

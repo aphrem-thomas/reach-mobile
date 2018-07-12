@@ -17,15 +17,15 @@ class VaccineDone extends React.Component {
             <View style={styles.viewStyle}>
                 <View style={styles.userinfovertical}>
                     <View style={styles.userinfohorizontal}>
-                        <Text>Vaccine name : </Text>
+                        <Text style={styles.textStyle}>Vaccine name : </Text>
                         <Text style={styles.textStyle}>{this.props.vaccine}</Text>
                     </View>
                     <View style={styles.userinfohorizontal}>
-                        <Text>Date of Vaccination: </Text>
+                        <Text style={styles.textStyle}>Date of Vaccination: </Text>
                         <Text style={styles.textStyle}>{this.props.date}</Text>
                     </View>
                     <View style={styles.userinfohorizontal}>
-                        <Text>Location : </Text>
+                        <Text style={styles.textStyle}>Location : </Text>
                         <Text style={styles.textStyle}>{this.props.location}</Text>
                     </View>
                 </View>
@@ -40,13 +40,12 @@ const styles = StyleSheet.create({
         height:65,
         width:320,
         flexDirection: 'column',
-        backgroundColor: '#6bf442',
+        backgroundColor: '#36f773',
         alignItems: 'center',
         marginLeft:20,
         marginRight:20,
         marginTop:10,
         marginBottom:10,
-        borderWidth:1,
         borderRadius:5,
         paddingLeft:5,
         paddingRight:5,

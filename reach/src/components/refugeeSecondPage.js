@@ -18,6 +18,8 @@ import Navbar from './Navbar.js'
 import { UIManager } from 'react-native';
 import ClickCard from './clickCard.js';
 import Button from './Button.js';
+import {connect} from 'react-redux';
+import * as actionCreator from './action/actionCreator.js';
 class RefugeeSecondPage extends React.Component {
     constructor(props) {
         super(props);
@@ -29,6 +31,9 @@ class RefugeeSecondPage extends React.Component {
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         }
+        this.props.dispatch(actionCreator.emptyRefugee());
+        this.props.dispatch(actionCreator.emptyDependent());
+        this.props.dispatch(actionCreator.emptyPhysician());
     }
     options() {
         if (this.state.option === "patient") {
@@ -146,4 +151,8 @@ const styles = StyleSheet.create({
 
 
 });
-export default RefugeeSecondPage;
+
+function mapStateToProps(){
+    return({});
+}
+export default connect(mapStateToProps)(RefugeeSecondPage);

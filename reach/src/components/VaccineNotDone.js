@@ -37,7 +37,7 @@ class VaccineNotDone extends React.Component {
                 return(<Spinner size={"small"}/>)
             }
             else{
-                return(<Button title={"done"} onPress={this.onClickHandle.bind(this)}/>)
+                return(<Button title={"done"} background="#007aff" onPress={this.onClickHandle.bind(this)}/>)
             }
         }
     }
@@ -46,7 +46,7 @@ class VaccineNotDone extends React.Component {
             <View style={styles.viewStyle}>
                 <View style={styles.userinfovertical}>
                     <View style={styles.userinfohorizontal}>
-                        <Text>Vaccine name : </Text>
+                        <Text style={styles.textStyle}>Vaccine name : </Text>
                         <Text style={styles.textStyle}>{this.props.vaccine}</Text>
                         {this.buttonChoose()}
                     </View>
@@ -62,13 +62,12 @@ const styles = StyleSheet.create({
         height:65,
         width:300,
         flexDirection: 'column',
-        backgroundColor: '#f72011',
+        backgroundColor: '#f73022',
         alignItems: 'center',
         marginLeft:10,
         marginRight:10,
         marginTop:10,
         marginBottom:10,
-        borderWidth:1,
         borderRadius:5,
         paddingLeft:5,
         paddingRight:5,
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
     },
     
     textStyle:{
-        color:"#000",
+        color:"#FFF",
         paddingLeft:5,
         paddingRight:5
     }

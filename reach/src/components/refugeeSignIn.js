@@ -12,7 +12,10 @@ class RefugeeSignIn extends React.Component{
     constructor(props){
         super(props);
         this.state={loading:false,modalVisible:false}
-        
+        console.log("refugee state in refugee"+ JSON.stringify(this.props.refugeeDetails));
+        console.log("refugee id field in refugee "+this.props.refugeeId);
+    
+    
     }
     componentWillUnmount(){
         this.setState({loading:false})
@@ -101,6 +104,7 @@ const styles = StyleSheet.create({
 function mapStateToProps(state,ownProps){
     return({
         refugeeId:state.RefugeeField,
+        refugeeDetails:state.RefugeeDetails
     })
 }
 export default connect(mapStateToProps)(RefugeeSignIn);

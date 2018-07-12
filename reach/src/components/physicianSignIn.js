@@ -12,6 +12,10 @@ class PhysicianSignIn extends React.Component {
     constructor(props) {
         super(props);
         this.state = { country: "Country", camp: "Location", loading: false, modalVisible: false }
+        // console.log("physician state in physician"+ this.props.refugeeId);
+        console.log("refugee state in physician"+ JSON.stringify(this.props.refugeeDetails));
+        console.log("refugee id field in refugee "+this.props.refugeeId);
+    
     }
     componentWillUnmount(){
         this.setState({loading:false})
@@ -38,9 +42,11 @@ class PhysicianSignIn extends React.Component {
             "date": today.toString()
         }
         this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
-            Actions.doctorView();
-            this.props.dispatch(actionCreator.updateDoctor(doc));
             this.flipState();
+            this.props.dispatch(actionCreator.updateDoctor(doc));
+            Actions.doctorView();
+            
+            
         });
     }
     ButtonLoading() {
@@ -54,7 +60,10 @@ class PhysicianSignIn extends React.Component {
         this.setState({ modalVisible: true })
     }
     flipState() {
-        this.setState({ modalVisible: false,loading:false })
+        if(this.state.modalVisible===true)
+            this.setState({modalVisible:false,loading:false})
+        else
+            this.setState({modalVisible:true,loading:true})
     }
 
     render() {
@@ -64,7 +73,8 @@ class PhysicianSignIn extends React.Component {
                 <ScrollView style={{ flex: 1 }}>
                     <View style={{ flex: 1, justifyContent: 'center' }}>
                         <Text style={{ flex: 1, fontSize: 30, color: '#007aff' }}>Physician signin</Text>
-                        <Text style={{ fontFamily: "sans-serif" }}>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Text>
+                        {/* <Text style={{ fontFamily: "sans-serif" }}>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Text> */}
+                        
                         <Button title="login" background="red" onPress={this.signinModal.bind(this)} />
                     </View>
                 </ScrollView>
@@ -147,7 +157,8 @@ const styles = StyleSheet.create({
 function mapStateToProps(state, ownProps) {
     return ({
         refugeeId: state.RefugeeField,
-        physicianId: state.PhysicianField
+        physicianId: state.PhysicianField,
+        refugeeDetails:state.RefugeeDetails
     })
 }
 export default connect(mapStateToProps)(PhysicianSignIn);
