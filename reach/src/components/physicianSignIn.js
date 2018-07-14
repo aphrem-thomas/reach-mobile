@@ -21,6 +21,10 @@ class PhysicianSignIn extends React.Component {
         this.setState({loading:false})
     }
     onSubmit() {
+        this.props.dispatch(actionCreator.emptyRefugee());
+        this.props.dispatch(actionCreator.emptyDependent());
+        this.props.dispatch(actionCreator.emptyPhysician());
+        
         let today = new Date();
         let dd = today.getDate();
         let mm = today.getMonth() + 1; //January is 0!

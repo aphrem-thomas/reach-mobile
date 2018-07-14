@@ -20,11 +20,14 @@ import {
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import UserLabel from './UserLabel.js';
+import NewButton from './Button.js';
 import { Router, Scene, Stack } from 'react-native-router-flux';
 import UserOption from './UserOption.js';
 import UserMedicalRecord from './UserMedicalRecord.js';
 import UserVaccineRecord from './UserVaccineRecord.js';
 import ClickCard from './clickCard.js';
+import DependentList from './dependentList.js';
+
 class UserPage extends React.Component {
     // clickHandle1(){
     //     Actions.refugeesecondpage();
@@ -39,7 +42,7 @@ class UserPage extends React.Component {
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         }
-        var {height,width}=Dimensions.get('window');
+        var { height, width } = Dimensions.get('window');
     }
     componentWillMount() {
         let arrayChildren = [];
@@ -68,7 +71,7 @@ class UserPage extends React.Component {
     componentWillUpdate() {
         LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
     }
-  
+
     onClickVaccine() {
         this.setState({
             medicalbutton: false,
@@ -80,21 +83,18 @@ class UserPage extends React.Component {
         this.setState({
             medicalbutton: true,
             vaccinebutton: false,
-            modalView:true,
+            modalView: true,
         })
     }
-    logout(){
+    logout() {
         Actions.pop();
     }
 
-    dependentPage(id){
-        this.props.dispatch(actionCreator.emptyDependent())
-        this.props.dispatch(actionCreator.fetch(id))
-    }
+
     chooseComponent() {
         if (this.state.medicalbutton) {
             return (<View style={styles.sectionStyle}>
-                <UserMedicalRecord/>
+                <UserMedicalRecord />
             </View>);
         }
         else if (this.state.vaccinebutton) {
@@ -108,9 +108,16 @@ class UserPage extends React.Component {
             return null;
     }
     render() {
+        if (this.props.refugee.children != null && this.props.refugee.parents != null) {
+            let dependentnumber = this.props.refugee.children.length;
+            if (this.props.refugee.parents.fater != null)
+                dependentnumber++;
+            if (this.props.refugee.parents.mother != null)
+                dependentnumber++;
+        }
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel onLogout={this.logout.bind(this)}/>
+                <UserLabel onLogout={this.logout.bind(this)} />
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
                         <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
@@ -121,38 +128,9 @@ class UserPage extends React.Component {
                 </View>
 
                 <View style={{ flex: 1 }}>
-                        
-                            {this.chooseComponent()}
-                        
-                        <ScrollView style={{flex:1}} onScroll={()=>{this.setState({ medicalbutton: false,vaccinebutton: false})}}>
-                        {this.props.dependent.map((item, i) => {
-                            return (
-                                <ClickCard key={i} height={100} width={this.width-20} onPress={()=>{this.dependentPage(item.id)}}> 
-                                    <View style={{
-                                        height:98,
-                                        backgroundColor:"#FFF",
-                                        // marginTop: '5',
-                                        // marginRight: '3',
-                                        // marginLeft: '3',
-                                        borderRadius:10,
-                                        flexDirection:'row',
-                                        shadowColor: '#000000',
-                                        shadowOffset: {
-                                            width: 0,
-                                            height: 10
-                                        },
-                                        shadowRadius: 20,
-                                        shadowOpacity: 1.0,
-                                        elevation: 1,
-                                        alignItems:'center'
-
-                                    }}>
-                                        <Image source={{ uri: item.image }} style={{ height: 70, width: 70, borderRadius: 70,marginLeft:20,marginRight:20}} />
-                                        <Text style={{fontSize:20}}>{item.name}</Text>                                   
-                                    </View>
-                                </ClickCard>
-                            )
-                        })}
+                    {this.chooseComponent()}
+                    <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
+                        {this.props.dependent.length == 4 ? <DependentList /> : null}
                     </ScrollView>
                 </View>
             </View>

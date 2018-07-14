@@ -27,6 +27,9 @@ class RefugeeSignIn extends React.Component{
             this.setState({modalVisible:true})
     }
    onPress(){
+    this.props.dispatch(actionCreator.emptyRefugee());
+    this.props.dispatch(actionCreator.emptyDependent());
+    this.props.dispatch(actionCreator.emptyPhysician());
        this.setState({loading:true})
         this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(()=>{
             this.setState({loading:false})

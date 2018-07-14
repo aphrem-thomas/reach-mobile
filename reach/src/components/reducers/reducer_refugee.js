@@ -22,6 +22,7 @@ export function dependentRecord(state=dependentInt,action){
             return [...state,action.payload]
         }
         case 'EMPTYDEPENDENT':{
+            console.log("inside EMPTYDEPENDENT");
             return dependentInt
         }
         default : return state;
@@ -55,6 +56,7 @@ export function doctorDetails(state=docState,action){
             return newState;
         };break;
         case 'EMPTYPHYSICIAN':{
+            console.log("inside EMPTYPHYSICIAN");
             return docState;
         };break;
         default:return state;

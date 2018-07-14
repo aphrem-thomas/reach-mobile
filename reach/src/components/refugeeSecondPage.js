@@ -31,9 +31,7 @@ class RefugeeSecondPage extends React.Component {
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         }
-        this.props.dispatch(actionCreator.emptyRefugee());
-        this.props.dispatch(actionCreator.emptyDependent());
-        this.props.dispatch(actionCreator.emptyPhysician());
+      
     }
     options() {
         if (this.state.option === "patient") {
@@ -59,6 +57,7 @@ class RefugeeSecondPage extends React.Component {
     clickhandlePhysician() {
         this.setState({ option: "physician", button2: true, button1: false });
     }
+   
     componentWillUpdate() {
         LayoutAnimation.linear();
     }
