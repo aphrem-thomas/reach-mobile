@@ -6,7 +6,7 @@ import RefugeeSecondPage from './src/components/refugeeSecondPage.js';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import { combineReducers } from 'redux';
-import {refreshUpdate,doctorDetails,refugeeIdField,physicianIdField,dependentRecord} from './src/components/reducers/reducer_refugee.js';
+import {refreshUpdate,doctorDetails,refugeeIdField,physicianIdField,dependentRecord, dependentPage, guardian} from './src/components/reducers/reducer_refugee.js';
 import {refresh_vaccine,refresh_medicine,refresh_syringe,refresh_blood,VendorDetails} from './src/components/reducers/reducer_supply.js';
 import { applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -25,7 +25,9 @@ const TheReducer=combineReducers({
   DoctorDetails:doctorDetails,
   VendorDetails:VendorDetails,
   RefugeeField:refugeeIdField,
-  Dependent:dependentRecord
+  Dependent:dependentRecord,
+  DependentPage:dependentPage,
+  Guardian:guardian,
 
 });
 

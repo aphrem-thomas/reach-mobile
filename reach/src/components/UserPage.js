@@ -14,7 +14,8 @@ import {
     Platform,
     UIManager,
     Dimensions,
-    Modal
+    Modal,
+    ProgressBarAndroid,
 } from 'react-native';
 // import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
@@ -29,15 +30,16 @@ import ClickCard from './clickCard.js';
 import DependentList from './dependentList.js';
 
 class UserPage extends React.Component {
-    // clickHandle1(){
-    //     Actions.refugeesecondpage();
-    // }
+   
     constructor(props) {
         super(props);
+        console.log("dependent page is : "+this.props.dependentPage);
         this.state = {
             medicalbutton: false,
             vaccinebutton: false,
             modalView: false,
+            dependentPage:false,
+            dependingOn:null
         }
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -117,7 +119,7 @@ class UserPage extends React.Component {
         }
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel onLogout={this.logout.bind(this)} />
+                <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} />
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
                         <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
@@ -130,7 +132,11 @@ class UserPage extends React.Component {
                 <View style={{ flex: 1 }}>
                     {this.chooseComponent()}
                     <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
-                        {this.props.dependent.length == 4 ? <DependentList /> : null}
+                        {this.props.dependent.length == 4 ?
+                            <DependentList /> :!this.props.dependentPage?
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
+                            </View>:null}
                     </ScrollView>
                 </View>
             </View>
@@ -212,7 +218,9 @@ const styles = StyleSheet.create({
 function mapStateToProps(state, ownProps) {
     return ({
         refugee: state.RefugeeDetails,
-        dependent: state.Dependent
+        dependent: state.Dependent,
+        dependentPage:state.DependentPage,
+        guardian:state.Guardian
     });
 }
 export default connect(mapStateToProps)(UserPage);

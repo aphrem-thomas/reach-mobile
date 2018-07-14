@@ -39,6 +39,25 @@ export function refugeeIdField(state="Like rf123233",action){
     }
 }
 
+export function dependentPage(state=false,action){
+    switch(action.type){
+        case 'FLIPDEPENDENTPAGE':{
+            return !state;
+        }
+        default:return state;
+    }
+}
+
+export function guardian(state=null,action){
+    switch(action.type){
+        case 'GUARDIAN':{
+            return action.payload;
+        }
+        default:return null;
+    }
+}
+
+
 export function physicianIdField(state="Like Dr_Adel",action){
     switch(action.type){
         case 'PHYFIELD':{

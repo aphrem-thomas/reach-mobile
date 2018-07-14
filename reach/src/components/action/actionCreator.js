@@ -17,6 +17,14 @@ export function addDependent(value){
     return({type:'ADDDEPENDENT',payload:value})
 }
 
+export function flipdependentpage(){
+    return({type:'FLIPDEPENDENTPAGE'})
+}
+
+export function guardian(id){
+    console.log("id in guardian : "+id);
+    return({type:'GUARDIAN',payload:id})
+}
 
 export function emptyRefugee(){
     return({type:"EMPTYREFUGEE"})

@@ -7,6 +7,8 @@ import * as actionCreator from './action/actionCreator.js';
 
 class DependentList extends React.Component{
     dependentPage(id){
+        this.props.dispatch(actionCreator.guardian(this.props.refugee.refugeeId))
+        this.props.dispatch(actionCreator.flipdependentpage())
         this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.fetch(id));
     }
@@ -19,9 +21,6 @@ class DependentList extends React.Component{
                         <View key={i} style={{
                             height:100,
                             backgroundColor:"#FFF",
-                            // marginTop: '5',
-                            // marginRight: '3',
-                            // marginLeft: '3',
                             borderRadius:10,
                             flexDirection:'row',
                             shadowColor: '#000000',
@@ -121,6 +120,7 @@ const styles = StyleSheet.create({
 
 function mapStateToProps(state,ownProps){
     return({
+        refugee:state.RefugeeDetails,
         dependent:state.Dependent
     })
 }
