@@ -29,14 +29,16 @@ import UserVaccineRecord from './UserVaccineRecord.js';
 import ClickCard from './clickCard.js';
 import DependentList from './dependentList.js';
 
-class UserPage extends React.Component {
+class VendorPage extends React.Component {
    
     constructor(props) {
         super(props);
        
         this.state = {
-            medicalbutton: false,
+            medicinebutton: false,
             vaccinebutton: false,
+            bloodbutton:false,
+            syringbutton:false,
             modalView: false,
             dependentPage:false,
             dependingOn:null
@@ -78,72 +80,92 @@ class UserPage extends React.Component {
 
     onClickVaccine() {
         this.setState({
-            medicalbutton: false,
+            medicinebutton: false,
             vaccinebutton: true,
+            syringbutton:true,
+            bloodbutton:true,
         })
     }
 
-    onClickMedical() {
+    onClickMedicine() {
         this.setState({
             medicalbutton: true,
             vaccinebutton: false,
-            modalView: true,
+            syringbutton:true,
+            bloodbutton:true,
+        })
+    }
+
+    onClickSyringe() {
+        this.setState({
+            medicalbutton: true,
+            vaccinebutton: true,
+            syringbutton: false,
+            bloodbutton:true,
+        })
+    }
+
+    onClickBlood() {
+        this.setState({
+            medicalbutton: true,
+            vaccinebutton: true,
+            syringbutton:true,
+            bloodbutton:false,
         })
     }
     logout() {
         this.props.dispatch(actionCreator.emptyRefugee());
         this.props.dispatch(actionCreator.emptyPhysician());
         this.props.dispatch(actionCreator.emptyDependent());
-        this.props.dispatch(actionCreator.resetdependentpage());
         Actions.pop();
     }
 
 
     chooseComponent() {
-        if (this.state.medicalbutton) {
+        if (this.state.medicinebutton) {
             return (<View style={styles.sectionStyle}>
-                <UserMedicalRecord />
+                <MedicineList/>
             </View>);
         }
         else if (this.state.vaccinebutton) {
             return (<View style={styles.sectionStyle}>
-                <UserVaccineRecord />
+                <VaccineList/>
             </View>);
         }
-        else if (this.state.vaccinebutton)
-            return null;
-        else
-            return null;
+        else if (this.state.syringebutton){
+            return (<View style={styles.sectionStyle}>
+                <SyringeList/>
+            </View>);
+        }
+        else if(this.state.bloodbutton){
+            return (<View style={styles.sectionStyle}>
+                <BloodList/>
+            </View>);
+        }
     }
     render() {
-        if (this.props.refugee.children != null && this.props.refugee.parents != null) {
-            let dependentnumber = this.props.refugee.children.length;
-            if (this.props.refugee.parents.fater != null)
-                dependentnumber++;
-            if (this.props.refugee.parents.mother != null)
-                dependentnumber++;
-        }
+        
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} />
+                
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
+                        <Button onPress={this.onClickMedicine.bind(this)} disabled={this.state.medicinButton} style={{ height: 30 }} title="Medicine" />
                     </View>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine Record" />
+                        <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine" />
+                    </View>
+                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
+                        <Button onPress={this.onClickSyringe.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Syringe" />
+                    </View>
+                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
+                        <Button onPress={this.onClickBlood.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Blood" />
                     </View>
                 </View>
 
                 <View style={{ flex: 1 }}>
                     {this.chooseComponent()}
-                    <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
-                        {this.props.dependent.length == 4 ?
-                            <DependentList /> :!this.props.dependentPage?
-                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
-                            </View>:null}
-                    </ScrollView>
+                    
                 </View>
             </View>
         );
@@ -229,4 +251,4 @@ function mapStateToProps(state, ownProps) {
         guardian:state.Guardian
     });
 }
-export default connect(mapStateToProps)(UserPage);
+export default connect(mapStateToProps)(VendorPage);

@@ -17,12 +17,15 @@ export function addDependent(value){
     return({type:'ADDDEPENDENT',payload:value})
 }
 
-export function flipdependentpage(){
-    return({type:'FLIPDEPENDENTPAGE'})
+export function setdependentpage(){
+    return({type:'SETDEPENDENTPAGE'})
+}
+
+export function resetdependentpage(){
+    return({type:'RESETDEPENDENTPAGE'})
 }
 
 export function guardian(id){
-    console.log("id in guardian : "+id);
     return({type:'GUARDIAN',payload:id})
 }
 
@@ -94,7 +97,7 @@ export function updateVaccineRecord(id,data){
 }
 
 export function updateMedicalRecord(id,data){
-    console.log("checking data "+ data.refugee);
+    console.log("checking data "+ JSON.stringify(data));
     return(function(dispatch){
         return axios.post("https://hps-bna-client.mybluemix.net/calltransaction",
         {

@@ -4,7 +4,7 @@ import {Text,View,StyleSheet,TextInput} from 'react-native';
 import Button from './Button.js';
 import {Actions} from 'react-native-router-flux';
 
-class PhysicianSignIn extends React.Component{
+class InputText extends React.Component{
     // clickHandle1(){
     //     Actions.refugeesecondpage();
     // }
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
 
   });
 
-export default PhysicianSignIn;
+export default InputText;

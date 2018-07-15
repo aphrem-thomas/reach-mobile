@@ -12,6 +12,7 @@ class UserLabel extends React.Component {
     constructor(props) {
         super(props);
     }
+ 
     backbutton() {
         if (this.props.guardian != null) {
             return (<TouchableOpacity onPress={this.props.onLogout}>
@@ -39,7 +40,9 @@ render(){
                             <Text style={{ color: "#007aff" }}>Logout</Text>
                         </TouchableOpacity>
                     </View>
-                    {this.backbutton()}
+                    {this.props.guardian!=null?<TouchableOpacity onPress={this.props.onLogout}>
+                        <Text style={{ color: "#007aff" }}>back</Text>
+                    </TouchableOpacity>:null}
                 </View>
             </View>
         </View>

@@ -6,7 +6,6 @@ import {
     StyleSheet,
     TextInput,
     Image,
-    Button,
     ScrollView,
     Modal
 } from 'react-native';
@@ -21,7 +20,8 @@ import ModalView from './ModalView.js';
 import InputText from './InputText.js';
 import DatePick from './DatePicker.js';
 import Spinner from './Spinner.js';
-import DatePicker from 'react-native-datepicker'
+import DatePicker from 'react-native-datepicker';
+import Button from './Button.js'
 class UserMedicalRecord extends React.Component {
     constructor(props) {
         super(props);
@@ -29,12 +29,13 @@ class UserMedicalRecord extends React.Component {
             tableHead: ['Date', 'Hospital', 'Medical Issue', 'Physician', 'Admited', 'Released', 'Prescription'],
             widthArr: [40, 60, 80, 100, 120, 140, 160],
             modalVisible: false,
-            admitDate: "2018/5/01",
-            releaseDate: null,
+            admdays: 0,
             hostpitalName: null,
             issue: null,
             prescription: null,
-            loading: false
+            loading: false,
+            admitDate:null,
+            releaseDate:null
         }
     }
     onPress() {
@@ -42,6 +43,7 @@ class UserMedicalRecord extends React.Component {
     }
     updateMedical() {
         this.setState({ loading: true });
+        console.log("hospital name is " + this.state.hostpitalName);
         let data = {
             "refugee": this.props.refugee.refugeeId,
             "doctor": this.props.doctor.name,
@@ -54,6 +56,7 @@ class UserMedicalRecord extends React.Component {
             "prescription": this.state.prescription
 
         }
+        console.log("data in usermedical record " + JSON.stringify(data));
         this.props.dispatch(actionCreator.updateMedicalRecord(this.props.refugee.refugeeId, data)).then(() => {
             this.setState({ loading: false, modalVisible: false })
 
@@ -61,7 +64,7 @@ class UserMedicalRecord extends React.Component {
     }
     buttonChoose() {
         if (this.props.doctor.name != null) {
-            return (<Button onPress={this.onPress.bind(this)} title="Add" />)
+            return (<Button onPress={this.onPress.bind(this)} background="#007aff" title="Add" />)
         }
     }
 
@@ -70,7 +73,7 @@ class UserMedicalRecord extends React.Component {
             return (<Spinner size="small" />)
         }
         else {
-            return (<Button title="Update" onPress={this.updateMedical.bind(this)} />)
+            return (<Button title="Update" background="#007aff" onPress={this.updateMedical.bind(this)} />)
         }
     }
     flipState() {
@@ -131,12 +134,18 @@ class UserMedicalRecord extends React.Component {
                     <View style={{ justifyContent: "center", alignItems: 'center', flex: 1 }}>
                         <View style={styles.modalstyle}>
                             <Text style={{ fontSize: 40, color: "#007aff" }}>Enter Medical report</Text>
-                            <InputText label="Hospital Name" onChange={(data) => { console.log(data) }} />
-                            <DatePicker
-                                style={{ width: 150, marginTop: 5 }}
+                            <InputText label="Hospital Name" value={this.state.hostpitalName} onChangeText={(data) => { this.setState({ hostpitalName: data }); console.log() }} />
+                            <InputText label="issue" value={this.state.issue} onChangeText={(data) => { this.setState({ issue: data }) }} />
+                            <InputText label="Prescription" value={this.state.prescription} onChangeText={(data) => { this.setState({ prescription: data }) }} />
+                            <View style={{flex:1,justifyContent:'center',flexDirection:'row'}}>                           
+                            <Text style={{fontSize:20,color:"#FFF"}}>Admit Date</Text><DatePicker
+                                style={{ width: 150}}
                                 date={this.state.admitDate}
                                 mode="date"
+                                placeholder="Admit date"
                                 format="YYYY-MM-DD"
+                                minDate="2016-05-01"
+                                maxDate="2100-06-01"
                                 confirmBtnText="Confirm"
                                 cancelBtnText="Cancel"
                                 customStyles={{
@@ -148,20 +157,52 @@ class UserMedicalRecord extends React.Component {
                                     },
                                     dateInput: {
                                         marginLeft: 36
+                                    },
+                                    dateText:{
+                                        color:"#FFF"
                                     }
-
+                                    // ... You can check the source to find the other keys.
                                 }}
-                                onDateChange={(date) => { () => { this.setState({ admitDate: date }) } }}
+                                onDateChange={(date) => { this.setState({ admitDate: date }) }}
                             />
-                            <InputText label="issue" onChange={(data) => { this.setState({ hostpitalName: data }) }} />
-                            <InputText label="Prescription" onChange={(data) => { this.setState({ prescription: data }) }} />
+                            </View>
+                            <View style={{flex:1,justifyContent:'center',flexDirection:'row'}}>
+                            <Text style={{fontSize:20,color:"#FFF"}}>Release Date</Text><DatePicker
+                                style={{ width: 150}}
+                                date={this.state.releaseDate}
+                                mode="date"
+                                placeholder="Discharge date"
+                                format="YYYY-MM-DD"
+                                minDate="2016-05-01"
+                                maxDate="2100-06-01"
+                                confirmBtnText="Confirm"
+                                cancelBtnText="Cancel"
+                                customStyles={{
+                                    dateIcon: {
+                                        position: 'absolute',
+                                        left: 0,
+                                        top: 4,
+                                        marginLeft: 0
+                                    },
+                                    dateInput: {
+                                        marginLeft: 36,
+                                    },
+                                    dateText:{
+                                        color:"#FFF"
+                                    }
+                                    // ... You can check the source to find the other keys.
+                                }}
+                                onDateChange={(date) => { this.setState({ releaseDate: date }) }}
+                            />
+                            </View>
                             {this.updatebutton()}
-                            <Button title="close" onPress={this.flipState.bind(this)} />
+                            <Button title="close" background="red" onPress={this.flipState.bind(this)} />
                         </View>
 
 
                     </View>
                 </Modal>
+                
 
             </View>
         )
@@ -188,16 +229,16 @@ const styles = StyleSheet.create({
 
     },
     modalstyle: {
-        height: 400,
-        width: 300,
-        backgroundColor: 'rgba(255,255,255,0.75)',
+        height: 500,
+        width: 350,
+        backgroundColor: 'rgba(0,0,0,0.75)',
         borderRadius: 10,
         justifyContent: 'center',
         flexDirection: 'column'
     },
     container:
         {
-            flex: 1, padding: 16, paddingTop: 30,backgroundColor:'#FFF'
+            flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#FFF'
         },
     header:
         {

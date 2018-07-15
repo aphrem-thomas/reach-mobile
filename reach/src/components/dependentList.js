@@ -8,12 +8,11 @@ import * as actionCreator from './action/actionCreator.js';
 class DependentList extends React.Component{
     dependentPage(id){
         this.props.dispatch(actionCreator.guardian(this.props.refugee.refugeeId))
-        this.props.dispatch(actionCreator.flipdependentpage())
+        this.props.dispatch(actionCreator.setdependentpage())
         this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.fetch(id));
     }
     render(){
-        console.log("inside flat list");
         return(
             this.props.dependent.map((item, i) => {
                 return (

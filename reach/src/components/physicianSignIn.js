@@ -24,12 +24,11 @@ class PhysicianSignIn extends React.Component {
         this.props.dispatch(actionCreator.emptyRefugee());
         this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.emptyPhysician());
-        
+        this.setState({ loading: true })
         let today = new Date();
         let dd = today.getDate();
         let mm = today.getMonth() + 1; //January is 0!
         let yyyy = today.getFullYear();
-        this.setState({ loading: true })
         if (dd < 10) {
             dd = '0' + dd
         }
@@ -40,11 +39,12 @@ class PhysicianSignIn extends React.Component {
 
         today = yyyy + '/' + mm + '/' + dd;
         let doc = {
-            "name": this.props.refugeeId,
+            "name": this.props.physicianId,
             "location": this.state.country,
             "camp": this.state.camp,
-            "date": today.toString()
+            "date": today
         }
+        console.log("doc in physician sign in page "+JSON.stringify(doc))
         this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
             this.flipState();
             this.props.dispatch(actionCreator.updateDoctor(doc));
@@ -75,10 +75,9 @@ class PhysicianSignIn extends React.Component {
 
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
                 <ScrollView style={{ flex: 1 }}>
-                    <View style={{ flex: 1, justifyContent: 'center' }}>
+                    <View style={{ flex: 1, justifyContent: 'center'}}>
                         <Text style={{ flex: 1, fontSize: 30, color: '#007aff' }}>Physician signin</Text>
-                        {/* <Text style={{ fontFamily: "sans-serif" }}>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</Text> */}
-                        
+                        <Text style={{ fontFamily: "sans-serif" }}>Physician can provide the id of patient along with login to view and update the Medical and Vaccine Records of Patient and his/her dependent's</Text>
                         <Button title="login" background="red" onPress={this.signinModal.bind(this)} />
                     </View>
                 </ScrollView>
@@ -101,28 +100,27 @@ class PhysicianSignIn extends React.Component {
                             }} />
                             <InputText secureTextEntry={true} label="Password" />
                             <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-                                <View style={styles.pickerStyle}>
                                     <Picker
+                                        itemStyle={{color:'white'}}
                                         selectedValue={this.state.country}
-                                        style={{ height: 50, width: 150 }}
+                                        style={{marginRight:2,backgroundColor:'orange', height: 50, width: 150 }}
                                         onValueChange={(itemValue, itemIndex) => this.setState({ country: itemValue })}>
                                         <Picker.Item label="Country" value="Country" />
                                         <Picker.Item label="Turkey" value="Turkey" />
                                         <Picker.Item label="Iran" value="Iran" />
                                         <Picker.Item label="Syria" value="Syria" />
                                     </Picker>
-                                </View>
-                                <View style={styles.pickerStyle}>
+                               
                                     <Picker
-                                        itemStyle={{ color: 'orange' }}
+                                        itemStyle={{color:'white'}}
                                         selectedValue={this.state.camp}
-                                        style={{ height: 50, width: 150 }}
+                                        style={{marginLeft:2, backgroundColor:'orange',height: 50, width: 150 }}
                                         onValueChange={(itemValue, itemIndex) => this.setState({ camp: itemValue })}>
                                         <Picker.Item label="Location" value="Location" />
                                         <Picker.Item label="Aleppo" value="Aleppo" />
                                         <Picker.Item label="Damascus" value="Damascus" />
                                     </Picker>
-                                </View>
+                               
                             </View>
                             {this.ButtonLoading()}
                             <Button background="red" title="close" onPress={this.flipState.bind(this)} />
@@ -141,11 +139,14 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         backgroundColor: 'rgba(225,225,225,0)',
         justifyContent: 'center',
-        alignContent: 'center'
+        alignContent: 'center',
+        marginLeft:3,
+        marginRight:3
     },
     pickerStyle: {
         marginTop: 5,
-        borderRadius: 2
+        borderRadius: 2,
+        borderColor:'orange',
     },
     modalstyle: {
         height: 450,

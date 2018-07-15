@@ -41,9 +41,12 @@ export function refugeeIdField(state="Like rf123233",action){
 
 export function dependentPage(state=false,action){
     switch(action.type){
-        case 'FLIPDEPENDENTPAGE':{
-            return !state;
-        }
+        case 'SETDEPENDENTPAGE':{
+            return true;
+        }break;
+        case 'RESETDEPENDENTPAGE':{
+            return false;
+        }break;
         default:return state;
     }
 }
@@ -51,8 +54,11 @@ export function dependentPage(state=false,action){
 export function guardian(state=null,action){
     switch(action.type){
         case 'GUARDIAN':{
-            return action.payload;
-        }
+            console.log("inside guardian reducer");
+            console.log("action.payload is "+ action.payload);
+            let newState=action.payload;
+            return newState;
+        }break;
         default:return null;
     }
 }

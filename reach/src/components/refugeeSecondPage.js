@@ -14,6 +14,7 @@ import {
 //import Button from './Button.js';
 import PhysicianSignIn from './physicianSignIn.js';
 import RefugeeSignIn from './refugeeSignIn.js';
+import UnoSignIn from './UnoSignIn.js';
 import Navbar from './Navbar.js'
 import { UIManager } from 'react-native';
 import ClickCard from './clickCard.js';
@@ -44,6 +45,13 @@ class RefugeeSecondPage extends React.Component {
             return (
                 <View style={styles.signinStyle}>
                     <PhysicianSignIn />
+                </View>
+            );
+        }
+        else if (this.state.option === "uno") {
+            return (
+                <View style={styles.signinStyle}>
+                    <UnoSignIn />
                 </View>
             );
         }
@@ -136,7 +144,7 @@ const styles = StyleSheet.create({
     signinStyle: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        
 
     },
     redTextStyle: {
