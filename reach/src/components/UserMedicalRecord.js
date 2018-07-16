@@ -83,6 +83,7 @@ class UserMedicalRecord extends React.Component {
         let medicalRecords = [{ "date": "1/2/2018", "hospital": "akfjldk", "issue": "jdljkfds", "physician": "kjdkfaf#dan", "admitDate": "03/25/2015", "dischargeDate": "2/5/2018", "prescription": "fa;ldkfj;" }];
         const state = this.state;
         const tableData = [];
+        if(this.props.refugee.medicalRecords){
         this.props.refugee.medicalRecords.map((item) => {
             let temp = [];
             let doc = item.physician.split('#');
@@ -94,7 +95,7 @@ class UserMedicalRecord extends React.Component {
             temp.push(item.dischargeDate);
             temp.push(item.prescription);
             tableData.push(temp);
-        })
+        })}
 
 
         return (
@@ -129,7 +130,7 @@ class UserMedicalRecord extends React.Component {
                     visible={this.state.modalVisible}
                     style={styles.modalstyle}
                     onRequestClose={() => {
-                        alert('Modal has been closed.');
+                        this.setState({modalVisible:false})
                     }}>
                     <View style={{ justifyContent: "center", alignItems: 'center', flex: 1 }}>
                         <View style={styles.modalstyle}>

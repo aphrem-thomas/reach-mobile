@@ -28,7 +28,11 @@ import UserMedicalRecord from './UserMedicalRecord.js';
 import UserVaccineRecord from './UserVaccineRecord.js';
 import ClickCard from './clickCard.js';
 import DependentList from './dependentList.js';
-
+import BloodList from './BloodList.js';
+import VaccineList from './VaccineList.js';
+import SyringeList from './SyringeList.js';
+import MedicineList from './MedicineList.js';
+import ChangeSupply from './ChangeSupply.js';
 class VendorPage extends React.Component {
    
     constructor(props) {
@@ -39,7 +43,7 @@ class VendorPage extends React.Component {
             vaccinebutton: false,
             bloodbutton:false,
             syringbutton:false,
-            modalView: false,
+            loading: false,
             dependentPage:false,
             dependingOn:null
         }
@@ -79,38 +83,46 @@ class VendorPage extends React.Component {
     }
 
     onClickVaccine() {
+        this.props.dispatch(actionCreator.Vaccine()).then(()=>{this.setState({loading:false})});
         this.setState({
             medicinebutton: false,
             vaccinebutton: true,
-            syringbutton:true,
-            bloodbutton:true,
+            syringbutton:false,
+            bloodbutton:false,
+            loading:true,
         })
     }
 
     onClickMedicine() {
+        this.props.dispatch(actionCreator.Medicine()).then(()=>{this.setState({loading:false})});
         this.setState({
-            medicalbutton: true,
+            medicinebutton: true,
             vaccinebutton: false,
-            syringbutton:true,
-            bloodbutton:true,
+            syringbutton:false,
+            bloodbutton:false,
+            loading:true,
         })
     }
 
     onClickSyringe() {
+        this.props.dispatch(actionCreator.Syringe()).then(()=>{this.setState({loading:false})});
         this.setState({
-            medicalbutton: true,
-            vaccinebutton: true,
-            syringbutton: false,
-            bloodbutton:true,
+            medicinebutton: false,
+            vaccinebutton: false,
+            syringbutton: true,
+            bloodbutton:false,
+            loading:true,
         })
     }
 
     onClickBlood() {
+        this.props.dispatch(actionCreator.Blood()).then(()=>{this.setState({loading:false})});
         this.setState({
-            medicalbutton: true,
-            vaccinebutton: true,
-            syringbutton:true,
-            bloodbutton:false,
+            medicinebutton: false,
+            vaccinebutton: false,
+            syringbutton:false,
+            bloodbutton:true,
+            loading:true,
         })
     }
     logout() {
@@ -123,24 +135,56 @@ class VendorPage extends React.Component {
 
     chooseComponent() {
         if (this.state.medicinebutton) {
+            if(this.state.loading){
+                return(
+                <View style={{flex:1,justifyContent:'center', alignItems:'center'}}>
+                <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
+                </View>)
+            }
+            else{
             return (<View style={styles.sectionStyle}>
                 <MedicineList/>
             </View>);
+            }
         }
         else if (this.state.vaccinebutton) {
+            if(this.state.loading){
+                return(
+                    <View style={{flex:1,justifyContent:'center', alignItems:'center'}}>
+                    <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
+                    </View>)
+                }
+            else{
             return (<View style={styles.sectionStyle}>
                 <VaccineList/>
             </View>);
+            }
         }
-        else if (this.state.syringebutton){
+        else if (this.state.syringbutton){
+            if(this.state.loading){
+                return(
+                    <View style={{flex:1,justifyContent:'center', alignItems:'center'}}>
+                    <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
+                    </View>)
+                }
+            else{
             return (<View style={styles.sectionStyle}>
                 <SyringeList/>
             </View>);
+            }
         }
         else if(this.state.bloodbutton){
+            if(this.state.loading){
+                return(
+                    <View style={{flex:1,justifyContent:'center', alignItems:'center'}}>
+                    <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
+                    </View>)
+                }
+            else{
             return (<View style={styles.sectionStyle}>
                 <BloodList/>
             </View>);
+            }
         }
     }
     render() {
@@ -148,25 +192,64 @@ class VendorPage extends React.Component {
         return (
             <View style={{ flex: 1 }}>
                 
-                <View style={styles.tabbuttons}>
-                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickMedicine.bind(this)} disabled={this.state.medicinButton} style={{ height: 30 }} title="Medicine" />
-                    </View>
-                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine" />
-                    </View>
-                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickSyringe.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Syringe" />
-                    </View>
-                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickBlood.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Blood" />
-                    </View>
+                <View style={styles.scrollside}>
+                    <ScrollView horizontal={true} style={{ flex: 1 }}>
+                        <ClickCard
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={180}
+                            width={150}
+                            onPress={this.onClickBlood.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/blood.png")} resizeMode='contain' style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>Blood</Text>
+                            </View>
+                        </ClickCard>
+                        <ClickCard
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={180}
+                            width={150}
+                            onPress={this.onClickVaccine.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/vaccine.png")} resizeMode='contain' style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>Vaccine</Text>
+                            </View>
+                        </ClickCard>
+                        <ClickCard
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={180}
+                            width={150}
+                            onPress={this.onClickMedicine.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/medicine.png")} resizeMode='contain' style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>Medicine</Text>
+                            </View>
+                        </ClickCard>
+                        <ClickCard
+                            style={{ flex: 1 }}
+                            backgroundColor='#FFF'
+                            height={180}
+                            width={150}
+                            onPress={this.onClickSyringe.bind(this)}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Image source={require("./images/syringe.png")} resizeMode='contain' style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Text style={{ fontSize: 20 }}>Syringe</Text>
+                            </View>
+                        </ClickCard>
+
+                    </ScrollView>
                 </View>
 
-                <View style={{ flex: 1 }}>
+                <View style={{ flex: 4}}>
                     {this.chooseComponent()}
                     
                 </View>
+                <View style={{ flex: 1 }}>
+                    <ChangeSupply/>  
+                </View>
+
             </View>
         );
 
@@ -240,7 +323,17 @@ const styles = StyleSheet.create({
         shadowOpacity: 1.0,
         elevation: 1,
 
-    }
+    },
+    scrollside: {
+
+        marginLeft: 3,
+        marginRight: 3,
+        alignSelf: 'stretch',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+
+    },
 
 });
 function mapStateToProps(state, ownProps) {

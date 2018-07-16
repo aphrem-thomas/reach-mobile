@@ -83,6 +83,13 @@ class UserPage extends React.Component {
         })
     }
 
+    onBack(){
+        this.props.dispatch(actionCreator.emptyDependent());
+        this.props.dispatch(actionCreator.fetch(this.props.guardian));
+        this.props.dispatch(actionCreator.resetdependentpage());
+        this.props.dispatch(actionCreator.guardian(null));
+    }
+
     onClickMedical() {
         this.setState({
             medicalbutton: true,
@@ -125,7 +132,7 @@ class UserPage extends React.Component {
         }
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} />
+                <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} onBack={this.onBack.bind(this)}/>
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
                         <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />

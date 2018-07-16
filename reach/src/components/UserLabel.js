@@ -40,7 +40,7 @@ render(){
                             <Text style={{ color: "#007aff" }}>Logout</Text>
                         </TouchableOpacity>
                     </View>
-                    {this.props.guardian!=null?<TouchableOpacity onPress={this.props.onLogout}>
+                    {this.props.guardian!=null?<TouchableOpacity onPress={this.props.onBack}>
                         <Text style={{ color: "#007aff" }}>back</Text>
                     </TouchableOpacity>:null}
                 </View>

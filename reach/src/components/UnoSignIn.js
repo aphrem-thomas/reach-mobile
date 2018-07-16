@@ -22,9 +22,8 @@ class UnoSignIn extends React.Component {
         this.props.dispatch(actionCreator.emptyPhysician());
         this.setState({ loading: true })
        
-        this.props.dispatch(actionCreator.fetchVendor(this.props.refugeeId)).then(() => {
+        this.props.dispatch(actionCreator.fetchVendor(this.state.vendorId)).then(() => {
             this.flipState();
-            this.props.dispatch(actionCreator.updateDoctor(doc));
             Actions.VendorView();
             
             

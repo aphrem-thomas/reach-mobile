@@ -56,10 +56,9 @@ export function guardian(state=null,action){
         case 'GUARDIAN':{
             console.log("inside guardian reducer");
             console.log("action.payload is "+ action.payload);
-            let newState=action.payload;
-            return newState;
+            return action.payload;
         }break;
-        default:return null;
+        default:return state;
     }
 }
 
