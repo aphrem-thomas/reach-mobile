@@ -136,7 +136,11 @@ class ChangeSupply extends React.Component {
                                 selectedValue={this.state.country}
                                 style={{ marginRight: 2, height: 50, width: 150, borderColor:"#007aff",borderWidth:1}}
                                 onValueChange={(itemValue, itemIndex) => this.setState({ inventory: itemValue })}>
-                                <Picker.Item label="Select item" value={null} itemStyle={{color:"#007aff"}} />
+                                {this.state.sublist.map((x)=>{
+                                    return(
+                                        <Picker.Item label={x.item} value={x.item} itemStyle={{color:"#007aff"}} />
+                                    )
+                                })}
                                
                             </Picker>
                         </View>
