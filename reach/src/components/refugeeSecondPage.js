@@ -21,6 +21,7 @@ import ClickCard from './clickCard.js';
 import Button from './Button.js';
 import {connect} from 'react-redux';
 import * as actionCreator from './action/actionCreator.js';
+import MyCamera from './camera.js';
 class RefugeeSecondPage extends React.Component {
     constructor(props) {
         super(props);
@@ -71,7 +72,7 @@ class RefugeeSecondPage extends React.Component {
     }
     render() {
         return (
-            <View style={styles.viewStyle}>
+            <ImageBackground source={require('./images/slider-img1.jpg')} blurRadius={.7} style={{ flex: 1 }}>
                 <View style={styles.scrollside}>
                         <ClickCard
                             style={{ flex: 1 }}
@@ -107,9 +108,8 @@ class RefugeeSecondPage extends React.Component {
                             </View>
                         </ClickCard> */}
                 </View>
-
                 {this.options()}
-            </View>
+            </ImageBackground>
         );
 
     }
