@@ -8,6 +8,8 @@ import { connect } from 'react-redux';
 import * as actionCreator from './action/actionCreator.js'
 import doctorphoto from './images/doctor.jpg';
 import Spinner from './Spinner.js';
+import MyCamera from './camera.js';
+
 class RefugeeSignIn extends React.Component {
     constructor(props) {
         super(props);
@@ -27,15 +29,17 @@ class RefugeeSignIn extends React.Component {
             this.setState({ modalVisible: true })
     }
     onPress() {
-        this.props.dispatch(actionCreator.emptyRefugee());
-        this.props.dispatch(actionCreator.emptyDependent());
-        this.props.dispatch(actionCreator.emptyPhysician());
-        this.setState({ loading: true })
-        this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
-            this.setState({ loading: false })
-            this.setState({ modalVisible: false })
-            Actions.userpage();
-        })
+
+            this.props.dispatch(actionCreator.emptyRefugee());
+            this.props.dispatch(actionCreator.emptyDependent());
+            this.props.dispatch(actionCreator.emptyPhysician());
+            this.setState({ loading: true })
+                this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
+                this.setState({ loading: false })
+                this.setState({ modalVisible: false })
+                Actions.userpage();
+            })
+
     }
     ButtonLoading() {
         if (this.state.loading)
@@ -44,15 +48,16 @@ class RefugeeSignIn extends React.Component {
             return (<Button title="Authenticate" background="#007aff" onPress={this.onPress.bind(this)} />);
 
     }
+   
     render() {
         return (
             <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
-            <ScrollView>
-                <View style={{ flex: 1, justifyContent: 'center'}}>
-                    <Text style={{ fontSize: 30, color: '#007aff' }}>Patient signin</Text>
-                    <Text>Patient can login and view the Medical and Vaccine record of their own and dependent's records.</Text>
-                    <Button background="red" title="Authenticate" onPress={this.flipState.bind(this)} />
-                </View>
+                <ScrollView>
+                    <View style={{ flex: 1, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 30, color: '#007aff' }}>Patient signin</Text>
+                        <Text>Patient can login and view the Medical and Vaccine record of their own and dependent's records.</Text>
+                        <Button background="red" title="Authenticate" onPress={this.flipState.bind(this)} />
+                    </View>
                 </ScrollView>
                 <Modal animationType="slide"
                     transparent={true}
@@ -67,6 +72,11 @@ class RefugeeSignIn extends React.Component {
                             <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
                                 this.props.dispatch(actionCreator.refugeeIdField(text))
                             }} />
+                            <View style={{ height: 200, width: 150 }}>
+                                <MyCamera/>
+                            </View>
+
+
                             {this.ButtonLoading()}
                             <Button background="red" title="close" onPress={this.flipState.bind(this)} />
                         </View>
@@ -85,15 +95,17 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(225,225,225,0)',
         justifyContent: 'center',
         alignContent: 'center',
-        marginLeft:3,
-        marginRight:3
+        marginLeft: 3,
+        marginRight: 3
     },
     modalstyle: {
-        height: 350,
+        height: 450,
         width: 350,
         backgroundColor: 'rgba(0,0,0,0.9)',
         borderRadius: 10,
-        flexDirection: 'column'
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 
 
