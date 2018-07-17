@@ -73,7 +73,6 @@ class RefugeeSecondPage extends React.Component {
         return (
             <View style={styles.viewStyle}>
                 <View style={styles.scrollside}>
-                    <ScrollView horizontal={true} style={{ flex: 1 }}>
                         <ClickCard
                             style={{ flex: 1 }}
                             backgroundColor='#FFF'
@@ -96,7 +95,7 @@ class RefugeeSecondPage extends React.Component {
                                 <Text style={{ fontSize: 20 }}>Physician</Text>
                             </View>
                         </ClickCard>
-                        <ClickCard
+                        {/* <ClickCard
                             style={{ flex: 1 }}
                             backgroundColor='#FFF'
                             height={200}
@@ -106,9 +105,7 @@ class RefugeeSecondPage extends React.Component {
                                 <Image source={require("./images/un.jpeg")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
                                 <Text style={{ fontSize: 20 }}>UN Official</Text>
                             </View>
-                        </ClickCard>
-
-                    </ScrollView>
+                        </ClickCard> */}
                 </View>
 
                 {this.options()}
