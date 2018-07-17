@@ -74,7 +74,7 @@ class RefugeeSignIn extends React.Component {
                             }} />
                             <Text style={{color:'orange',fontSize:20}}>OR</Text>
                             <View style={{ height: 200, width: 150 }}>
-                                <MyCamera/>
+                                <MyCamera camface="front"/>
                             </View>
 
 

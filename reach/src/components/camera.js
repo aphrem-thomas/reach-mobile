@@ -12,6 +12,10 @@ export default class MyCamera extends React.Component {
   async componentWillMount() {
     const { status } = await Permissions.askAsync(Permissions.CAMERA);
     this.setState({ hasCameraPermission: status === 'granted' });
+    if(this.props.camface=="front")
+        this.setState({type: Camera.Constants.Type.front})
+    else
+        this.setState({type: Camera.Constants.Type.back})
   }
   snap = async () => {
     if (this.camera) {
@@ -30,7 +34,7 @@ export default class MyCamera extends React.Component {
     } else {
       return (
         <View style={{ flex: 1 }}>
-          <Camera style={{ flex: 1 }} type={Camera.Constants.Type.front} ref={ref => { this.camera = ref; }} >
+          <Camera style={{ flex: 1 }} type={this.state.type} ref={ref => { this.camera = ref; }} >
             
             {this.state.savedImage==null?<View
               style={{
