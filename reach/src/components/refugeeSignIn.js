@@ -72,6 +72,7 @@ class RefugeeSignIn extends React.Component {
                             <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
                                 this.props.dispatch(actionCreator.refugeeIdField(text))
                             }} />
+                            <Text style={{color:'orange',fontSize:20}}>OR</Text>
                             <View style={{ height: 200, width: 150 }}>
                                 <MyCamera/>
                             </View>
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
         marginRight: 3
     },
     modalstyle: {
-        height: 450,
+        height: 500,
         width: 350,
         backgroundColor: 'rgba(0,0,0,0.9)',
         borderRadius: 10,
