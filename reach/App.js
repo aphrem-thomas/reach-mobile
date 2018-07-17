@@ -16,6 +16,7 @@ import * as actonCreator from './src/components/action/actionCreator.js';
 import { createStackNavigator } from 'react-navigation';
 import UnoSignIn from './src/components/UnoSignIn.js';
 import VendorPage from './src/components/VendorPage.js';
+import physiciansPage from './src/components/physiciansPage.js';
 
 const TheReducer=combineReducers({
   PhysicianField:physicianIdField,
@@ -48,7 +49,8 @@ const App=()=>{
                 <Scene title="User Page" key="userpage" component={UserPage}/>
               </Scene>
                 <Scene key="doctorView">
-                  <Scene type='replace' title="Physician's page" key="doctorpage" component={UserPage}/>
+                  <Scene type='replace' title="Physician's page" key="doctorpage1" component={physiciansPage} initial/>
+                  <Scene type='replace' title="Physician's page" key="doctorpage2" component={UserPage}/>
                 </Scene>
                 <Scene key="VendorView">
                   <Scene type='replace' title="UN Official's page" key="vendorpage" component={VendorPage}/>

@@ -24,7 +24,6 @@ class PhysicianSignIn extends React.Component {
         this.props.dispatch(actionCreator.emptyRefugee());
         this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.emptyPhysician());
-        this.setState({ loading: true })
         let today = new Date();
         let dd = today.getDate();
         let mm = today.getMonth() + 1; //January is 0!
@@ -45,13 +44,15 @@ class PhysicianSignIn extends React.Component {
             "date": today
         }
         console.log("doc in physician sign in page "+JSON.stringify(doc))
-        this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
-            this.flipState();
             this.props.dispatch(actionCreator.updateDoctor(doc));
-            Actions.doctorView();
+            this.setState({loading:true})
+            setTimeout(()=>{
+                this.setState({loading:false});
+                this.setState({modalVisible:false});
+                Actions.doctorView();
+            },2000);
             
-            
-        });
+    
     }
     ButtonLoading() {
         if (this.state.loading)
@@ -92,9 +93,6 @@ class PhysicianSignIn extends React.Component {
                     <View style={{ justifyContent: "center", alignItems: 'center', flex: 1 }}>
                         <View style={styles.modalstyle}>
                             <Text style={{ fontSize: 50, color: "#007aff", marginLeft: 5 }}>Login</Text>
-                            <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
-                                this.props.dispatch(actionCreator.refugeeIdField(text))
-                            }} />
                             <InputText label="Physician ID" value={this.props.physicianId} onChangeText={(text) => {
                                 this.props.dispatch(actionCreator.physicianIdField(text))
                             }} />
