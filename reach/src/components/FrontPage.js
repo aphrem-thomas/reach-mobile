@@ -22,20 +22,18 @@ class FrontPage extends React.Component {
                     <View>
                         <Image source={require('./images/logoreachwhite.png')} style={styles.imageStyle} />
                     </View>
-                    <View style={{flex:1,justifyContent:'flex-end'}}>
+                    <View style={{flex:1,justifyContent:'center'}}>
                     <View style={{
                         alignSelf: 'stretch',
                         justifyContent: 'flex-end',
                         marginLeft:10,
                         marginRight:10,
                         marginBottom:10,
-                        alignItems:'center',backgroundColor:'rgba(225,225,225,0.5)'}}>
+                        alignItems:'center',backgroundColor:'rgba(225,225,225,0.8)'}}>
                         <View style={styles.eachline}>
-                            <Text style={styles.orangeTextStyle}>Refugee Assistance in</Text>
+                            <Text style={styles.orangeTextStyle}>Refugee Assistance in Clinics and Hospitals</Text>
                         </View>
-                        <View style={styles.eachline}>
-                            <Text style={styles.orangeTextStyle}>Clinics and Hospitals</Text>
-                        </View>
+                       
                         <Text style={styles.redTextStyle}>Revolutionizing healthcare using Blockchain</Text>
                         <Button background="rgba(225,0,0,1)" height={40} title="Continue..." onPress={this.clickHandle1.bind(this)} />
                     </View>
@@ -59,8 +57,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     orangeTextStyle: {
-        color: 'green',
-        fontSize: 25
+        color: '#79797a',
+        fontSize: 18
     },
     whiteTextStyle: {
         color: '#FFF',
