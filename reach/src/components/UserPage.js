@@ -16,6 +16,7 @@ import {
     Dimensions,
     Modal,
     ProgressBarAndroid,
+    ImageBackground
 } from 'react-native';
 // import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
@@ -30,16 +31,16 @@ import ClickCard from './clickCard.js';
 import DependentList from './dependentList.js';
 
 class UserPage extends React.Component {
-   
+
     constructor(props) {
         super(props);
-       
+
         this.state = {
             medicalbutton: false,
             vaccinebutton: false,
             modalView: false,
-            dependentPage:false,
-            dependingOn:null
+            dependentPage: false,
+            dependingOn: null
         }
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -83,7 +84,7 @@ class UserPage extends React.Component {
         })
     }
 
-    onBack(){
+    onBack() {
         this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.fetch(this.props.guardian));
         this.props.dispatch(actionCreator.resetdependentpage());
@@ -132,7 +133,15 @@ class UserPage extends React.Component {
         }
         return (
             <View style={{ flex: 1 }}>
-                <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} onBack={this.onBack.bind(this)}/>
+                {/* <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} onBack={this.onBack.bind(this)}/> */}
+                <View style={{ flex: 1 }}>
+                    <ImageBackground source={{ uri: this.props.refugee.refugeeImage }} style={{ flex: 1,justifyContent:'flex-end'}}>
+                    <View style={{backgroundColor:'rgba(0,0,0,.7)',alignItems:'center'}}>
+                        <Text style={{color:"#FFF", fontSize:20}}>Name: {this.props.refugee.firstName}</Text>
+                        <Text style={{color:"#FFF", fontSize:20}}>Country: {this.props.refugee.nationality}</Text>
+                    </View>
+                    </ImageBackground>
+                </View>
                 <View style={styles.tabbuttons}>
                     <View style={{ paddingLeft: 5, paddingRight: 5 }}>
                         <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
@@ -144,13 +153,14 @@ class UserPage extends React.Component {
 
                 <View style={{ flex: 1 }}>
                     {this.chooseComponent()}
-                    <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
-                        {this.props.dependent.length == 4 ?
-                            <DependentList /> :!this.props.dependentPage?
-                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
-                            </View>:null}
-                    </ScrollView>
+                    {this.props.refugee.children ?
+                        <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
+                            {this.props.dependent.length == this.props.refugee.children.length ?
+                                <DependentList /> : !this.props.dependentPage ?
+                                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                        <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
+                                    </View> : null}
+                        </ScrollView> : null}
                 </View>
             </View>
         );
@@ -232,8 +242,8 @@ function mapStateToProps(state, ownProps) {
     return ({
         refugee: state.RefugeeDetails,
         dependent: state.Dependent,
-        dependentPage:state.DependentPage,
-        guardian:state.Guardian
+        dependentPage: state.DependentPage,
+        guardian: state.Guardian
     });
 }
 export default connect(mapStateToProps)(UserPage);
