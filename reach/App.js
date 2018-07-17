@@ -39,7 +39,7 @@ const App=()=>{
   
     return(
       <Provider store={store}>
-        <Router>
+        <Router navigationBarStyle={{ backgroundColor: 'transparent' }}>
             <Scene key="root" hideNavBar>
               <Scene key="frontpage">
                 <Scene  title="ReACH" key="firstpage" component={FrontPage} hideNavBar initial/>
