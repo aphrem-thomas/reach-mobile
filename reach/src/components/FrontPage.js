@@ -17,31 +17,29 @@ class FrontPage extends React.Component {
     }
     render() {
         return (
-            <ImageBackground source={require('./images/refugee2.jpg')} blurRadius={1} style={{ flex: 1 }}>
+            <ImageBackground source={require('./images/slider-img1.jpg')} style={{ flex: 1 }}>
                 <View style={styles.viewStyle}>
                     <View>
                         <Image source={require('./images/logoreachwhite.png')} style={styles.imageStyle} />
                     </View>
-
-                    <View style={{ flex: 1, alignSelf: 'stretch', justifyContent: 'flex-end' ,alignItems:'center'}}>
+                    <View style={{flex:1,justifyContent:'flex-end'}}>
+                    <View style={{
+                        alignSelf: 'stretch',
+                        justifyContent: 'flex-end',
+                        marginLeft:10,
+                        marginRight:10,
+                        marginBottom:10,
+                        alignItems:'center',backgroundColor:'rgba(225,225,225,0.5)'}}>
                         <View style={styles.eachline}>
-                            <Text style={styles.orangeTextStyle}>Re</Text>
-                            <Text style={styles.whiteTextStyle}>fugee </Text>
-                       
-                            <Text style={styles.orangeTextStyle}>A</Text>
-                            <Text style={styles.whiteTextStyle}>ssistance in</Text>
+                            <Text style={styles.orangeTextStyle}>Refugee Assistance in</Text>
                         </View>
                         <View style={styles.eachline}>
-                            <Text style={styles.orangeTextStyle}>C</Text>
-                            <Text style={styles.whiteTextStyle}>linics and </Text>
-                        
-                            <Text style={styles.orangeTextStyle}>H</Text>
-                            <Text style={styles.whiteTextStyle}>ospitals</Text>
+                            <Text style={styles.orangeTextStyle}>Clinics and Hospitals</Text>
                         </View>
                         <Text style={styles.redTextStyle}>Revolutionizing healthcare using Blockchain</Text>
                         <Button background="rgba(225,0,0,1)" height={40} title="Continue..." onPress={this.clickHandle1.bind(this)} />
                     </View>
-
+                    </View>
 
                 </View>
             </ImageBackground>
@@ -53,7 +51,6 @@ const styles = StyleSheet.create({
     viewStyle: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: 'rgba(0,0,225,.25)',
         alignItems: 'center',
 
 
@@ -62,7 +59,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     orangeTextStyle: {
-        color: 'orange',
+        color: 'green',
         fontSize: 25
     },
     whiteTextStyle: {
@@ -70,8 +67,10 @@ const styles = StyleSheet.create({
         fontSize: 25
     },
     redTextStyle:{
-        color: '#ff0000',
-        fontSize: 20 
+        color: '#000',
+        fontSize: 20,
+        marginLeft:5,
+        marginRight:5
     },
     imageStyle: {
         resizeMode: 'contain',
