@@ -34,7 +34,7 @@ class RefugeeSignIn extends React.Component {
             this.props.dispatch(actionCreator.emptyDependent());
             this.props.dispatch(actionCreator.emptyPhysician());
             this.setState({ loading: true })
-                if(this.props.refugeeId=null){
+                if(this.props.refugeeId!='Like rf123233'){
                 this.props.dispatch(actionCreator.fetch(this.props.refugeeId)).then(() => {
                 this.setState({ loading: false })
                 this.setState({ modalVisible: false })

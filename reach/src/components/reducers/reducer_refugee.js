@@ -29,11 +29,14 @@ export function dependentRecord(state=dependentInt,action){
     }
 }
 
-export function refugeeIdField(state="Like rf123233",action){
+export function refugeeIdField(state=null,action){
     switch(action.type){
         case 'REFFIELD':{
             let newState=action.payload;
             return newState;
+        }
+        case 'CLEARREFFIELD':{
+            return null;
         }
         default:return state;
     }
@@ -63,11 +66,14 @@ export function guardian(state=null,action){
 }
 
 
-export function physicianIdField(state="Like Dr_Adel",action){
+export function physicianIdField(state=null,action){
     switch(action.type){
         case 'PHYFIELD':{
             let newState=action.payload;
             return newState;
+        }
+        case 'CLEARPHYFIELD':{
+            return null;
         }
         default:return state;
     }

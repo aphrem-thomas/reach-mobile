@@ -107,6 +107,8 @@ class UserPage extends React.Component {
         this.props.dispatch(actionCreator.emptyPhysician());
         this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.resetdependentpage());
+        this.props.dispatch(actionCreator.clearPhysicianIdField());
+        this.props.dispatch(actionCreator.clearRefugeeIdField())
         Actions.pop();
     }
 

@@ -9,8 +9,16 @@ export function refugeeIdField(value){
     return({'type':'REFFIELD', 'payload':value})
 }
 
+export function clearRefugeeIdField(value){
+    return({'type':'CLEARREFFIELD'})
+}
+
 export function physicianIdField(value){
     return({'type':'PHYFIELD', 'payload':value})
+}
+
+export function clearPhysicianIdField(){
+    return({'type':'CLEARPHYFIELD'})
 }
 
 export function addDependent(value){
