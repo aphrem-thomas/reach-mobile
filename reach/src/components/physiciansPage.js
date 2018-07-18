@@ -75,12 +75,16 @@ class PhysiciansPage extends React.Component {
     onSubmit(){
         this.props.dispatch(actionCreator.emptyRefugee());
         this.props.dispatch(actionCreator.emptyDependent());
-        this.props.dispatch(actionCreator.emptyPhysician());
         this.setState({ loading: true })
+        if(this.props.refugeeIdField!=null){
             this.props.dispatch(actionCreator.fetch(this.props.refugeeIdField)).then(() => {
             this.setState({ loading: false })
             Actions.userpage();
-        })
+        })}
+        else{ this.props.dispatch(actionCreator.fetch('rf1')).then(() => {
+            this.setState({ loading: false })
+            Actions.userpage();
+        })}
     }
 
     ButtonLoading() {

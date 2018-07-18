@@ -123,7 +123,9 @@ class UserMedicalRecord extends React.Component {
                         </ScrollView>
                     </View>
                 </ScrollView>
+                <View style={{flex:.2}}>
                 {this.buttonChoose()}
+                </View>
 
                 <Modal animationType="slide"
                     transparent={true}
@@ -239,7 +241,7 @@ const styles = StyleSheet.create({
     },
     container:
         {
-            flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#FFF'
+            flex: 1.5, padding: 10, paddingTop: 10, backgroundColor: '#FFF'
         },
     header:
         {

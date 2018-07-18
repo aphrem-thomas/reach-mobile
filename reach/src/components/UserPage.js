@@ -16,7 +16,8 @@ import {
     Dimensions,
     Modal,
     ProgressBarAndroid,
-    ImageBackground
+    ImageBackground,
+    TouchableOpacity
 } from 'react-native';
 // import Button from './Button.js';
 import { Actions } from 'react-native-router-flux';
@@ -86,9 +87,12 @@ class UserPage extends React.Component {
 
     onBack() {
         this.props.dispatch(actionCreator.emptyDependent());
-        this.props.dispatch(actionCreator.fetch(this.props.guardian));
         this.props.dispatch(actionCreator.resetdependentpage());
         this.props.dispatch(actionCreator.guardian(null));
+        this.props.dispatch(actionCreator.fetch(this.props.guardian)).then(()=>{
+            this.componentWillMount();
+        })
+       
     }
 
     onClickMedical() {
@@ -134,8 +138,17 @@ class UserPage extends React.Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} onBack={this.onBack.bind(this)}/> */}
+                <View style={{flex:1}}>
                 <View style={{ flex: 1 }}>
                     <ImageBackground source={{ uri: this.props.refugee.refugeeImage }} style={{ flex: 1,justifyContent:'flex-end'}}>
+                    
+                    {this.props.guardian?
+                    <TouchableOpacity onPress={this.onBack.bind(this)}><Text style={{color:"#007aff", fontSize:15}}>back</Text></TouchableOpacity>
+                    :
+                    <TouchableOpacity onPress={this.logout.bind(this)}><Text style={{color:"#007aff", fontSize:15}}>logout</Text></TouchableOpacity>
+                }
+                    
+                    
                     <View style={{backgroundColor:'rgba(0,0,0,.7)',alignItems:'center'}}>
                         <Text style={{color:"#FFF", fontSize:20}}>Name: {this.props.refugee.firstName}</Text>
                         <Text style={{color:"#FFF", fontSize:20}}>Country: {this.props.refugee.nationality}</Text>
@@ -150,9 +163,9 @@ class UserPage extends React.Component {
                         <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine Record" />
                     </View>
                 </View>
-
-                <View style={{ flex: 1 }}>
+                </View>
                     {this.chooseComponent()}
+                <View style={{flex:1}}>
                     {this.props.refugee.children ?
                         <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
                             {this.props.dependent.length == this.props.refugee.children.length ?
@@ -161,7 +174,7 @@ class UserPage extends React.Component {
                                         <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
                                     </View> : null}
                         </ScrollView> : null}
-                </View>
+                    </View>
             </View>
         );
 
