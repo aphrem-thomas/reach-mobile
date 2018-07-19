@@ -52,11 +52,12 @@ class UserVaccineRecord extends React.Component {
                     </View>
                     <View style={{ justifyContent: 'center' }}>
                         <ScrollView style={{ height: 250 }}>
-                            <View style={{ flex: 1, justifyContent: 'center' }}>
+                            <View style={{ flex: 1, justifyContent: 'center',alignItems:'center' }}>
                                 {
-                                    this.state.vacc == "done" ? this.props.refugee.vaccinationRecords.map((item, i) => {
-                                        return (<VaccineDone key={i} vaccine={item.vaccineName} date={item.date} location={item.location} camp={item.camp} />)
-                                    }) : vaccinenot.map((item, i) => {
+                                    this.state.vacc == "done" ?(this.props.refugee.vaccinationRecords)?
+                                     this.props.refugee.vaccinationRecords.map((item, i) => {
+                                        return (<VaccineDone key={i} vaccine={item.vaccineName} date={item.date} location={item.location} camp={item.camp} />)}):
+                                        <Text>No vaccines administered</Text>: vaccinenot.map((item, i) => {
                                         console.log("inside vaccinecross");
                                         return (<VaccineNotDone key={i} vaccine={item} />)
                                     })
