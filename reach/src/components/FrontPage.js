@@ -59,7 +59,7 @@ class FrontPage extends React.Component {
                                     </Text>
                             </View>
                             </View>
-                            <Button background="rgba(225,0,0,1)" height={40} title="Continue..." onPress={this.clickHandle1.bind(this)} />
+                            <Button background="rgba(225,0,0,1)" height={40} title="Continue" onPress={this.clickHandle1.bind(this)} />
                             <Text style={{ fontSize: 15, color:'white',marginRight:25,marginLeft:25,marginBottom:25 }}>Revolutionizing healthcare using Blockchain</Text>                        
                         </View>
                     </View>

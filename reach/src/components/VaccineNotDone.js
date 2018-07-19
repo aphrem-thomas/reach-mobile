@@ -60,32 +60,46 @@ const styles = StyleSheet.create({
     viewStyle: {
         flex: 1,
         height:65,
-        width:300,
+        alignSelf:'stretch',
         flexDirection: 'column',
-        backgroundColor: '#f73022',
+        backgroundColor: '#FFF',
+        borderColor:'#b7180c',
+        borderLeftWidth:10,
         alignItems: 'center',
         marginLeft:10,
         marginRight:10,
         marginTop:10,
         marginBottom:10,
-        borderRadius:5,
         paddingLeft:5,
         paddingRight:5,
         paddingTop:5,
-        borderColor:"#000"
+        borderColor:"#b7180c",
+        alignItems:'center',
+        justifyContent:"center",
+        shadowColor: '#000000',
+        shadowOffset: {
+            width: 0,
+            height: 10
+        },
+        shadowRadius: 20,
+        shadowOpacity: 1.0,
+        elevation: 1,
     },
     
     userinfovertical:{
         flexDirection:'column',
-        flex:4,
+        flex:1,
         paddingLeft:15
     },
     userinfohorizontal:{
+        flex:1,
         flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
     },
     
     textStyle:{
-        color:"#FFF",
+        color:"#000",
         paddingLeft:5,
         paddingRight:5
     }

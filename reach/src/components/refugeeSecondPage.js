@@ -72,30 +72,31 @@ class RefugeeSecondPage extends React.Component {
     }
     render() {
         return (
-            <ImageBackground source={require('./images/slider-img1.jpg')} blurRadius={.7} style={{ flex: 1 }}>
+            <ImageBackground source={require('./images/slider-img1.jpg')} blurRadius={.7} style={{ flex: 1,justifyContent:'center' }}>
                 <View style={styles.scrollside}>
-                        <ClickCard
-                            style={{ flex: 1 }}
-                            backgroundColor='#FFF'
-                            height={200}
-                            width={150}
-                            onPress={this.clickhandlePatient.bind(this)}>
+                        <View
+                            marginLeft={10}
+                            backgroundColor='rgba(225,225,225,0.7)'
+                            height={250}
+                            width={150}>
+                            
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image source={require("./images/patient.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
-                                <Text style={{ fontSize: 20 }}>Patient</Text>
+                                <Text style={{ fontSize: 20 }}>Refugee</Text>
                             </View>
-                        </ClickCard>
-                        <ClickCard
-                            style={{ flex: 1 }}
-                            backgroundColor='#FFF'
-                            height={200}
-                            width={150}
-                            onPress={this.clickhandlePhysician.bind(this)}>
+                            <RefugeeSignIn/>
+                        </View>
+                        <View
+                            marginLeft={10}
+                            backgroundColor='rgba(225,225,225,0.9)'
+                            height={250}
+                            width={150}>
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image source={require("./images/doctor.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
                                 <Text style={{ fontSize: 20 }}>Physician</Text>
                             </View>
-                        </ClickCard>
+                            <PhysicianSignIn/>
+                        </View>
                         {/* <ClickCard
                             style={{ flex: 1 }}
                             backgroundColor='#FFF'
@@ -124,6 +125,7 @@ const styles = StyleSheet.create({
 
         marginLeft: 3,
         marginRight: 3,
+        marginTop:5,
         alignSelf: 'stretch',
         flexDirection: 'row',
         alignItems: 'center',

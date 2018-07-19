@@ -44,10 +44,10 @@ class UserVaccineRecord extends React.Component {
                 <View style={{ flexDirection: 'column' }}>
                     <View style={{ flexDirection: 'row' }}>
                         <View style={{ justifyContent: 'flex-start', marginLeft: 20 }}>
-                            <Button onPress={this.done.bind(this)} title="Over" color="#65f442" />
+                            <Button onPress={this.done.bind(this)} title="Completed" color="#1e7519" />
                         </View>
-                        <View style={{ justifyContent: 'flex-end', marginRight: 10, marginLeft: 200 }}>
-                            <Button onPress={this.notdone.bind(this)} title="Pending" color="#ef2710" />
+                        <View style={{ justifyContent: 'flex-end', marginRight: 10, marginLeft: 170 }}>
+                            <Button onPress={this.notdone.bind(this)} title="Pending" color="#b7180c" />
                         </View>
                     </View>
                     <View style={{ justifyContent: 'center' }}>

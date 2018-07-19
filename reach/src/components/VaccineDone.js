@@ -38,19 +38,27 @@ const styles = StyleSheet.create({
     viewStyle: {
         flex: 1,
         height:65,
-        width:320,
+        alignSelf:'stretch',
         flexDirection: 'column',
-        backgroundColor: '#36f773',
+        backgroundColor: '#FFF',
         alignItems: 'center',
+        borderLeftWidth:10,
+        borderColor:'#1e7519',
         marginLeft:20,
         marginRight:20,
         marginTop:10,
         marginBottom:10,
-        borderRadius:5,
         paddingLeft:5,
         paddingRight:5,
         paddingTop:5,
-        borderColor:"#000"
+        shadowColor: '#000000',
+        shadowOffset: {
+            width: 0,
+            height: 10
+        },
+        shadowRadius: 20,
+        shadowOpacity: 1.0,
+        elevation: 1,
     },
     
     userinfovertical:{

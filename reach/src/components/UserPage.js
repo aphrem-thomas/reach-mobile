@@ -153,7 +153,6 @@ class UserPage extends React.Component {
                     
                     <View style={{backgroundColor:'rgba(0,0,0,.7)',alignItems:'center'}}>
                         <Text style={{color:"#FFF", fontSize:20}}>Name: {this.props.refugee.firstName}</Text>
-                        <Text style={{color:"#FFF", fontSize:20}}>Country: {this.props.refugee.nationality}</Text>
                     </View>
                     </ImageBackground>
                 </View>
@@ -203,7 +202,6 @@ const styles = StyleSheet.create({
     },
     sectionStyle: {
         flex: 4,
-        backgroundColor: "#FFF",
         marginLeft: 5,
         marginRight: 5,
         marginTop: 5,

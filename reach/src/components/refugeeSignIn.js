@@ -60,14 +60,10 @@ class RefugeeSignIn extends React.Component {
    
     render() {
         return (
-            <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
-                <ScrollView>
-                    <View style={{ flex: 1, justifyContent: 'center' }}>
-                        <Text style={{ fontSize: 30, color: '#007aff' }}>Patient signin</Text>
-                        <Text>Patient can login and view the Medical and Vaccine record of their own and dependent's records.</Text>
-                        <Button background="red" title="Authenticate" onPress={this.flipState.bind(this)} />
+           <View>
+                    <View style={{ justifyContent: 'center' }}>
+                       <Button background="red" height={30} title="Authenticate" onPress={this.flipState.bind(this)} />
                     </View>
-                </ScrollView>
                 <Modal animationType="slide"
                     transparent={true}
                     visible={this.state.modalVisible}
@@ -88,15 +84,12 @@ class RefugeeSignIn extends React.Component {
 
 
                             {this.ButtonLoading()}
-                            <Button background="red" title="close" onPress={this.flipState.bind(this)} />
+                            <Button background="red"  title="close" onPress={this.flipState.bind(this)} />
                         </View>
                     </View>
                 </Modal>
-
-            </KeyboardAvoidingView>
-        );
-
-    }
+            </View>
+        )}
 }
 const styles = StyleSheet.create({
     viewStyle: {
