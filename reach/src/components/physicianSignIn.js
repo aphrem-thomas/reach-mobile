@@ -59,7 +59,7 @@ class PhysicianSignIn extends React.Component {
 
     onAuthenticate(){
         this.setState({ loading: true })
-        this.props.dispatch(actionCreator.fetch("rf1")).then(()=>{
+        this.props.dispatch(actionCreator.fetch("rf100")).then(()=>{
             this.setState({ loading: false });
             this.setState({ modalVisibleRef: false });
             Actions.userpage();

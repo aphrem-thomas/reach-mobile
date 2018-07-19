@@ -42,7 +42,7 @@ class RefugeeSignIn extends React.Component {
                 })
             }
             else{
-                this.props.dispatch(actionCreator.fetch("rf1")).then(() => {
+                this.props.dispatch(actionCreator.fetch("rf100")).then(() => {
                     this.setState({ loading: false })
                     this.setState({ modalVisible: false })
                     Actions.userpage();

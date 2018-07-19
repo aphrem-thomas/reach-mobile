@@ -81,7 +81,7 @@ class PhysiciansPage extends React.Component {
             this.setState({ loading: false })
             Actions.userpage();
         })}
-        else{ this.props.dispatch(actionCreator.fetch('rf1')).then(() => {
+        else{ this.props.dispatch(actionCreator.fetch('rf100')).then(() => {
             this.setState({ loading: false })
             Actions.userpage();
         })}
