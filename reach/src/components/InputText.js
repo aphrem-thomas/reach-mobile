@@ -37,7 +37,8 @@ const styles = StyleSheet.create({
         color:'#FFF',
         alignItems:'center',
         justifyContent:'center',
-        paddingLeft:5
+        paddingLeft:5,
+        fontFamily:'lato'
         
     },
     textStyle:{

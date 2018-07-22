@@ -156,7 +156,7 @@ class UserPage extends React.Component {
                     
                     
                     <View style={{backgroundColor:'rgba(0,0,0,.7)',alignItems:'center'}}>
-                        <Text style={{color:"#FFF", fontSize:20}}>Name: {this.props.refugee.firstName}</Text>
+                        <Text style={{color:"#FFF", fontSize:20,fontFamily:'lato'}}>Name: {this.props.refugee.firstName}</Text>
                     </View>
                     </ImageBackground>
                 </View>

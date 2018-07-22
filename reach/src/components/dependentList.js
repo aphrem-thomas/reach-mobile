@@ -37,7 +37,7 @@ class DependentList extends React.Component{
 
                         }}>
                             <Image source={{ uri: item.image }} style={{ height: 70, width: 70, borderRadius: 70,marginLeft:20,marginRight:20}} />
-                            <Text style={{fontSize:20}}>{item.name}</Text>
+                            <Text style={{fontSize:20,fontFamily:'lato'}}>{item.name}</Text>
                         </View>
                         </ClickCard>
                 )

@@ -114,7 +114,7 @@ class PhysicianSignIn extends React.Component {
                     }}>
                     <View style={{ justifyContent: "center", alignItems: 'center', flex: 1 }}>
                         <View style={styles.modalstyle}>
-                            <Text style={{ fontSize: 50, color: "#007aff", marginLeft: 5 }}>Login</Text>
+                            <Text style={{ fontSize: 50, color: "#007aff", marginLeft: 5,fontFamily:'lato' }}>Login</Text>
                             <InputText label="Physician ID" value={this.props.physicianId} onChangeText={(text) => {
                                 this.props.dispatch(actionCreator.physicianIdField(text))
                             }} />

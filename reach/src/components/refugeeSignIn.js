@@ -73,11 +73,11 @@ class RefugeeSignIn extends React.Component {
                     }}>
                     <View style={{ justifyContent: "center", alignItems: 'center', flex: 1 }}>
                         <View style={styles.modalstyle}>
-                            <Text style={{ fontSize: 50, color: "#007aff", marginLeft: 5 }}>Authenticate</Text>
+                            <Text style={{ fontSize: 50, color: "#007aff", marginLeft: 5,fontFamily:'lato' }}>Authenticate</Text>
                             <InputText label="Refugee ID" value={this.props.refugeeId} onChangeText={(text) => {
                                 this.props.dispatch(actionCreator.refugeeIdField(text))
                             }} />
-                            <Text style={{color:'orange',fontSize:20}}>OR</Text>
+                            <Text style={{color:'orange',fontSize:20,fontFamily:'lato'}}>OR</Text>
                             <View style={{ height: 200, width: 150 }}>
                                 <MyCamera camface="front"/>
                             </View>

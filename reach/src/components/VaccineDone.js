@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     textStyle:{
         color:"#000",
         paddingLeft:5,
-        paddingRight:5
+        paddingRight:5,
+        fontFamily:'lato'
     }
 
 

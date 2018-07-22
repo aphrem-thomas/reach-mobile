@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
         },
     text:
         {
-            textAlign: 'center', fontWeight: '100'
+            textAlign: 'center', fontWeight: '100',fontFamily:'lato'
         },
     dataWrapper:
         {
