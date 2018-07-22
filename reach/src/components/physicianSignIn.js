@@ -62,7 +62,7 @@ class PhysicianSignIn extends React.Component {
         this.props.dispatch(actionCreator.fetch("rf100")).then(()=>{
             this.setState({ loading: false });
             this.setState({ modalVisibleRef: false });
-            Actions.userpage();
+            Actions.doctorpage2();
         });
       
     }
@@ -101,7 +101,7 @@ class PhysicianSignIn extends React.Component {
         return (
             <View>
                 <View style={{ justifyContent: 'center' }}>
-                    <Button height={30} title="Log In" background="red" onPress={this.signinModal.bind(this)} />
+                    <Button height={30} title="Log In" background="#007aff" onPress={this.signinModal.bind(this)} />
                 </View>
 
 

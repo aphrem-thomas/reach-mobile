@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
         color:'#fff',
         fontSize:20,
         padding:10,
+        fontFamily:'roboto'
     }
   });
 export default Button;

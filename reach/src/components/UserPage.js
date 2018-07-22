@@ -48,6 +48,10 @@ class UserPage extends React.Component {
         }
         var { height, width } = Dimensions.get('window');
     }
+
+    static navigationOptions = {
+		headerLeft:null
+	}
     componentWillMount() {
         let arrayChildren = [];
         let children = this.props.refugee.children;

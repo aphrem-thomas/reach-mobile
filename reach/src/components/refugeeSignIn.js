@@ -62,7 +62,7 @@ class RefugeeSignIn extends React.Component {
         return (
            <View>
                     <View style={{ justifyContent: 'center' }}>
-                       <Button background="red" height={30} title="Authenticate" onPress={this.flipState.bind(this)} />
+                       <Button background="#007aff" height={30} title="Authenticate" onPress={this.flipState.bind(this)} />
                     </View>
                 <Modal animationType="slide"
                     transparent={true}

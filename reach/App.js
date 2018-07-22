@@ -17,6 +17,7 @@ import { createStackNavigator } from 'react-navigation';
 import UnoSignIn from './src/components/UnoSignIn.js';
 import VendorPage from './src/components/VendorPage.js';
 import physiciansPage from './src/components/physiciansPage.js';
+import {Font} from 'expo';
 
 const TheReducer=combineReducers({
   PhysicianField:physicianIdField,
@@ -36,9 +37,22 @@ const TheReducer=combineReducers({
 
 const store= createStore(TheReducer,applyMiddleware(thunk));
 
-const App=()=>{
-  
+class App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={fontLoaded:false};
+}
+componentDidMount(){
+  Font.loadAsync({
+      'playfair': require('./assets/fonts/PlayfairDisplay-Regular.ttf'),
+      'lato': require('./assets/fonts/Lato-Regular.ttf'),
+      'roboto': require('./assets/fonts/Roboto-Light.ttf'),
+    }).then(()=>{this.setState({fontLoaded:true});
+    console.log("************************* slabo loaded *****************8 ")});
+}
+  render(){
     return(
+      this.state.fontLoaded?
       <Provider store={store}>
         <Router navigationBarStyle={{ backgroundColor: 'transparent' }}>
             <Scene key="root" hideNavBar>
@@ -46,19 +60,20 @@ const App=()=>{
                 <Scene  title="ReACH" key="firstpage" component={FrontPage} hideNavBar initial/>
                 <Scene  title="Select your account" key="refugeesecondpage" component={RefugeeSecondPage}/>
                 {/* <Scene title="SupplyChain" key="supplychain" component={SupplySecondPage} /> */}
-                <Scene title="User Page" key="userpage" component={UserPage}/>
+                <Scene  title="User Page" key="userpage" component={UserPage}/>
               </Scene>
                 <Scene key="doctorView">
-                  <Scene type='replace' title="Physician's page" key="doctorpage1" component={physiciansPage} initial/>
-                  <Scene type='replace' title="Physician's page" key="doctorpage2" component={UserPage}/>
+                  <Scene type='replace'  title="Physician's page" key="doctorpage1" component={physiciansPage} initial/>
+                  <Scene type='replace'  title="Physician's page" key="doctorpage2" component={UserPage}/>
                 </Scene>
                 <Scene key="VendorView">
                   <Scene type='replace' title="UN Official's page" key="vendorpage" component={VendorPage}/>
                 </Scene>
             </Scene>
         </Router>
-      </Provider>
+      </Provider>:null
     );
+  }
 }
 export default App;
 

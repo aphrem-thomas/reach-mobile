@@ -7,11 +7,7 @@ import { reachlogo } from './images/logoReach.jpg';
 import { Font } from 'expo';
 
 class FrontPage extends React.Component {
-    // componentDidMount(){
-    //     Font.loadAsync({
-    //         'roboto': require('../../assets/fonts/Roboto-Black.ttf'),
-    //       });
-    // }
+   
     clickHandle1() {
         Actions.refugeesecondpage();
     }
@@ -60,7 +56,9 @@ class FrontPage extends React.Component {
                             </View>
                             </View>
                             <Button background="rgba(225,0,0,1)" height={40} title="Continue" onPress={this.clickHandle1.bind(this)} />
-                            <Text style={{ fontSize: 15, color:'white',marginRight:25,marginLeft:25,marginBottom:25 }}>Revolutionizing healthcare using Blockchain</Text>                        
+                           
+                                <Text style={{ fontFamily:'playfair',fontSize: 15, color:'white',marginRight:25,marginLeft:25,marginBottom:25 }}>Revolutionizing healthcare using Blockchain</Text>                        
+                                
                         </View>
                     </View>
 
@@ -69,6 +67,7 @@ class FrontPage extends React.Component {
         );
 
     }
+
 }
 const styles = StyleSheet.create({
     viewStyle: {
@@ -86,17 +85,19 @@ const styles = StyleSheet.create({
     orangeTextStyle: {
         color: '#79797a',
         fontSize: 40,
-        // fontFamily:'roboto'
+        fontFamily:'roboto'
     },
     whiteTextStyle: {
         color: '#FFF',
-        fontSize: 23
+        fontSize: 23,
+        fontFamily:'roboto'
     },
     redTextStyle: {
         color: '#FFF',
         fontSize: 40,
         marginLeft: 5,
-        marginRight: 5
+        marginRight: 5,
+        fontFamily:'roboto'
     },
     imageStyle: {
         resizeMode: 'contain',
@@ -105,7 +106,8 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         color: "#FFF",
-        fontSize: 20
+        fontSize: 20,
+        fontFamily:'roboto'
     }
 
 

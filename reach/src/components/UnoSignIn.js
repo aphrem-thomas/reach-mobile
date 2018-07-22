@@ -49,14 +49,10 @@ class UnoSignIn extends React.Component {
     render() {
         return (
 
-            <KeyboardAvoidingView style={styles.viewStyle} behavior={"padding"} enabled>
-                <ScrollView style={{ flex: 1 }}>
-                    <View style={{ flex: 1, justifyContent: 'center'}}>
-                        <Text style={{ flex: 1, fontSize: 30, color: '#007aff' }}>UN Official signin</Text>
-                        <Text>UN Offical can login and view the availability of Medicall supplys. Also can update the supply details</Text>
-                        <Button title="login" background="red" onPress={this.signinModal.bind(this)} />
+           <View>
+                    <View style={{justifyContent: 'center'}}>
+                       <Button title="Log In" background="#007aff" height={30} onPress={this.signinModal.bind(this)} />
                     </View>
-                </ScrollView>
 
                 <Modal animationType="slide"
                     transparent={true}
@@ -78,7 +74,7 @@ class UnoSignIn extends React.Component {
                         </View>
                     </View>
                 </Modal>
-            </KeyboardAvoidingView>
+            </View>
 
         );
 

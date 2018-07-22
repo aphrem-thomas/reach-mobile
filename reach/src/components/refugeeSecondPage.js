@@ -73,43 +73,45 @@ class RefugeeSecondPage extends React.Component {
     render() {
         return (
             <ImageBackground source={require('./images/slider-img1.jpg')} blurRadius={.7} style={{ flex: 1,justifyContent:'center' }}>
+               <ScrollView horizontal={true}>
                 <View style={styles.scrollside}>
                         <View
                             marginLeft={10}
-                            backgroundColor='rgba(225,225,225,0.7)'
-                            height={250}
+                            backgroundColor='rgba(225,0,0,0.9)'
+                            height={200}
                             width={150}>
                             
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                <Image source={require("./images/patient.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
-                                <Text style={{ fontSize: 20 }}>Refugee</Text>
+                                <Image source={require("./images/patient.png")} style={{ height: 100, width: 100, justifyContent: 'center' }} />
+                                <Text style={{ fontFamily:'lato',fontSize: 20 }}>Refugee</Text>
                             </View>
                             <RefugeeSignIn/>
                         </View>
                         <View
                             marginLeft={10}
-                            backgroundColor='rgba(225,225,225,0.9)'
-                            height={250}
+                            backgroundColor='rgba(225,0,0,0.9)'
+                            height={200}
                             width={150}>
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                <Image source={require("./images/doctor.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
-                                <Text style={{ fontSize: 20 }}>Physician</Text>
+                                <Image source={require("./images/doctor.png")} style={{ height: 100, width: 100, justifyContent: 'center' }} />
+                                <Text style={{ fontFamily:'lato', fontSize: 20 }}>Physician</Text>
                             </View>
                             <PhysicianSignIn/>
                         </View>
-                        {/* <ClickCard
-                            style={{ flex: 1 }}
-                            backgroundColor='#FFF'
-                            height={200}
-                            width={150}
-                            onPress={this.clickhandleUno.bind(this)}>
+                        {/* <View
+                            marginLeft={10}
+                            backgroundColor='rgba(225,0,0,0.9)'
+                            height={250}
+                            width={150}>
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                                <Image source={require("./images/un.jpeg")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
+                                <Image source={require("./images/un.png")} style={{ height: 140, width: 140, justifyContent: 'center' }} />
                                 <Text style={{ fontSize: 20 }}>UN Official</Text>
                             </View>
-                        </ClickCard> */}
+                            <UnoSignIn/>
+                        </View> */}
+                       
                 </View>
-                {this.options()}
+                </ScrollView>
             </ImageBackground>
         );
 
