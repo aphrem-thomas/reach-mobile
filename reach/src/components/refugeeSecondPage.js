@@ -73,13 +73,14 @@ class RefugeeSecondPage extends React.Component {
     render() {
         return (
             <ImageBackground source={require('./images/slider-img1.jpg')} blurRadius={.7} style={{ flex: 1,justifyContent:'center' }}>
-               <ScrollView horizontal={true}>
+               <ScrollView>
                 <View style={styles.scrollside}>
                         <View
+                            marginTop={20}
                             marginLeft={10}
                             backgroundColor='rgba(225,0,0,0.9)'
-                            height={200}
-                            width={150}>
+                            height={250}
+                            width={250}>
                             
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image source={require("./images/patient.png")} style={{ height: 100, width: 100, justifyContent: 'center' }} />
@@ -88,10 +89,11 @@ class RefugeeSecondPage extends React.Component {
                             <RefugeeSignIn/>
                         </View>
                         <View
+                            marginTop={20}
                             marginLeft={10}
                             backgroundColor='rgba(225,0,0,0.9)'
-                            height={200}
-                            width={150}>
+                            height={250}
+                            width={250}>
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                 <Image source={require("./images/doctor.png")} style={{ height: 100, width: 100, justifyContent: 'center' }} />
                                 <Text style={{ fontFamily:'lato', fontSize: 20 }}>Physician</Text>
@@ -129,7 +131,7 @@ const styles = StyleSheet.create({
         marginRight: 3,
         marginTop:5,
         alignSelf: 'stretch',
-        flexDirection: 'row',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center'
 

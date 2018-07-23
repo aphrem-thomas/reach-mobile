@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         height:65,
         alignSelf:'stretch',
         flexDirection: 'column',
-        backgroundColor: '#FFF',
+        backgroundColor: '#b7180c',
         borderColor:'#b7180c',
         borderLeftWidth:10,
         alignItems: 'center',
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     },
     
     textStyle:{
-        color:"#000",
+        color:"#FFF",
         paddingLeft:5,
         paddingRight:5,
         fontFamily:'lato'
