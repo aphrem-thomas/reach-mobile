@@ -123,7 +123,7 @@ class PhysicianSignIn extends React.Component {
                                 <Picker
                                     itemStyle={{ color: 'white' }}
                                     selectedValue={this.state.country}
-                                    style={{ marginRight: 2, backgroundColor: 'orange', height: 50, width: 150 }}
+                                    style={{ marginRight: 2, height: 50, width: 150 }}
                                     onValueChange={(itemValue, itemIndex) => this.setState({ country: itemValue })}>
                                     <Picker.Item label="Country" value="Country" />
                                     <Picker.Item label="Turkey" value="Turkey" />
@@ -134,7 +134,7 @@ class PhysicianSignIn extends React.Component {
                                 <Picker
                                     itemStyle={{ color: 'white' }}
                                     selectedValue={this.state.camp}
-                                    style={{ marginLeft: 2, backgroundColor: 'orange', height: 50, width: 150 }}
+                                    style={{ marginLeft: 2,  height: 50, width: 150 }}
                                     onValueChange={(itemValue, itemIndex) => this.setState({ camp: itemValue })}>
                                     <Picker.Item label="Location" value="Location" />
                                     <Picker.Item label="Aleppo" value="Aleppo" />

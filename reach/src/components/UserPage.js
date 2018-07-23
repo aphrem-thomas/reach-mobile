@@ -53,6 +53,7 @@ class UserPage extends React.Component {
 		headerLeft:null
 	}
     componentWillMount() {
+        if(this.props.dependent.length==0){
         let arrayChildren = [];
         let children = this.props.refugee.children;
         if (children) {
@@ -76,6 +77,7 @@ class UserPage extends React.Component {
 
         })
     }
+    }
     componentWillUpdate() {
         LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
         // console.log("dependent page is : "+this.props.dependentPage);
@@ -90,7 +92,7 @@ class UserPage extends React.Component {
     }
 
     onBack() {
-        this.props.dispatch(actionCreator.emptyDependent());
+        // this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.resetdependentpage());
         this.props.dispatch(actionCreator.guardian(null));
         this.props.dispatch(actionCreator.fetch(this.props.guardian)).then(()=>{

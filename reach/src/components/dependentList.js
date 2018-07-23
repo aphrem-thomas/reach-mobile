@@ -9,7 +9,7 @@ class DependentList extends React.Component{
     dependentPage(id){
         this.props.dispatch(actionCreator.guardian(this.props.refugee.refugeeId))
         this.props.dispatch(actionCreator.setdependentpage())
-        this.props.dispatch(actionCreator.emptyDependent());
+        // this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.fetch(id));
     }
     render(){
