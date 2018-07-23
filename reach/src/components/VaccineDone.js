@@ -24,10 +24,10 @@ class VaccineDone extends React.Component {
                         <Text style={styles.textStyle}>Date of Vaccination: </Text>
                         <Text style={styles.textStyle}>{this.props.date}</Text>
                     </View>
-                    <View style={styles.userinfohorizontal}>
+                    {/* <View style={styles.userinfohorizontal}>
                         <Text style={styles.textStyle}>Location : </Text>
                         <Text style={styles.textStyle}>{this.props.location}</Text>
-                    </View>
+                    </View> */}
                 </View>
             </View>
         );

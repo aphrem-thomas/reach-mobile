@@ -41,7 +41,9 @@ class UserPage extends React.Component {
             vaccinebutton: false,
             modalView: false,
             dependentPage: false,
-            dependingOn: null
+            dependingOn: null,
+            dependetVisible:false,
+            recordVisible:true,
         }
         if (Platform.OS === 'android') {
             UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -88,6 +90,7 @@ class UserPage extends React.Component {
         this.setState({
             medicalbutton: false,
             vaccinebutton: true,
+            recordVisible:false
         })
     }
 
@@ -95,6 +98,7 @@ class UserPage extends React.Component {
         // this.props.dispatch(actionCreator.emptyDependent());
         this.props.dispatch(actionCreator.resetdependentpage());
         this.props.dispatch(actionCreator.guardian(null));
+        this.setState({medicalbutton:false,vaccinebutton:false,dependetVisible:false,recordVisible:true})
         this.props.dispatch(actionCreator.fetch(this.props.guardian)).then(()=>{
             this.componentWillMount();
         })
@@ -106,6 +110,7 @@ class UserPage extends React.Component {
             medicalbutton: true,
             vaccinebutton: false,
             modalView: true,
+            recordVisible:false
         })
     }
     logout() {
@@ -118,7 +123,12 @@ class UserPage extends React.Component {
         Actions.pop();
     }
 
-
+    dependetVisibleFlip(){
+        if(this.state.dependetVisible==true)
+            this.setState({dependetVisible:false});
+        else
+            this.setState({dependetVisible:true});
+    }
     chooseComponent() {
         if (this.state.medicalbutton) {
             return (<View style={styles.sectionStyle}>
@@ -146,7 +156,7 @@ class UserPage extends React.Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* <UserLabel onLogout={this.logout.bind(this)} backbutton={this.props.guardian} onBack={this.onBack.bind(this)}/> */}
-                <View style={{flex:1}}>
+                <View style={{flex:2}}>
                 <View style={{ flex: 1 }}>
                     <ImageBackground source={{ uri: this.props.refugee.refugeeImage }} style={{ flex: 1,justifyContent:'flex-end'}}>
                     
@@ -157,22 +167,15 @@ class UserPage extends React.Component {
                 }
                     
                     
-                    <View style={{backgroundColor:'rgba(0,0,0,.7)',alignItems:'center'}}>
+                    <View style={{backgroundColor:'transparent',alignItems:'center',flexDirection:'row'}}>
                         <Text style={{color:"#FFF", fontSize:20,fontFamily:'lato'}}>Name: {this.props.refugee.firstName}</Text>
+                        <TouchableOpacity style={{marginLeft:150,height:50,width:50,borderRadius:25}} onPress={()=>{this.dependetVisibleFlip(); this.setState({recordVisible:true,vaccinebutton:false,medicalbutton:false})}}>
+                            <Image source={require("./images/group.png")} style={{height:50,width:50}}/>
+                        </TouchableOpacity>                    
                     </View>
                     </ImageBackground>
                 </View>
-                <View style={styles.tabbuttons}>
-                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
-                    </View>
-                    <View style={{ paddingLeft: 5, paddingRight: 5 }}>
-                        <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine Record" />
-                    </View>
-                </View>
-                </View>
-                    {this.chooseComponent()}
-                <View style={{flex:1}}>
+                    {this.state.dependetVisible&&!this.props.dependentPage?<View style={{flex:1}}>
                     {this.props.refugee.children ?
                         <ScrollView style={{ flex: 1 }} onScroll={() => { this.setState({ medicalbutton: false, vaccinebutton: false }) }}>
                             {this.props.dependent.length == this.props.refugee.children.length ?
@@ -181,7 +184,59 @@ class UserPage extends React.Component {
                                         <ProgressBarAndroid style={{ width: 200 }} styleAttr="Horizontal" color="#2196F3" />
                                     </View> : null}
                         </ScrollView> : null}
-                    </View>
+                    </View>:null}
+                 
+               {this.state.recordVisible?
+               <View style={{flex:1,justifyContent:'center'}}>
+               <View style={styles.tabbuttons}> 
+                       <TouchableOpacity style={{height:100,width:100,borderRadius:25,alignItems:"center"}} onPress={()=>{alert("")}}>
+                           <Image source={require("./images/man-user.png")} style={{height:50,width:50}}/>
+                           <Text>Personal Data</Text>
+                       </TouchableOpacity> 
+                       <TouchableOpacity style={{height:100,width:100,borderRadius:25,alignItems:"center"}} onPress={this.onClickMedical.bind(this)}>
+                           <Image source={require("./images/medicine.png")} style={{height:50,width:50}}/>
+                           <Text>Medical History</Text>
+                       </TouchableOpacity>
+                       <TouchableOpacity style={{height:100,width:100,borderRadius:25,alignItems:"center"}} onPress={()=>{alert("no allergy record")}}>
+                           <Image source={require("./images/allergic.png")} style={{height:50,width:50}}/>
+                           <Text>Allegry</Text>
+                       </TouchableOpacity>
+                   {/* <View style={{ paddingLeft: 5, paddingRight: 5 }}>
+                       <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
+                   </View>
+                   <View style={{ paddingLeft: 5, paddingRight: 5 }}>
+                       <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine Record" />
+                   </View> */}
+                   </View>
+                   <View style={styles.tabbuttons}> 
+                       <TouchableOpacity style={{height:100,width:100,borderRadius:25,alignItems:"center"}} onPress={()=>{alert("no prescription record")}}>
+                           <Image source={require("./images/prescription.png")} style={{height:50,width:50}}/>
+                           <Text>Prescription</Text>
+                       </TouchableOpacity> 
+                       <TouchableOpacity style={{height:100,width:100,borderRadius:25,alignItems:"center"}} onPress={()=>{alert("no Lab report")}}>
+                           <Image source={require("./images/lab.png")} style={{height:50,width:50}}/>
+                           <Text> Lab Report</Text>
+                       </TouchableOpacity>
+                       <TouchableOpacity style={{height:100,width:100,borderRadius:25,alignItems:"center"}} onPress={this.onClickVaccine.bind(this)}>
+                           <Image source={require("./images/syringe.png")} style={{height:50,width:50}}/>
+                           <Text>Vaccine Record</Text>
+                       </TouchableOpacity>
+                   {/* <View style={{ paddingLeft: 5, paddingRight: 5 }}>
+                       <Button onPress={this.onClickMedical.bind(this)} disabled={this.state.medicalbutton} style={{ height: 30 }} title="Medical Record" />
+                   </View>
+                   <View style={{ paddingLeft: 5, paddingRight: 5 }}>
+                       <Button onPress={this.onClickVaccine.bind(this)} disabled={this.state.vaccinebutton} style={{ height: 30 }} title="Vaccine Record" />
+                   </View> */}
+                   </View>
+               </View>:null
+               
+            }
+                
+                
+                
+                </View>
+                    {this.chooseComponent()}
+               
             </View>
         );
 
